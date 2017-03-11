@@ -1,0 +1,36 @@
+<select id="cursors" name="cursors">
+	<option value='auto'>auto</option>
+	<option value='default'>default</option>
+	<option value='none'>none</option>
+	<option value='context-menu'>context-menu</option>
+	<option value='help'>help</option>
+	<option value='pointer'>pointer</option>
+	<option value='progress'>progress</option>
+	<option value='wait'>wait</option>
+	<option value='cell'>cell</option>
+	<option value='crosshair'>crosshair</option>
+	<option value='text'>text</option>
+	<option value='vertical-text'>vertical-text</option>
+	<option value='alias'>alias</option>
+	<option value='copy'>copy</option>
+	<option value='move'>move</option>
+	<option value='no-drop'>no-drop</option>
+	<option value='not-allowed'>not-allowed</option>
+	<option value='all-scroll'>all-scroll</option>
+	<option value='col-resize'>col-resize</option>
+	<option value='row-resize'>row-resize</option>
+	<option value='n-resize'>n-resize</option>
+	<option value='e-resize'>e-resize</option>
+	<option value='s-resize'>s-resize</option>
+	<option value='w-resize'>w-resize</option>
+	<option value='ns-resize'>ns-resize</option>
+	<option value='ew-resize'>ew-resize</option>
+	<option value='ne-resize'>ne-resize</option>
+	<option value='nw-resize'>nw-resize</option>
+	<option value='se-resize'>se-resize</option>
+	<option value='sw-resize'>sw-resize</option>
+	<option value='nesw-resize'>nesw-resize</option>
+	<option value='nwse-resize'>nwse-resize</option>
+</select>
+
+// document.getElementById("cursors").value
