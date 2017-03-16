@@ -4,36 +4,36 @@ html {
   height: 100%;
   position: relative;
 }
-iframe {
-  overflow-y: scroll;
-  float: left;
-  height: 100%;
-  width: 100%;
-  margin-bottom: 34px;
-}
-.navbar {
-  margin-bottom: 0;
-}
 .application {
   height: 100%;
   width: calc(100% - 232px);
   min-width: 320px;
   padding: 0px;
-  margin: 50px 0 0 0;
+  margin: 0px;
   background: #ffffff;
   overflow: auto;
 }
+iframe {
+  overflow-y: auto;
+  float: left;
+  width: calc(100% - 232px);
+  height: calc(100% - 64px);
+  position: fixed;
+  top: 50px;
+  margin-bottom: 34px;
+  padding-bottom: 30px;
+}
 .tool-panel {
-  width: 232px;
+  overflow-y: auto;
   float: right;
-  height: 100%;
-  padding: 0;
-  margin: 0px;
+  width: 232px;
+  height: calc(100% - 84px);
   position: absolute;
-  top: 0;
+  top: 50px;
   right: 0;
   background-color: #c3c3c3;
-  overflow: scroll;
+  padding: 0;
+  margin: 0 0 34px 0;
 }
 footer {
   background: black;

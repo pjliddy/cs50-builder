@@ -1,0 +1,32 @@
+{% extends "application.html" %}
+
+{% block title %}
+    Bootstrap Theme Builder
+{% endblock %}
+
+{% block main %}
+  <!--  iframe containing layout page -->
+  <iframe src="{{ url_for('static', filename='form.html') }}" width="100%" id="layoutframe">
+    <p>Your browser does not support iframes.</p>
+  </iframe>
+
+  <!--  tool panel -->
+  <div class="tool-panel">
+    <div class="dropdown">
+        <button class="btn btn-block btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+            Category <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" id="category-select">
+          <li><a href="#" data-value="layout">Layout</a></li>
+          <li><a href="#" data-value="core">Core</a></li>
+          <li><a href="#" data-value="elements">Elements</a></li>
+          <li><a href="#" data-value="tables">Tables &amp; Forms</a></li>
+          <li><a href="#" data-value="navigation">Navigation</a></li>
+          <li><a href="#" data-value="indicators">Indicators</a></li>
+          <li><a href="#" data-value="containers">Containers</a></li>
+          <li><a href="#" data-value="dialogs">Dialogs</a></li>
+          <li><a href="#" data-value="configuration">Configuration</a></li>
+        </ul>
+    </div>
+  </div>   
+{% endblock %}

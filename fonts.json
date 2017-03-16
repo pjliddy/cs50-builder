@@ -1,0 +1,93 @@
+fonts = [
+  {
+    name: "Helvetica Neue"
+    , value: "'Helvetica Neue', Helvetica, Arial, sans-serif"
+    , familyType: "sansserif"
+    , fontType: "websafe" // websafe or custom (css)
+  }
+  , {
+    name: "Georgia"
+    , value: 'Georgia, "Times New Roman", Times, serif'
+    , familyType: "serif"
+    , fontType: "websafe" // websafe or custom (css)
+  }
+  , {
+    name: "Palatino"
+    , value: "'Palatino Linotype', 'Book Antiqua', Palatino, serif"
+    , familyType: "serif"
+    , fontType: "websafe" // websafe or custom (css)
+  }
+  , {
+    name: "Times New Roman"
+    , value: "'Times New Roman', Times, serif"
+    , familyType: "serif"
+    , fontType: "websafe" // websafe or custom (css)
+  }, {
+    name: "Arial"
+    , value: "Arial, Helvetica, sans-serif"
+    , familyType: "sansserif"
+    , fontType: "websafe" // websafe or custom (css)
+  }, {
+    name: "Arial Black"
+    , value: "'Arial Black', Gadget, sans-serif"
+    , familyType: "sansserif"
+    , fontType: "websafe" // websafe or custom (css)
+  }, {
+    name: "Impact"
+    , value: "Impact, Charcoal, sans-serif"
+    , familyType: "sansserif"
+    , fontType: "websafe" // websafe or custom (css)
+  }, {
+    name: "Lucida Sans"
+    , value: "'Lucida Sans Unicode', 'Lucida Grande', sans-serif"
+    , familyType: "sansserif"
+    , fontType: "websafe" // websafe or custom (css)
+  }, {
+    name: "Tahoma"
+    , value: "Tahoma, Geneva, sans-serif"
+    , familyType: "sansserif"
+    , fontType: "websafe" // websafe or custom (css)
+  }, {
+    name: "Trebuchet MS"
+    , value: "'Trebuchet MS', Trebuchet, Arial, Helvetica, sans-serif"
+    , familyType: "sansserif"
+    , fontType: "websafe" // websafe or custom (css)
+  }, {
+    name: "Verdana"
+    , value: "Verdana, Geneva, sans-serif"
+    , familyType: "sansserif"
+    , fontType: "websafe" // websafe or custom (css)
+  }
+  , {
+    name: "Menlo"
+    , value: "Menlo, Monaco, Consolas, 'Courier New', monospace"
+    , familyType: "monospace"
+    , fontType: "websafe" // websafe or custom (css)
+  }
+  , {
+    name: "Courier New"
+    , value: "'Courier New', Courier, monospace"
+    , familyType: "monospace"
+    , fontType: "websafe" // websafe or custom (css)
+  }, {
+    name: "Lucida Console"
+    , value: "'Lucida Console', Monaco, monospace"
+    , familyType: "monospace"
+    , fontType: "websafe" // websafe or custom (css)
+  }
+  , {
+    name: "Lato"
+    , value: "Lato, sans-serif" // = font-family CSS attribute
+    , familyType: "sansserif"
+    , fontType: "custom" // websafe or custom (css)
+    , href: "https://fonts.googleapis.com/css?family=Lato"
+  }
+  , {
+    name: "Open Sans"
+    , value: "'Open Sans', sans-serif" // = font-family CSS attribute
+    , familyType: "sansserif"
+    , fontType: "custom" // websafe or custom (css)
+    , href: "https://fonts.googleapis.com/css?family=Open+Sans"
+  }
+];
+
