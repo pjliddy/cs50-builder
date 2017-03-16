@@ -3,7 +3,7 @@ from flask import Flask, g, flash, redirect, render_template, request, session, 
 from flask_session import Session
 from flask_jsglue import JSGlue
 
-from flask_debugtoolbar import DebugToolbarExtension
+#from flask_debugtoolbar import DebugToolbarExtension
 #from passlib.apps import custom_app_context as pwd_context
 from tempfile import gettempdir
 
@@ -22,7 +22,7 @@ if app.config["DEBUG"]:
         response.headers["Pragma"] = "no-cache"
         return response
       
-toolbar = DebugToolbarExtension(app)
+#toolbar = DebugToolbarExtension(app)
 
 print(app.root_path)
 
@@ -55,7 +55,7 @@ def query_db(query, args=(), one=False):
 
 @app.route("/")
 def index():
-  logging.warning("See this message in Flask Debug Toolbar!")
+#  logging.warning("See this message in Flask Debug Toolbar!")
 
   users = query_db('select * from users')
   
