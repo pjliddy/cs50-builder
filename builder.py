@@ -1,6 +1,6 @@
 import sqlite3
 from flask import Flask, g, flash, redirect, render_template, request, session, url_for
-from flask_session import Session
+# from flask_session import Session
 from flask_jsglue import JSGlue
 
 #from flask_debugtoolbar import DebugToolbarExtension
