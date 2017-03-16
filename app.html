@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Bootstrap Builder</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!--  default bootstrap theme for UI-->
+  <link rel="stylesheet" href="/css/bootstrap.css" type="text/css">
+  
+  <!--  custom bootstrap elements for builder UI-->
+  <link rel="stylesheet" href="/css/builder-styles.css" type="text/css">
+
+  <!--
+    <link rel="stylesheet" href="/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="/css/builder-styles.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-slider.css">
+    <link href="/css/bootstrap-colorpicker.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+-->
+
+  <title> Bootstrap Less Variables</title>
+</head>
+
+<body>
+  <div class="container application">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#builderNavbar"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a class="navbar-brand" href="#">BUILDER</a>
+            </div>
+            <div class="collapse navbar-collapse" id="builderNavbar">
+              <ul class="nav navbar-nav"></ul>
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="#" id="link-export">Update</a></li>
+              </ul>
+            </div>
+          </div>
+      </nav>
+      </div>
+    </nav>
+    <!--  iframe containing layout page -->
+    <iframe src="/form.html" width="100%" id="layoutframe">
+      <p>Your browser does not support iframes.</p>
+    </iframe>
+    <!--  tool panel -->
+    <div class="tool-panel">
+      <div class="dropdown">
+          <button class="btn btn-block btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+              Category <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" id="category-select">
+            <li><a href="#" data-value="layout">Layout</a></li>
+            <li><a href="#" data-value="core">Core</a></li>
+            <li><a href="#" data-value="elements">Elements</a></li>
+            <li><a href="#" data-value="tables">Tables &amp; Forms</a></li>
+            <li><a href="#" data-value="navigation">Navigation</a></li>
+            <li><a href="#" data-value="indicators">Indicators</a></li>
+            <li><a href="#" data-value="containers">Containers</a></li>
+            <li><a href="#" data-value="dialogs">Dialogs</a></li>
+            <li><a href="#" data-value="configuration">Configuration</a></li>
+          </ul>
+      </div>
+    </div>
+    <footer class="navbar-fixed-bottom">
+      &copy; Patrick Liddy 2017
+    </footer>
+  </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
