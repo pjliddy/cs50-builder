@@ -10,17 +10,17 @@ from tempfile import gettempdir
 app = Flask(__name__)
 JSGlue(app)
 
-app.debug = True
+#app.debug = True
 app.config['SECRET_KEY'] = 'development_key'
 
 # ensure responses aren't cached
-if app.config["DEBUG"]:
-    @app.after_request
-    def after_request(response):
-        response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
-        response.headers["Expires"] = 0
-        response.headers["Pragma"] = "no-cache"
-        return response
+#if app.config["DEBUG"]:
+#    @app.after_request
+#    def after_request(response):
+#        response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
+#        response.headers["Expires"] = 0
+#        response.headers["Pragma"] = "no-cache"
+#        return response
       
 #toolbar = DebugToolbarExtension(app)
 
