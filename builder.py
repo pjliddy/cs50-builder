@@ -55,9 +55,7 @@ def query_db(query, args=(), one=False):
 
 @app.route("/")
 def index():
-#  for result in query_db('select * from users'):
-#  print 'loop test'
-  #  logging.warning("See this message in Flask Debug Toolbar!")
+  logging.warning("See this message in Flask Debug Toolbar!")
 
   users = query_db('select * from users')
   
