@@ -1,5 +1,7 @@
 import sqlite3
 
+#from flask_sqlalchemy import SQLAlchemy
+
 from flask import Flask, g, flash, redirect, render_template, request, session, url_for
 # from flask_session import Session
 from flask_jsglue import JSGlue
@@ -11,6 +13,13 @@ from tempfile import gettempdir
 from helpers import *
 
 app = Flask(__name__)
+
+# SQLAlchemy setup
+#app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///builder.db'
+#app.config["SQLALCHEMY_ECHO"] = True
+#db = SQLAlchemy(app)
+
 JSGlue(app)
 
 #app.debug = True
@@ -27,26 +36,36 @@ if app.config["DEBUG"]:
       
 #toolbar = DebugToolbarExtension(app)
 
-print(app.root_path)
+#print(app.root_path)
 
 @app.route("/")
 def index():
 #  logging.warning("See this message in Flask Debug Toolbar!")
 
-  users = query_db('select * from users')
-  
+  users = query_db('SELECT * FROM users')
+
   for user in users:
-    print( user['user_name'] )
+    print('User: ' + user['user_name'])
+#    print( user['user_name'] )
    
-  themes = query_db('select * from themes')
+  themes = query_db('SELECT * FROM themes')
   
   for theme in themes:
-    print( theme['theme_name'] )
+    print('Theme: ' + theme['theme_name'])
+#    print( theme['theme_name'] )
    
-  variables = query_db('select * from variables')
+  variables = query_db('SELECT * FROM variables')
   
   for variable in variables:
-    print( variable['name'] )
+    varname = variable['var_name']
+    message = query_db("SELECT message FROM helptext WHERE var_name = '" + varname + "'")
+
+    print('@' + variable['var_name'] + "=" + variable['output'] + " -- " + message[0]['message'])
+#    print(message)
+#    query = 'SELECT message FROM helptext WHERE var_name = "' + variable['var_name'] + '"'
+#    help = query_db(query)
+#    print(help)
+#    print( "@" + variable['var_name'] + ": " + variable['output'] + " -- " + help)
 
   return render_template("index.html")
 
