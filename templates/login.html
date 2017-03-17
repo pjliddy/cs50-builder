@@ -1,0 +1,32 @@
+{% extends "application.html" %}
+
+{% block title %}
+    Builder - Sign In
+{% endblock %}
+
+{% block main %}
+  <div class="wrapper">
+<!--    <h1>Log</h1>-->
+    <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Sign In</h3>
+        </div>
+        <div class="panel-body">
+          <form action="{{ url_for('login') }}" method="post">
+            <div class="form-group">
+              <label for="email">User ID</label>
+              <input type="email" class="form-control" name="email" placeholder="email address">
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" name="password" placeholder="password">
+            </div>
+            <button type="submit" class="btn btn-primary pull-right">Sign In</button>
+            <a type="submit" class="btn btn-link pull-right" href="{{ url_for('register') }}">Register</a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

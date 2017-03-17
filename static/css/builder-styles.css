@@ -9,11 +9,11 @@ html {
   width: calc(100% - 232px);
   min-width: 320px;
   padding: 0px;
-  margin: 0px;
+  margin: 0;
   background: #ffffff;
   overflow: auto;
 }
-iframe {
+#layout {
   overflow-y: auto;
   float: left;
   width: calc(100% - 232px);
@@ -21,6 +21,10 @@ iframe {
   position: fixed;
   top: 50px;
   margin-bottom: 34px;
+}
+header {
+  position: relative;
+  top: 72px;
 }
 .tool-panel {
   overflow-y: auto;
@@ -39,5 +43,8 @@ footer {
   color: #9d9d9d;
   font-size: 10px;
   padding: 10px;
+}
+.wrapper {
+  margin: 96px 0 34px 0;
 }
 /*# sourceMappingURL=builder-styles.css.map */

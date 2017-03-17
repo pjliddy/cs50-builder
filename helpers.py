@@ -1,9 +1,12 @@
 import sqlite3
-import execjs
-from flask import g, url_for
+from flask import g, redirect, render_template, request, session, url_for
+from functools import wraps
 
 DATABASE = 'builder.db'
 
+#
+# get_db(): utility class from flask sqlite3 documentation
+#
 def get_db():
   db = getattr(g, '_database', None)
   if db is None:
@@ -14,16 +17,14 @@ def get_db():
                 for idx, value in enumerate(row))
   
   db.row_factory = make_dicts
-
 #  db.row_factory = sqlite3.Row
   
   
   return db
 
-
-
-
-
+#
+# query_db(): utility class from flask sqlite3 documentation
+#
 def query_db(query, args=(), one=False):
   cur = get_db().execute(query, args)
   rv = cur.fetchall()
@@ -31,23 +32,28 @@ def query_db(query, args=(), one=False):
   
   return (rv[0] if rv else None) if one else rv
 
-#def test_less():
-#  testfile = url_for('static', filename='/js/test.js')
-#  infile = url_for('static', filename='test.less')
-#  outfile = url_for('static', filename='test')
-#  
-#  print(infile)
-#  
-##  ctx = py_mini_racer.MiniRacer()
-#  execjs.eval('node ' + testfile)
-#  
-##  ctx.eval("var lessTest = () => console.log('test');")
-##  ctx.eval("var lessTest = () => var less=require('less');")
-#           
-##           less.render( input ).then(function(output) {console.log(output.css);};};") 
 #
-##  ctx.eval("function lessTest(input) { return 5 + 12;};")
-#  
-##  ctx.call("lessTest")
+# query_db(): utility class from flask sqlite3 documentation
 #
-#  return
+def insert_db(query, args=()):
+  cursor = get_db().cursor()
+  result = cursor.execute(query, args)
+  get_db().commit()
+  
+  return result
+
+#
+# login_required(): utility class from CS-50 pset
+#
+def login_required(f):
+    """
+    Decorate routes to require login.
+
+    http://flask.pocoo.org/docs/0.11/patterns/viewdecorators/
+    """
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        if session.get("user_id") is None:
+            return redirect(url_for("login", next=request.url))
+        return f(*args, **kwargs)
+    return decorated_function

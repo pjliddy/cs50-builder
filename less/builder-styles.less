@@ -12,12 +12,12 @@ html {
   width: calc(100% - 232px);
   min-width: 320px;
   padding: 0px;
-  margin: 0px;
+  margin: 0;
   background: #ffffff;
   overflow: auto;
 }
 
-iframe {
+#layout {
   overflow-y: auto;
   float: left;
   width: calc(100% - 232px);
@@ -26,7 +26,10 @@ iframe {
   top: 50px;
   margin-bottom: 34px;
 }
-
+header {
+  position:relative;
+  top:72px;
+}
 .tool-panel {
   overflow-y: auto;
   float: right;
@@ -41,47 +44,6 @@ iframe {
   margin: 0 0 34px 0;
 }
 
-
-//body,
-//html {
-//  height: 100%;
-//  position: relative;
-//}
-//
-//.application {
-//  height: 100%;
-//  width: calc(100% - 232px);
-//  min-width: 320px;
-//  padding: 0px;
-//  margin: 50px 0 0 0;
-//  background: #ffffff;
-//  position:absolute;
-//}
-//
-//#layoutframe {
-//  float: left;
-//  overflow-y: scroll;
-//  height: 100%;
-//  width: 100%;
-//  margin-bottom: 34px;
-//}
-//
-//.navbar {
-//  margin-bottom: 0;
-//}
-//
-//.tool-panel {
-//  width: 232px;
-//  float: right;
-//  height: 100%;
-//  padding: 0;
-//  margin: 0;
-//  top: 50px;
-//  right: 0;
-//  background-color: #c3c3c3;
-//  overflow-y: scroll;
-//}
-
 footer {
   background: black;
   color: #9d9d9d;
@@ -89,4 +51,6 @@ footer {
   padding: 10px;
 }
 
-
+.wrapper {
+  margin: 96px 0 34px 0;
+}
