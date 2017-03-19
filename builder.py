@@ -1,6 +1,6 @@
 import sqlite3 as sql
 
-from flask import Flask, g, flash, redirect, render_template, request, session, url_for
+from flask import Flask, g, flash, jsonify, redirect, render_template, request, session, url_for
 from flask_session import Session
 from passlib.apps import custom_app_context as pwd_context
 from tempfile import gettempdir
@@ -14,7 +14,10 @@ app = Flask(__name__)
 #JSGlue(app)
 
 app.debug = True
-app.config['SECRET_KEY'] = 'development_key'
+app.config['SECRET_KEY'] = 'developer key'
+#app.config['SECRET_KEY'] = '\x81\xb5\x14\x9a\x1a\xa2\x04\xc3\xc7\xd6\xe3\x98\xd3n\xc0\xe7\xd8\xcej\xba\xef^*\x8a'
+
+global currentTheme
 
 # ensure responses aren't cached
 if app.config["DEBUG"]:
@@ -25,6 +28,11 @@ if app.config["DEBUG"]:
         response.headers["Pragma"] = "no-cache"
         return response
 
+
+def main(argv):
+  global currentTheme
+  currentTheme = None
+
 #
 # @app.route("/") = index(): home (index) page
 #
@@ -32,19 +40,32 @@ if app.config["DEBUG"]:
 @app.route("/")
 @login_required
 def index():
-  # database query test
-  for user in query_db('SELECT * FROM users'):
-    print('User: ' + user['user_name'])
-
-  for theme in query_db('SELECT * FROM themes'):
-    print('Theme: ' + theme['theme_name'])
-  
-  for variable in query_db('SELECT * FROM variables'):
-    varname = variable['var_name']
-    message = query_db("SELECT message FROM helptext WHERE var_name = '" + varname + "'")
-    print('@' + variable['var_name'] + "=" + variable['output'] + " -- " + message[0]['message'])
-
   return render_template("index.html")
+
+#
+# @app.route("/init") = initTheme(): create new theme from default values
+#
+
+@app.route("/init", methods=["GET", "POST"])
+def init():
+  global currentTheme
+  currentTheme = getDefaultTheme()
+
+  return render_template("index.html", vars=currentTheme, messages=getHelpText(), category="layout")
+
+#
+# @app.route("/category") = initTheme(): create new theme from default values
+#
+
+@app.route("/category", methods=["GET"])
+def category():
+  global currentTheme
+  # http://builder.pliddy.com/category.html?c='Layout'
+  # request.args.get("c")
+
+  category = request.args.get("c")
+
+  return render_template("index.html", vars=currentTheme, messages=getHelpText(), category=category)
 
 #
 # @app.route("/register") = register(): new user account creation
@@ -76,12 +97,12 @@ def register():
     # generate hash based on user's password
     hashed = pwd_context.encrypt(password)
     
-    # if user_name is unique, add to db
-    exists = query_db('SELECT count(*) AS count FROM users WHERE user_name = ?',(email,))[0]['count']
+    # if name is unique, add to db
+    exists = query_db('SELECT count(*) AS count FROM users WHERE name = ?',(email,))[0]['count']
     
     if not exists:
       result = insert_db(
-        'INSERT INTO users (user_name, hash) VALUES (?,?)', (email, hashed)
+        'INSERT INTO users (name, hash) VALUES (?,?)', (email, hashed)
       )
 
       if not result:
@@ -130,7 +151,7 @@ def password():
       return render_template("password.html")
 
     # query database for username
-    rows = query_db('SELECT * FROM users WHERE user_id =  ?',(session["user_id"],))
+    rows = query_db('SELECT * FROM users WHERE id =  ?',(session["user_id"],))
 
     # ensure username exists and password is correct
     if len(rows) != 1 or not pwd_context.verify(password, rows[0]["hash"]):
@@ -142,7 +163,7 @@ def password():
 
     # update user's password in db
     result = insert_db(
-        'UPDATE users SET hash = ? WHERE user_id = ?', (hashed, session["user_id"])
+        'UPDATE users SET hash = ? WHERE id = ?', (hashed, session["user_id"])
       )
     
     if not result:
@@ -187,7 +208,7 @@ def login():
       return render_template("login.html")
 
     # query database for username
-    rows = query_db('SELECT * FROM users WHERE user_name =  ?',(email,))
+    rows = query_db('SELECT * FROM users WHERE name =  ?',(email,))
 
     # ensure username exists and password is correct
     if len(rows) != 1 or not pwd_context.verify(password, rows[0]["hash"]):
@@ -195,7 +216,7 @@ def login():
       return render_template("login.html")
     
     # remember which user has logged in
-    session["user_id"] = rows[0]["user_id"]
+    session["user_id"] = rows[0]["id"]
 
     # redirect user to home page
     return redirect(url_for("index"))
@@ -222,7 +243,7 @@ def logout():
 
 @app.route("/export")
 def export():
-  return render_template("export.html")
+  return render_template("index.html")
 
 #
 # close_connection(): utility class from flask sqlite3 documentation

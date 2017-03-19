@@ -1,12 +1,13 @@
 import sqlite3
-from flask import g, redirect, render_template, request, session, url_for
+from flask import g, jsonify, redirect, render_template, request, session, url_for
 from functools import wraps
 
 DATABASE = 'builder.db'
 
 #
-# get_db(): utility class from flask sqlite3 documentation
+# get_db(): utility from flask sqlite3 documentation
 #
+
 def get_db():
   db = getattr(g, '_database', None)
   if db is None:
@@ -17,14 +18,14 @@ def get_db():
                 for idx, value in enumerate(row))
   
   db.row_factory = make_dicts
-#  db.row_factory = sqlite3.Row
-  
+  # db.row_factory = sqlite3.Row
   
   return db
 
 #
-# query_db(): utility class from flask sqlite3 documentation
+# query_db(): utility from flask sqlite3 documentation
 #
+
 def query_db(query, args=(), one=False):
   cur = get_db().execute(query, args)
   rv = cur.fetchall()
@@ -33,8 +34,9 @@ def query_db(query, args=(), one=False):
   return (rv[0] if rv else None) if one else rv
 
 #
-# query_db(): utility class from flask sqlite3 documentation
+# query_db(): utility from flask sqlite3 documentation
 #
+
 def insert_db(query, args=()):
   cursor = get_db().cursor()
   result = cursor.execute(query, args)
@@ -43,17 +45,49 @@ def insert_db(query, args=()):
   return result
 
 #
-# login_required(): utility class from CS-50 pset
+# login_required(): utility from CS-50 pset
 #
-def login_required(f):
-    """
-    Decorate routes to require login.
 
-    http://flask.pocoo.org/docs/0.11/patterns/viewdecorators/
-    """
+def login_required(f):
+    # Decorate routes to require login.
+    # http://flask.pocoo.org/docs/0.11/patterns/viewdecorators/
     @wraps(f)
     def decorated_function(*args, **kwargs):
         if session.get("user_id") is None:
             return redirect(url_for("login", next=request.url))
         return f(*args, **kwargs)
     return decorated_function
+
+#
+# defaultThemeId(): returns ID of default theme
+#
+
+def defaultThemeId():
+  return query_db('SELECT * FROM themes WHERE name = "default"')[0]['id']
+
+#
+# getDefaultTheme(): returns all vars from default theme
+#
+
+def getDefaultTheme():
+  themeVars = getThemeVars(defaultThemeId())
+  for var in themeVars:
+    helptext = query_db('SELECT message FROM helptext WHERE var_name = ?',(var['name'],))[0]['message']
+    var['message'] = helptext
+
+  return themeVars
+
+#
+# getThemeVars(): returns all variables for a specified theme
+#
+
+def getThemeVars(themeId):
+  return query_db('SELECT * FROM variables WHERE theme_id = ?',(themeId,))
+
+#
+# getHelpText(): returns helper text messages for variables in config ui
+#
+
+def getHelpText():
+  return query_db('SELECT * FROM helptext')
+

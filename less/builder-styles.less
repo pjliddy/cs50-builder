@@ -1,12 +1,14 @@
 // out: ../static/css/builder-styles.css, compress: false, strictMath: true, sourceMap: true
 @import "variables.less";
 
+@ui-dark: #777;
+@ui-light: #eee;
+
 body,
 html {
   height: 100%;
   position: relative;
 }
-
 .application {
   height: 100%;
   width: calc(100% - 232px);
@@ -16,7 +18,6 @@ html {
   background: #ffffff;
   overflow: auto;
 }
-
 #layout {
   overflow-y: auto;
   float: left;
@@ -30,18 +31,25 @@ header {
   position:relative;
   top:72px;
 }
-.tool-panel {
+#config-panel {
   overflow-y: auto;
   float: right;
   width: 232px;
   height: calc(100% - 84px);  
   position: absolute;
-  top: 50px;
-  
+  top: 51px;
   right:0;  
-  background-color: #c3c3c3;
+//  background-color: #efefef;
   padding: 0;
   margin: 0 0 34px 0;
+}
+.category-title {
+//  background-color: white;
+//  color: @gray-darker;
+  text-transform: capitalize;
+  display:block;
+  padding:12px 12px 12px 12px;
+  margin:0;
 }
 
 footer {
@@ -54,3 +62,46 @@ footer {
 .wrapper {
   margin: 96px 0 34px 0;
 }
+
+.panel, .panel-heading{
+  border: none;
+  border-radius:0;
+}
+.panel-heading {
+  text-transform: capitalize;
+}
+.panel-outer, .panel-inner {
+  margin-bottom:0;
+}
+.panel-outer .panel-heading {
+  background-color: @ui-dark;
+  color: @ui-light;
+  border-bottom: 1px solid white;
+}
+.panel-inner .panel-heading {
+  background-color: @ui-light;
+  color: @ui-dark;
+  border-bottom: 1px solid white;
+}
+.panel-outer .panel-body,
+.panel-inner .panel-body {
+  padding:0;
+}
+
+.form-control {
+  border-radius: 0;
+}
+.variable-display {
+  margin:12px;
+  border-bottom:1px solid @ui-light;
+}
+.help-icon {
+  color:@brand-primary;
+  cursor:help;
+}
+.popover {
+//  min-width: 164px;
+//  right: 6px!important;
+//  max-width: 220px!important;
+}
+

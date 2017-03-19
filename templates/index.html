@@ -6,27 +6,79 @@
 
 {% block main %}
   <!--  iframe containing layout page -->
-  <iframe src="{{ url_for('static', filename='form.html') }}" width="100%" id="layout">
+  <iframe src="{{ url_for('static', filename='layout.html') }}" width="100%" id="layout">
     <p>Your browser does not support iframes.</p>
   </iframe>
 
   <!--  tool panel -->
-  <div class="tool-panel">
-    <div class="dropdown">
-        <button class="btn btn-block btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-            Category <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu" id="category-select">
-          <li><a href="#" data-value="layout">Layout</a></li>
-          <li><a href="#" data-value="core">Core</a></li>
-          <li><a href="#" data-value="elements">Elements</a></li>
-          <li><a href="#" data-value="tables">Tables &amp; Forms</a></li>
-          <li><a href="#" data-value="navigation">Navigation</a></li>
-          <li><a href="#" data-value="indicators">Indicators</a></li>
-          <li><a href="#" data-value="containers">Containers</a></li>
-          <li><a href="#" data-value="dialogs">Dialogs</a></li>
-          <li><a href="#" data-value="configuration">Configuration</a></li>
-        </ul>
-    </div>
-  </div>   
+  <div id="config-panel">
+    <h4 class="category-title">{{ category }}</h4>
+
+    <!-- group vars by section -->
+    {% for section in vars|selectattr("category", "equalto", category)|groupby('section') %}
+
+    <!-- create a panel for each section -->
+      <div class="panel panel-default panel-outer">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse-{{ section.grouper }}">{{ section.grouper }} <span class="caret"></span></a>
+          </h4>
+        </div>
+        <div id="collapse-{{ section.grouper }}" class="panel-collapse collapse">
+          {% for subsection in section.list|selectattr("section", "equalto", section.grouper)|groupby('subsection') %}
+            <div class="panel-body">
+
+              <!-- only use subsection if there is a subsection value -->
+              {% if subsection.grouper %}
+                <div class="panel panel-default panel-inner">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" href="#collapse-{{ subsection.grouper }}">{{ subsection.grouper }} <span class="caret"></span></a>
+                    </h4>
+                  </div>
+                <div id="collapse-{{ subsection.grouper }}" class="panel-collapse collapse">
+              {% endif %}
+
+              {% for var in subsection.list %}
+                  <div id="{{ var.name }}" class="panel-body variable-display">
+                    <div class="form-group">
+                      <label for="input-@{{ var.name }}">@{{ var.name }}</label>
+                      <a tabindex="0" role="button" class="help-icon" data-toggle="popover" data-trigger="focus" data-content="{{ var.message }}" data-placement="auto"><span class='glyphicon glyphicon-question-sign'></span></a>
+                      <input class="form-control" id="input-@{{ var.name }}" aria-describedby="help-block-@{{ var.var_name }}" value="{{ var.output }}" data-var="@{{ var.name }}">
+                    </div>
+                  </div>
+              {% endfor %}
+
+              <!-- only use subsection if there is a subsection value -->
+              {% if subsection.grouper %}
+                </div></div>
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
 {% endblock %}
+
+
+
+<!-- template grouping of category vars by section & subsection
+<ul>
+  {% for section in vars|selectattr("category", "equalto", category)|groupby('section') %}
+    <li>{{ section.grouper }}
+      <ul>
+        {% for subsection in section.list|selectattr("section", "equalto", section.grouper)|groupby('subsection') %}
+          <li>{{ subsection.grouper }}
+            <ul>
+              {% for var in subsection.list %}
+                <li>@{{ var.name }}</li>
+              {% endfor %}
+            </ul>
+          </li>
+        {% endfor %}
+      </ul>
+    </li>
+  {% endfor %}
+</ul>
+-->
