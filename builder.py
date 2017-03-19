@@ -1,7 +1,7 @@
 import sqlite3 as sql
 
 from flask import Flask, g, flash, jsonify, redirect, render_template, request, session, url_for
-from flask_session import Session
+#from flask_session import Session
 from passlib.apps import custom_app_context as pwd_context
 from tempfile import gettempdir
 
@@ -10,7 +10,6 @@ from tempfile import gettempdir
 from helpers import *
 
 app = Flask(__name__)
-
 currentTheme = None
 
 #JSGlue(app)
@@ -29,14 +28,18 @@ if app.config["DEBUG"]:
     return response
 
 
-def main(argv):
-  global currentTheme
-
-  print "## INIT G.CURRENT THEME"
-  print currentTheme
-
 #
-#  currentTheme = None
+# initApp()
+#
+
+def initApp(app):
+  global currentTheme
+  currentTheme = None
+
+  print "## MAIN "
+  print currentTheme
+initApp(app)
+
 
 
 #
@@ -53,15 +56,13 @@ def index():
 #
 
 @app.route("/init", methods=["GET", "POST"])
+@login_required
 def init():
   global currentTheme
-
   currentTheme = getDefaultTheme()
 
   print "## INIT CURRENTTHEME"
   print currentTheme
-
-
 
   return render_template("index.html", vars=currentTheme, messages=getHelpText(), category="layout")
 
@@ -70,6 +71,7 @@ def init():
 #
 
 @app.route("/category", methods=["GET"])
+@login_required
 def category():
   global currentTheme
 
@@ -247,6 +249,7 @@ def login():
 #
 
 @app.route("/logout")
+@login_required
 def logout():
   # clear current session user_id
   session.clear()
@@ -259,6 +262,7 @@ def logout():
 #
 
 @app.route("/export")
+@login_required
 def export():
   return render_template("index.html")
 
@@ -277,5 +281,4 @@ def close_connection(exception):
 #
 
 if __name__ == "__main__":
-#  init()
   app.run()
