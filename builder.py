@@ -9,7 +9,7 @@ from tempfile import gettempdir
 
 from helpers import *
 
-global currentTheme
+#global currentTheme
 
 app = Flask(__name__)
 
@@ -31,7 +31,6 @@ if app.config["DEBUG"]:
 
 def main(argv):
   global currentTheme
-
   currentTheme = None
 
 
@@ -66,9 +65,7 @@ def category():
   # http://builder.pliddy.com/category.html?c='Layout'
   # request.args.get("c")
 
-  category = request.args.get("c")
-
-  return render_template("index.html", vars=currentTheme, messages=getHelpText(), category=category)
+  return render_template("index.html", vars=currentTheme, messages=getHelpText(), category=request.args.get("c"))
 
 #
 # @app.route("/register") = register(): new user account creation
