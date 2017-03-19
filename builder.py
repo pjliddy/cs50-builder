@@ -9,6 +9,8 @@ from tempfile import gettempdir
 
 from helpers import *
 
+global currentTheme
+
 app = Flask(__name__)
 
 #JSGlue(app)
@@ -17,21 +19,21 @@ app.debug = True
 app.config['SECRET_KEY'] = 'developer key'
 #app.config['SECRET_KEY'] = '\x81\xb5\x14\x9a\x1a\xa2\x04\xc3\xc7\xd6\xe3\x98\xd3n\xc0\xe7\xd8\xcej\xba\xef^*\x8a'
 
-global currentTheme
-
 # ensure responses aren't cached
 if app.config["DEBUG"]:
-    @app.after_request
-    def after_request(response):
-        response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
-        response.headers["Expires"] = 0
-        response.headers["Pragma"] = "no-cache"
-        return response
+  @app.after_request
+  def after_request(response):
+    response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
+    response.headers["Expires"] = 0
+    response.headers["Pragma"] = "no-cache"
+    return response
 
 
-def init( ):
+def main(argv):
   global currentTheme
+
   currentTheme = None
+
 
 #
 # @app.route("/") = index(): home (index) page
@@ -261,5 +263,5 @@ def close_connection(exception):
 #
 
 if __name__ == "__main__":
-  init()
+#  init()
   app.run()
