@@ -29,7 +29,7 @@ if app.config["DEBUG"]:
         return response
 
 
-def main(argv):
+def init( ):
   global currentTheme
   currentTheme = None
 
@@ -60,6 +60,7 @@ def init():
 @app.route("/category", methods=["GET"])
 def category():
   global currentTheme
+
   # http://builder.pliddy.com/category.html?c='Layout'
   # request.args.get("c")
 
@@ -260,4 +261,5 @@ def close_connection(exception):
 #
 
 if __name__ == "__main__":
-    app.run()
+  init()
+  app.run()
