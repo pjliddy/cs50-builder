@@ -9,9 +9,9 @@ from tempfile import gettempdir
 
 from helpers import *
 
-#global currentTheme
-
 app = Flask(__name__)
+
+currentTheme = None
 
 #JSGlue(app)
 
@@ -31,7 +31,12 @@ if app.config["DEBUG"]:
 
 def main(argv):
   global currentTheme
-  currentTheme = None
+
+  print "## INIT G.CURRENT THEME"
+  print currentTheme
+
+#
+#  currentTheme = None
 
 
 #
@@ -50,7 +55,13 @@ def index():
 @app.route("/init", methods=["GET", "POST"])
 def init():
   global currentTheme
+
   currentTheme = getDefaultTheme()
+
+  print "## INIT CURRENTTHEME"
+  print currentTheme
+
+
 
   return render_template("index.html", vars=currentTheme, messages=getHelpText(), category="layout")
 
@@ -64,6 +75,12 @@ def category():
 
   # http://builder.pliddy.com/category.html?c='Layout'
   # request.args.get("c")
+
+#   = flask.g.get('user', None)
+
+  print "## CATEGORY"
+  print request.args.get("c")
+  print currentTheme
 
   return render_template("index.html", vars=currentTheme, messages=getHelpText(), category=request.args.get("c"))
 
