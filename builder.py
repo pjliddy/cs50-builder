@@ -1,3 +1,4 @@
+import os
 import sqlite3 as sql
 
 from flask import Flask, g, flash, jsonify, redirect, render_template, request, session, url_for
@@ -11,6 +12,7 @@ from helpers import *
 
 app = Flask(__name__)
 currentTheme = None
+APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 #JSGlue(app)
 

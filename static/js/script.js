@@ -7,6 +7,7 @@ $(function () {
   $('[data-toggle="popover"]').popover({
       container:'#config-panel'
     });
+  $('.variable-display input').blur(updateVar);
 });
 
 function selectCategory( evt ){
@@ -14,3 +15,8 @@ function selectCategory( evt ){
   console.log("/category?c=" + category);
   window.location.replace("/category?c=" + category);
 };
+
+function updateVar( evt ) {
+  var newVal = $(this).val();
+  console.log(newVal);
+}

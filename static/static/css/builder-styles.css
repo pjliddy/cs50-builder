@@ -2,6 +2,7 @@
 body,
 html {
   height: 100%;
+  position: relative;
 }
 .navbar {
   margin: 0;
@@ -9,9 +10,9 @@ html {
 .application {
   position: relative;
   top: 25px;
+  height: calc(100% - 34px);
   width: 100%;
   border: none;
-  margin-bottom: 34px;
 }
 #config-drawer {
   z-index: 1000;
@@ -24,11 +25,6 @@ html {
   position: relative;
   width: 16.66666667%;
   z-index: 500;
-}
-.layout {
-  height: calc(100% - 34px);
-  height: -webkit-calc(100% - 34px);
-  height: -moz-calc(100% - 34px);
 }
 header {
   position: relative;

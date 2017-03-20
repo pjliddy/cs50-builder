@@ -9,8 +9,13 @@
   <!--  default bootstrap theme for UI-->
   <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}" type="text/css">
   
+  <!--  bootstrap drawer plug-in for collapsing UI panel-->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-drawer.css') }}" type="text/css">
+
   <!--  custom bootstrap elements for builder UI-->
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/builder-styles.css') }}" type="text/css">
+<!--  <link rel="stylesheet" href="{{ url_for('static', filename='css/builder-styles.css') }}" type="text/css">-->
+  <link rel="stylesheet/less" href="{{ url_for('static', filename='less/builder-styles.less') }}" type="text/css">
+
 
 <!--
     <link rel="stylesheet" href="/css/bootstrap-theme.css">
@@ -25,13 +30,13 @@
   <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
-  <div class="container application clearfix">
+  <div class="container-fluid application clearfix">
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
         <nav class="navbar navbar-inverse navbar-fixed-top">
           <div class="container-fluid">
             <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#builderNavbar">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
                 <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> 
               </button>
               <a class="navbar-brand" href="{{ url_for('index') }}">Bootstrap Theme Builder</a>
@@ -56,6 +61,8 @@
                       <li><a href="#" data-value="configuration">Configuration</a></li>
                     </ul>
                   </li>
+
+                  <li><a href="#config-drawer" data-toggle="drawer">Theme</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                   <li><a href="{{ url_for('password') }}">Change Password</a></li>
@@ -86,13 +93,26 @@
     {% endblock %}
     
     <footer class="navbar-fixed-bottom">
-      &copy; Patrick Liddy 2017
+      &copy; 2017 Patrick Liddy
     </footer>
   </div>
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
-<!--  <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.7.2/less.min.js"></script>-->
+  <script src="{{ url_for('static', filename='js/drawer.js') }}"></script>
+  <script>
+    less = {
+      env: "development",
+      async: false,
+      fileAsync: false,
+      poll: 1000,
+      functions: {},
+      dumpLineNumbers: "comments",
+      relativeUrls: false,
+      rootpath: ":/a.com/"
+    };
+  </script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.7.2/less.min.js"></script>
   <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>

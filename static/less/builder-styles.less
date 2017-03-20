@@ -1,0 +1,136 @@
+// out: ../css/builder-styles.css, compress: false, strictMath: true, sourceMap: true
+@import "variables.less";
+
+@ui-dark: @brand-primary;
+@ui-light: lighten(@brand-primary, 40%);
+
+body,
+html {
+  height: 100%;
+//  position: relative;
+}
+.navbar {
+  margin: 0;
+}
+//.application {
+//  height: 100%;
+//  width: calc(100% - 232px);
+//  min-width: 320px;
+//  padding: 0px;
+//  margin: 0;
+//  background: #ffffff;
+//  overflow: auto;
+//}
+//.layout {
+//  overflow-y: auto;
+//  float: left;
+//  width: calc(100% - 232px);
+//  height: calc(100% - 84px);
+//  position:fixed;
+//  top: 50px;
+//  margin-bottom: 34px;
+//}
+.application {
+  position:relative;
+  top: 25px;
+//  height: -webkit-calc(100% - 34px);
+  width: 100%;
+  border: none;
+  margin-bottom:34px;
+  //  bottom: 34px;
+//  margin:0 15px;
+}
+#config-drawer {
+
+//  height: 100%;
+  z-index:1000;
+//  top: 51px;
+}
+.drawer-controls {
+  float: left;
+  margin-right: -16.66666667%;
+  padding: 10px;
+  height: 100%;
+  position: relative;
+  width: 16.66666667%;
+  z-index: 500;
+}
+.layout {
+  height: calc(100% - 34px);
+  height: -webkit-calc(100% - 34px);
+  height: -moz-calc(100% - 34px);
+}
+header {
+  position:relative;
+  top:72px;
+}
+footer {
+  background: black;
+  color: #9d9d9d;
+  font-size: 10px;
+  padding: 10px;
+}
+#config-panel {
+//  overflow-y: auto;
+//  float: right;
+//  width: 232px;
+//  height: calc(100% - 84px);
+//  position: absolute;
+//  top: 51px;
+//  right:0;
+//  padding: 0;
+//  margin: 0 0 34px 0;
+}
+.category-title {
+  text-transform: capitalize;
+  display:block;
+  padding:12px 12px 12px 12px;
+  margin:0;
+}
+#config-panel .panel,
+#config-panel .panel-heading{
+  border: none;
+  border-radius:0;
+  margin-bottom:0;
+  box-shadow:none;
+}
+#config-panel .panel-heading {
+  text-transform: capitalize;
+  cursor: pointer;
+  text-decoration: none !important;
+  border-bottom: 1px solid white;
+}
+.panel-outer .panel-heading {
+  color:white;
+  background-color: @ui-dark;
+}
+.panel-inner .panel-heading {
+  color:@ui-dark;
+  background-color: @ui-light;
+}
+#config-panel .panel-body {
+  padding:0;
+}
+#config-panel .form-control{
+  border-radius: 0;
+  margin-top:6px;
+}
+#config-panel .variable-display {
+  margin:12px;
+  border-bottom:1px solid @ui-light;
+}
+#config-panel .variable-display:last-child {
+  border-bottom:none;
+  margin-bottom:0;
+}
+.help-icon {
+  color:@brand-primary;
+  cursor:help;
+  margin:2px 0 0 3px;
+//  display:inline-block;
+  float:right;
+}
+#config-panel .popover {
+  min-width: 164px;
+//  max-width: 100% !important;
+}
