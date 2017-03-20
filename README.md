@@ -1,2 +1,2 @@
-# cs50-builder
-Final Bootstrap builder with Python on server side
+# cs50-builder: Final project for CS50x
+A web-based application for designing and configuring Bootstrap themes
