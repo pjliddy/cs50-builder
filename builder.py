@@ -36,8 +36,8 @@ def initApp(app):
   global currentTheme
   currentTheme = None
 
-  print "## MAIN "
-  print currentTheme
+#  print "## MAIN "
+#  print currentTheme
 initApp(app)
 
 
@@ -61,8 +61,8 @@ def init():
   global currentTheme
   currentTheme = getDefaultTheme()
 
-  print "## INIT CURRENTTHEME"
-  print currentTheme
+#  print "## INIT CURRENTTHEME"
+#  print currentTheme
 
   return render_template("index.html", vars=currentTheme, messages=getHelpText(), category="layout")
 
@@ -80,9 +80,9 @@ def category():
 
 #   = flask.g.get('user', None)
 
-  print "## CATEGORY"
-  print request.args.get("c")
-  print currentTheme
+#  print "## CATEGORY"
+#  print request.args.get("c")
+#  print currentTheme
 
   return render_template("index.html", vars=currentTheme, messages=getHelpText(), category=request.args.get("c"))
 
