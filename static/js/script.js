@@ -3,20 +3,26 @@
 $(function () {
   // create application UI event listeners
   $('#category-select a').click(selectCategory);
-//  $('[data-toggle="tooltip"]').tooltip();
   $('[data-toggle="popover"]').popover({
       container:'#config-panel'
     });
-  $('.variable-display input').blur(updateVar);
+  $('#config-panel input').change(updateVar);
+  //  $('#config-panel input').submit(function(e){ e.preventDefault(); updateVar();});
+
 });
 
 function selectCategory( evt ){
   var category = $(this).data("value");
-  console.log("/category?c=" + category);
+//  console.log("/category?c=" + category);
   window.location.replace("/category?c=" + category);
 };
 
 function updateVar( evt ) {
-  var newVal = $(this).val();
-  console.log(newVal);
-}
+  varName = $(this).closest(".variable-display").attr("id");
+  varValue = $(this).val();
+  message = {};
+  message['@' + varName] = varValue;
+
+  iframe = document.getElementById('layout');
+  iframe.contentWindow.postMessage(message, '*');    
+};

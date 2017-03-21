@@ -1,0 +1,135 @@
+// out: ../css/builder-styles.css
+
+@import "variables.less";
+
+@ui-dark: @brand-primary;
+@ui-light: lighten(@brand-primary, 40%);
+
+body,
+html {
+  height: 100%;
+//  position: relative;
+}
+header {
+  position:relative;
+  top:72px;
+}
+.navbar {
+  margin: 0;
+}
+.application {
+  height: 100%;
+  margin-top: 50px;
+  padding: 0;
+  margin: 0;
+  position:relative;
+//  width: 100%; 
+//  margin-right:232px;
+//  top:0;
+//  overflow: auto;
+//  background: #ffffff;
+//  min-width: 320px;
+}
+#layout {
+  float: left;
+  height: 100%;
+  width: 100%;
+  padding-right: 232px;
+  padding-bottom: 85px;
+  top:51px;
+  position:fixed;
+  border:none;
+//  width: calc(100%);
+//  width: calc(100%);
+//  -webkit-width: calc(100% - 232px);
+//  -moz-width: calc(100% - 232px);
+  
+//  height: calc(100% - 84px);
+//  overflow-y: auto;
+//  top: 50px;
+//  margin-bottom: 34px;
+//  border:none;
+}
+#config-panel {
+  background-color: #eee;
+  float:right;
+  overflow: auto;
+  width: 232px;
+  height:100%;
+  top:51px;
+  position:fixed;
+  right:0;
+  border-left:1px solid @gray-light;
+  padding: 0 0 85px 0;
+}
+footer {
+  background: black;
+  color: #9d9d9d;
+  font-size: 10px;
+  padding: 10px;
+}
+//.application {
+//  position:relative;
+//  top: 25px;
+////  height: -webkit-calc(100% - 34px);
+//  width: 100%;
+//  border: none;
+//  margin-bottom: 0;
+//  padding-bottom: 30px;
+//  //  bottom: 34px;
+////  margin:0 15px;
+//}
+
+.category-title {
+  text-transform: capitalize;
+  display:block;
+  padding:12px 12px 12px 12px;
+  margin:0;
+}
+#config-panel .panel,
+#config-panel .panel-heading{
+  border: none;
+  border-radius:0;
+  margin-bottom:0;
+  box-shadow:none;
+}
+#config-panel .panel-heading {
+  text-transform: capitalize;
+  cursor: pointer;
+  text-decoration: none !important;
+  border-bottom: 1px solid white;
+}
+.panel-outer .panel-heading {
+  color:white;
+  background-color: @ui-dark;
+}
+.panel-inner .panel-heading {
+  color:@ui-dark;
+  background-color: @ui-light;
+}
+#config-panel .panel-body {
+  padding:0;
+}
+#config-panel .form-control{
+  border-radius: 0;
+  margin-top:6px;
+}
+#config-panel .variable-display {
+  margin:12px;
+  border-bottom:1px solid @ui-light;
+}
+#config-panel .variable-display:last-child {
+  border-bottom:none;
+  margin-bottom:0;
+}
+.help-icon {
+  color:@brand-primary;
+  cursor:help;
+  margin:2px 0 0 3px;
+//  display:inline-block;
+  float:right;
+}
+#config-panel .popover {
+  min-width: 164px;
+//  max-width: 100% !important;
+}
