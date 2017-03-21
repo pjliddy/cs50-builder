@@ -90,6 +90,14 @@ def update():
       var['output'] = val
   
   return json.dumps({'status':'OK'});
+ 
+
+@app.route("/getvars", methods=["POST"])
+@login_required
+def getvars():
+  global currentTheme
+  return jsonify(currentTheme)
+
   
 #
 # @app.route("/register") = register(): new user account creation

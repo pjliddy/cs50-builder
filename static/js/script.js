@@ -6,9 +6,8 @@ $(function () {
   $('[data-toggle="popover"]').popover({
       container:'#config-panel'
     });
+  
   $('#config-panel input').change(updateVar);
-  //  $('#config-panel input').submit(function(e){ e.preventDefault(); updateVar();});
-
 });
 
 function selectCategory( evt ){
@@ -38,9 +37,12 @@ function updateVar( evt ) {
           console.log(error);
       }
   });
-  
 
+//  // send message to iframe for update
+//  iframe = document.getElementById('layout');
+//  iframe.contentWindow.postMessage(message, '*');   
+  
   // send message to iframe for update
   iframe = document.getElementById('layout');
-  iframe.contentWindow.postMessage(message, '*');    
+  iframe.contentWindow.postMessage("updateVars", '*');
 };
