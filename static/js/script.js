@@ -13,16 +13,34 @@ $(function () {
 
 function selectCategory( evt ){
   var category = $(this).data("value");
-//  console.log("/category?c=" + category);
+  
+  // should be refreshing page (through flask), not reloading
+  
   window.location.replace("/category?c=" + category);
 };
 
 function updateVar( evt ) {
   varName = $(this).closest(".variable-display").attr("id");
   varValue = $(this).val();
-  message = {};
-  message['@' + varName] = varValue;
+  message = {
+    [varName]: varValue
+  };
+  
+  // update theme data
+  $.ajax({
+      url: '/update',
+      data: message,
+      type: 'POST',
+      success: function(response) {
+          console.log(response);
+      },
+      error: function(error) {
+          console.log(error);
+      }
+  });
+  
 
+  // send message to iframe for update
   iframe = document.getElementById('layout');
   iframe.contentWindow.postMessage(message, '*');    
 };

@@ -4,11 +4,10 @@
 
 @ui-dark: @brand-primary;
 @ui-light: lighten(@brand-primary, 40%);
-
+  
 body,
 html {
   height: 100%;
-//  position: relative;
 }
 header {
   position:relative;
@@ -21,14 +20,13 @@ header {
   height: 100%;
   margin-top: 50px;
   padding: 0;
-  margin: 0;
-  position:relative;
-//  width: 100%; 
-//  margin-right:232px;
-//  top:0;
-//  overflow: auto;
-//  background: #ffffff;
-//  min-width: 320px;
+  margin: 0 auto;
+  top:51px;
+  position:absolute;
+  width:100%;
+}
+.wrapper {
+  margin-top:30px;
 }
 #layout {
   float: left;
@@ -36,19 +34,20 @@ header {
   width: 100%;
   padding-right: 232px;
   padding-bottom: 85px;
-  top:51px;
   position:fixed;
   border:none;
-//  width: calc(100%);
-//  width: calc(100%);
-//  -webkit-width: calc(100% - 232px);
-//  -moz-width: calc(100% - 232px);
-  
-//  height: calc(100% - 84px);
-//  overflow-y: auto;
-//  top: 50px;
-//  margin-bottom: 34px;
-//  border:none;
+}
+.export {
+  height:100%;
+  margin:30px auto 84px;
+//  margin:30px auto;
+//  overflow-y:auto;
+//  border:1px solid @gray;
+  padding:15px 15px 45px 15px;
+//  position:absolute;
+}
+.export p{
+  font-family: @font-family-monospace;
 }
 #config-panel {
   background-color: #eee;
@@ -56,7 +55,7 @@ header {
   overflow: auto;
   width: 232px;
   height:100%;
-  top:51px;
+//  top:51px;
   position:fixed;
   right:0;
   border-left:1px solid @gray-light;
@@ -68,18 +67,6 @@ footer {
   font-size: 10px;
   padding: 10px;
 }
-//.application {
-//  position:relative;
-//  top: 25px;
-////  height: -webkit-calc(100% - 34px);
-//  width: 100%;
-//  border: none;
-//  margin-bottom: 0;
-//  padding-bottom: 30px;
-//  //  bottom: 34px;
-////  margin:0 15px;
-//}
-
 .category-title {
   text-transform: capitalize;
   display:block;
@@ -126,10 +113,8 @@ footer {
   color:@brand-primary;
   cursor:help;
   margin:2px 0 0 3px;
-//  display:inline-block;
   float:right;
 }
 #config-panel .popover {
-  min-width: 164px;
-//  max-width: 100% !important;
+  max-width: 75% !important;
 }

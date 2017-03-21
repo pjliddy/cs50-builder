@@ -70,19 +70,36 @@ def defaultThemeId():
 #
 
 def getDefaultTheme():
-  themeVars = getThemeVars(defaultThemeId())
-  for var in themeVars:
+  theme = getTheme(defaultThemeId())
+  
+  for var in theme:
     helptext = query_db('SELECT message FROM helptext WHERE var_name = ?',(var['name'],))[0]['message']
     var['message'] = helptext
 
-  return themeVars
+  return theme
 
 #
 # getThemeVars(): returns all variables for a specified theme
 #
 
-def getThemeVars(themeId):
-  return query_db('SELECT * FROM variables WHERE theme_id = ?',(themeId,))
+def getTheme(themeId):
+  data = query_db('SELECT * FROM variables WHERE theme_id = ?',(themeId,))
+  
+  theme = [ ]
+  
+  for row in data:
+    varObj = { }
+    varObj['name'] = row['name']
+    varObj['output'] = row['output']
+    varObj['type'] = row['type']
+    varObj['category'] = row['category']
+    varObj['section'] = row['section']
+    varObj['subsection'] = row['subsection']
+    varObj['theme_id'] = row['theme_id']
+
+    theme.append(varObj)
+  
+  return theme
 
 #
 # getHelpText(): returns helper text messages for variables in config ui
@@ -90,4 +107,14 @@ def getThemeVars(themeId):
 
 def getHelpText():
   return query_db('SELECT * FROM helptext')
+
+#
+# redirect_url(): utility from flask documentation
+#
+
+def redirect_url(default='index'):
+#  test = request.args.get('last') or request.referrer or url_for(default)
+  test = request.referrer
+  print test
+  return test
 

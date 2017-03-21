@@ -29,7 +29,7 @@
             <div class="collapse navbar-collapse" id="navbar">
               {% if session.user_id %}
                 <ul class="nav navbar-nav">
-                  <li><a href="{{ url_for('init') }}">Initialize</a></li>
+                  <li><a href="{{ url_for('initTheme') }}">Initialize</a></li>
                   <li><a href="{{ url_for('export') }}">Export</a></li>
 
                   <li class="dropdown">
@@ -76,12 +76,14 @@
     {% endblock %}
     
     <footer class="navbar-fixed-bottom">
-      &copy; 2017 Patrick Liddy
+      &copy; 2017 Patrick Liddy — MVP 1
     </footer>
   </div>
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+  <script>less = {env: "development"};</script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.7.2/less.js"></script>
   <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>

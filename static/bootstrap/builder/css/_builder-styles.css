@@ -14,13 +14,8 @@ header {
   height: 100%;
   margin-top: 50px;
   padding: 0;
-  margin: 0 auto;
-  top: 51px;
-  position: absolute;
-  width: 100%;
-}
-.wrapper {
-  margin-top: 30px;
+  margin: 0;
+  position: relative;
 }
 #layout {
   float: left;
@@ -28,16 +23,9 @@ header {
   width: 100%;
   padding-right: 232px;
   padding-bottom: 85px;
+  top: 51px;
   position: fixed;
   border: none;
-}
-.export {
-  height: 100%;
-  margin: 30px auto 84px;
-  padding: 15px 15px 45px 15px;
-}
-.export p {
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 #config-panel {
   background-color: #eee;
@@ -45,6 +33,7 @@ header {
   overflow: auto;
   width: 232px;
   height: 100%;
+  top: 51px;
   position: fixed;
   right: 0;
   border-left: 1px solid #777777;
@@ -106,4 +95,8 @@ footer {
 }
 #config-panel .popover {
   max-width: 75% !important;
+  background-color: #ffff88;
+}
+#config-panel .arrow {
+  border-right-color: #ffff88 !important;
 }

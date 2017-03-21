@@ -1,0 +1,3484 @@
+[{
+  'category': u 'layout'
+  , 'name': u 'screen-xs'
+  , 'section': u 'breakpoints'
+  , 'subsection': u ''
+  , 'theme_id': 1
+  , 'output': u '480px'
+  , 'type': u 'size'
+  , 'id': 1
+}, {
+  'category': u 'layout'
+  , 'name': u 'screen-xs-min'
+  , 'section': u 'breakpoints'
+  , 'subsection': u ''
+  , 'theme_id': 1
+  , 'output': u '@screen-xs'
+  , 'type': u 'size'
+  , 'id': 2
+}, {
+  'category': u 'layout'
+  , 'name': u 'screen-phone'
+  , 'section': u 'breakpoints'
+  , 'subsection': u ''
+  , 'theme_id': 1
+  , 'output': u '@screen-xs-min'
+  , 'type': u 'size'
+  , 'id': 3
+}, {
+  'category': u 'layout'
+  , 'name': u 'screen-sm'
+  , 'section': u 'breakpoints'
+  , 'subsection': u ''
+  , 'theme_id': 1
+  , 'output': u '768px'
+  , 'type': u 'size'
+  , 'id': 4
+}, {
+  'category': u 'layout'
+  , 'name': u 'screen-sm-min'
+  , 'section': u 'breakpoints'
+  , 'subsection': u ''
+  , 'theme_id': 1
+  , 'output': u '@screen-sm'
+  , 'type': u 'size'
+  , 'id': 5
+}, {
+  'category': u 'layout'
+  , 'name': u 'screen-tablet'
+  , 'section': u 'breakpoints'
+  , 'subsection': u ''
+  , 'theme_id': 1
+  , 'output': u '@screen-sm-min'
+  , 'type': u 'size'
+  , 'id': 6
+}, {
+  'category': u 'layout'
+  , 'name': u 'screen-md'
+  , 'section': u 'breakpoints'
+  , 'subsection': u ''
+  , 'theme_id': 1
+  , 'output': u '992px'
+  , 'type': u 'size'
+  , 'id': 7
+}, {
+  'category': u 'layout'
+  , 'name': u 'screen-md-min'
+  , 'section': u 'breakpoints'
+  , 'subsection': u ''
+  , 'theme_id': 1
+  , 'output': u '@screen-md'
+  , 'type': u 'size'
+  , 'id': 8
+}, {
+  'category': u 'layout'
+  , 'name': u 'screen-desktop'
+  , 'section': u 'breakpoints'
+  , 'subsection': u ''
+  , 'theme_id': 1
+  , 'output': u '@screen-md-min'
+  , 'type': u 'size'
+  , 'id': 9
+}, {
+  'category': u 'layout'
+  , 'name': u 'screen-lg'
+  , 'section': u 'breakpoints'
+  , 'subsection': u ''
+  , 'theme_id': 1
+  , 'output': u '1200px'
+  , 'type': u 'size'
+  , 'id': 10
+}, {
+  'category': u 'layout'
+  , 'name': u 'screen-lg-min'
+  , 'section': u 'breakpoints'
+  , 'subsection': u ''
+  , 'theme_id': 1
+  , 'output': u '@screen-lg'
+  , 'type': u 'size'
+  , 'id': 11
+}, {
+  'category': u 'layout'
+  , 'name': u 'screen-lg-desktop'
+  , 'section': u 'breakpoints'
+  , 'subsection': u ''
+  , 'theme_id': 1
+  , 'output': u '@screen-lg-min'
+  , 'type': u 'size'
+  , 'id': 12
+}, {
+  'category': u 'layout'
+  , 'name': u 'screen-xs-max'
+  , 'section': u 'breakpoints'
+  , 'subsection': u ''
+  , 'theme_id': 1
+  , 'output': u '(@screen-sm-min - 1)'
+  , 'type': u 'size'
+  , 'id': 13
+}, {
+  'category': u 'layout'
+  , 'name': u 'screen-sm-max'
+  , 'section': u 'breakpoints'
+  , 'subsection': u ''
+  , 'theme_id': 1
+  , 'output': u '(@screen-md-min - 1)'
+  , 'type': u 'size'
+  , 'id': 14
+}, {
+  'category': u 'layout'
+  , 'name': u 'screen-md-max'
+  , 'section': u 'breakpoints'
+  , 'subsection': u ''
+  , 'theme_id': 1
+  , 'output': u '(@screen-lg-min - 1)'
+  , 'type': u 'size'
+  , 'id': 15
+}, {
+  'category': u 'layout'
+  , 'name': u 'grid-columns'
+  , 'section': u 'grid-system'
+  , 'subsection': u ''
+  , 'theme_id': 1
+  , 'output': u '12'
+  , 'type': u 'number'
+  , 'id': 16
+}, {
+  'category': u 'layout'
+  , 'name': u 'grid-gutter-width'
+  , 'section': u 'grid-system'
+  , 'subsection': u ''
+  , 'theme_id': 1
+  , 'output': u '30px'
+  , 'type': u 'size'
+  , 'id': 17
+}, {
+  'category': u 'layout'
+  , 'name': u 'grid-float-breakpoint'
+  , 'section': u 'grid-system'
+  , 'subsection': u ''
+  , 'theme_id': 1
+  , 'output': u '@screen-sm-min'
+  , 'type': u 'size'
+  , 'id': 18
+}, {
+  'category': u 'layout'
+  , 'name': u 'grid-float-breakpoint-max'
+  , 'section': u 'grid-system'
+  , 'subsection': u ''
+  , 'theme_id': 1
+  , 'output': u '(@grid-float-breakpoint - 1)'
+  , 'type': u 'size'
+  , 'id': 19
+}, {
+  'category': u 'layout'
+  , 'name': u 'container-tablet'
+  , 'section': u 'container-sizes'
+  , 'subsection': u ''
+  , 'theme_id': 1
+  , 'output': u '(720px + @grid-gutter-width)'
+  , 'type': u 'size'
+  , 'id': 20
+}, {
+  'category': u 'layout'
+  , 'name': u 'container-sm'
+  , 'section': u 'container-sizes'
+  , 'subsection': u ''
+  , 'theme_id': 1
+  , 'output': u '@container-tablet'
+  , 'type': u 'size'
+  , 'id': 21
+}, {
+  'category': u 'layout'
+  , 'name': u 'container-desktop'
+  , 'section': u 'container-sizes'
+  , 'subsection': u ''
+  , 'theme_id': 1
+  , 'output': u '(940px + @grid-gutter-width)'
+  , 'type': u 'size'
+  , 'id': 22
+}, {
+  'category': u 'layout'
+  , 'name': u 'container-md'
+  , 'section': u 'container-sizes'
+  , 'subsection': u ''
+  , 'theme_id': 1
+  , 'output': u '@container-desktop'
+  , 'type': u 'size'
+  , 'id': 23
+}, {
+  'category': u 'layout'
+  , 'name': u 'container-large-desktop'
+  , 'section': u 'container-sizes'
+  , 'subsection': u ''
+  , 'theme_id': 1
+  , 'output': u '(1140px + @grid-gutter-width)'
+  , 'type': u 'size'
+  , 'id': 24
+}, {
+  'category': u 'layout'
+  , 'name': u 'container-lg'
+  , 'section': u 'container-sizes'
+  , 'subsection': u ''
+  , 'theme_id': 1
+  , 'output': u '@container-large-desktop'
+  , 'type': u 'size'
+  , 'id': 25
+}, {
+  'category': u 'core'
+  , 'name': u 'gray-base'
+  , 'section': u 'colors'
+  , 'subsection': u 'grays'
+  , 'theme_id': 1
+  , 'output': u '#000'
+  , 'type': u 'color'
+  , 'id': 26
+}, {
+  'category': u 'core'
+  , 'name': u 'gray-darker'
+  , 'section': u 'colors'
+  , 'subsection': u 'grays'
+  , 'theme_id': 1
+  , 'output': u 'lighten(@gray-base, 13.5%)'
+  , 'type': u 'color'
+  , 'id': 27
+}, {
+  'category': u 'core'
+  , 'name': u 'gray-dark'
+  , 'section': u 'colors'
+  , 'subsection': u 'grays'
+  , 'theme_id': 1
+  , 'output': u 'lighten(@gray-base, 20%)'
+  , 'type': u 'color'
+  , 'id': 28
+}, {
+  'category': u 'core'
+  , 'name': u 'gray'
+  , 'section': u 'colors'
+  , 'subsection': u 'grays'
+  , 'theme_id': 1
+  , 'output': u 'lighten(@gray-base, 33.5%)'
+  , 'type': u 'color'
+  , 'id': 29
+}, {
+  'category': u 'core'
+  , 'name': u 'gray-light'
+  , 'section': u 'colors'
+  , 'subsection': u 'grays'
+  , 'theme_id': 1
+  , 'output': u 'lighten(@gray-base, 46.7%)'
+  , 'type': u 'color'
+  , 'id': 30
+}, {
+  'category': u 'core'
+  , 'name': u 'gray-lighter'
+  , 'section': u 'colors'
+  , 'subsection': u 'grays'
+  , 'theme_id': 1
+  , 'output': u 'lighten(@gray-base, 93.5%)'
+  , 'type': u 'color'
+  , 'id': 31
+}, {
+  'category': u 'core'
+  , 'name': u 'brand-primary'
+  , 'section': u 'colors'
+  , 'subsection': u 'brand-colors'
+  , 'theme_id': 1
+  , 'output': u 'darken(#428bca, 6.5%)'
+  , 'type': u 'color'
+  , 'id': 32
+}, {
+  'category': u 'core'
+  , 'name': u 'brand-success'
+  , 'section': u 'colors'
+  , 'subsection': u 'brand-colors'
+  , 'theme_id': 1
+  , 'output': u '#5cb85c'
+  , 'type': u 'color'
+  , 'id': 33
+}, {
+  'category': u 'core'
+  , 'name': u 'brand-info'
+  , 'section': u 'colors'
+  , 'subsection': u 'brand-colors'
+  , 'theme_id': 1
+  , 'output': u '#5bc0de'
+  , 'type': u 'color'
+  , 'id': 34
+}, {
+  'category': u 'core'
+  , 'name': u 'brand-warning'
+  , 'section': u 'colors'
+  , 'subsection': u 'brand-colors'
+  , 'theme_id': 1
+  , 'output': u '#f0ad4e'
+  , 'type': u 'color'
+  , 'id': 35
+}, {
+  'category': u 'core'
+  , 'name': u 'brand-danger'
+  , 'section': u 'colors'
+  , 'subsection': u 'brand-colors'
+  , 'theme_id': 1
+  , 'output': u '#d9534f'
+  , 'type': u 'color'
+  , 'id': 36
+}, {
+  'category': u 'core'
+  , 'name': u 'body-bg'
+  , 'section': u 'colors'
+  , 'subsection': u 'scaffolding'
+  , 'theme_id': 1
+  , 'output': u '#fff'
+  , 'type': u 'color'
+  , 'id': 37
+}, {
+  'category': u 'core'
+  , 'name': u 'text-color'
+  , 'section': u 'colors'
+  , 'subsection': u 'scaffolding'
+  , 'theme_id': 1
+  , 'output': u '@gray-dark'
+  , 'type': u 'color'
+  , 'id': 38
+}, {
+  'category': u 'core'
+  , 'name': u 'link-color'
+  , 'section': u 'colors'
+  , 'subsection': u 'links'
+  , 'theme_id': 1
+  , 'output': u '@brand-primary'
+  , 'type': u 'color'
+  , 'id': 39
+}, {
+  'category': u 'core'
+  , 'name': u 'link-hover-color'
+  , 'section': u 'colors'
+  , 'subsection': u 'links'
+  , 'theme_id': 1
+  , 'output': u 'darken(@link-color, 15%)'
+  , 'type': u 'color'
+  , 'id': 40
+}, {
+  'category': u 'core'
+  , 'name': u 'link-hover-decoration'
+  , 'section': u 'colors'
+  , 'subsection': u 'links'
+  , 'theme_id': 1
+  , 'output': u 'underline'
+  , 'type': u 'attribute'
+  , 'id': 41
+}, {
+  'category': u 'core'
+  , 'name': u 'font-family-sans-serif'
+  , 'section': u 'typography'
+  , 'subsection': u 'font-family'
+  , 'theme_id': 1
+  , 'output': u '"Helvetica Neue", Helvetica, Arial, sans-serif'
+  , 'type': u 'font-family'
+  , 'id': 42
+}, {
+  'category': u 'core'
+  , 'name': u 'font-family-serif'
+  , 'section': u 'typography'
+  , 'subsection': u 'font-family'
+  , 'theme_id': 1
+  , 'output': u 'Georgia, "Times New Roman", Times, serif'
+  , 'type': u 'font-family'
+  , 'id': 43
+}, {
+  'category': u 'core'
+  , 'name': u 'font-family-monospace'
+  , 'section': u 'typography'
+  , 'subsection': u 'font-family'
+  , 'theme_id': 1
+  , 'output': u 'Menlo, Monaco, Consolas, "Courier New", monospace'
+  , 'type': u 'font-family'
+  , 'id': 44
+}, {
+  'category': u 'core'
+  , 'name': u 'font-family-base'
+  , 'section': u 'typography'
+  , 'subsection': u 'font-family'
+  , 'theme_id': 1
+  , 'output': u '@font-family-sans-serif'
+  , 'type': u 'font-family'
+  , 'id': 45
+}, {
+  'category': u 'core'
+  , 'name': u 'font-size-base'
+  , 'section': u 'typography'
+  , 'subsection': u 'font-size'
+  , 'theme_id': 1
+  , 'output': u '14px'
+  , 'type': u 'size'
+  , 'id': 46
+}, {
+  'category': u 'core'
+  , 'name': u 'font-size-large'
+  , 'section': u 'typography'
+  , 'subsection': u 'font-size'
+  , 'theme_id': 1
+  , 'output': u 'ceil((@font-size-base * 1.25))'
+  , 'type': u 'size'
+  , 'id': 47
+}, {
+  'category': u 'core'
+  , 'name': u 'font-size-small'
+  , 'section': u 'typography'
+  , 'subsection': u 'font-size'
+  , 'theme_id': 1
+  , 'output': u 'ceil((@font-size-base * 0.85))'
+  , 'type': u 'size'
+  , 'id': 48
+}, {
+  'category': u 'core'
+  , 'name': u 'font-size-h1'
+  , 'section': u 'typography'
+  , 'subsection': u 'font-size'
+  , 'theme_id': 1
+  , 'output': u 'floor((@font-size-base * 2.6))'
+  , 'type': u 'size'
+  , 'id': 49
+}, {
+  'category': u 'core'
+  , 'name': u 'font-size-h2'
+  , 'section': u 'typography'
+  , 'subsection': u 'font-size'
+  , 'theme_id': 1
+  , 'output': u 'floor((@font-size-base * 2.15))'
+  , 'type': u 'size'
+  , 'id': 50
+}, {
+  'category': u 'core'
+  , 'name': u 'font-size-h3'
+  , 'section': u 'typography'
+  , 'subsection': u 'font-size'
+  , 'theme_id': 1
+  , 'output': u 'ceil((@font-size-base * 1.7))'
+  , 'type': u 'size'
+  , 'id': 51
+}, {
+  'category': u 'core'
+  , 'name': u 'font-size-h4'
+  , 'section': u 'typography'
+  , 'subsection': u 'font-size'
+  , 'theme_id': 1
+  , 'output': u 'ceil((@font-size-base * 1.25))'
+  , 'type': u 'size'
+  , 'id': 52
+}, {
+  'category': u 'core'
+  , 'name': u 'font-size-h5'
+  , 'section': u 'typography'
+  , 'subsection': u 'font-size'
+  , 'theme_id': 1
+  , 'output': u '@font-size-base'
+  , 'type': u 'size'
+  , 'id': 53
+}, {
+  'category': u 'core'
+  , 'name': u 'font-size-h6'
+  , 'section': u 'typography'
+  , 'subsection': u 'font-size'
+  , 'theme_id': 1
+  , 'output': u 'ceil((@font-size-base * 0.85))'
+  , 'type': u 'size'
+  , 'id': 54
+}, {
+  'category': u 'core'
+  , 'name': u 'line-height-base'
+  , 'section': u 'typography'
+  , 'subsection': u 'line-height'
+  , 'theme_id': 1
+  , 'output': u '1.428571429'
+  , 'type': u 'line-height'
+  , 'id': 55
+}, {
+  'category': u 'core'
+  , 'name': u 'line-height-computed'
+  , 'section': u 'typography'
+  , 'subsection': u 'line-height'
+  , 'theme_id': 1
+  , 'output': u 'floor((@font-size-base * @line-height-base))'
+  , 'type': u 'line-height'
+  , 'id': 56
+}, {
+  'category': u 'core'
+  , 'name': u 'line-height-large'
+  , 'section': u 'typography'
+  , 'subsection': u 'line-height'
+  , 'theme_id': 1
+  , 'output': u '1.3333333'
+  , 'type': u 'line-height'
+  , 'id': 57
+}, {
+  'category': u 'core'
+  , 'name': u 'line-height-small'
+  , 'section': u 'typography'
+  , 'subsection': u 'line-height'
+  , 'theme_id': 1
+  , 'output': u '1.5'
+  , 'type': u 'line-height'
+  , 'id': 58
+}, {
+  'category': u 'core'
+  , 'name': u 'headings-font-family'
+  , 'section': u 'typography'
+  , 'subsection': u 'headings'
+  , 'theme_id': 1
+  , 'output': u 'inherit'
+  , 'type': u 'font-family'
+  , 'id': 59
+}, {
+  'category': u 'core'
+  , 'name': u 'headings-font-weight'
+  , 'section': u 'typography'
+  , 'subsection': u 'headings'
+  , 'theme_id': 1
+  , 'output': u '500'
+  , 'type': u 'font-weight'
+  , 'id': 60
+}, {
+  'category': u 'core'
+  , 'name': u 'headings-line-height'
+  , 'section': u 'typography'
+  , 'subsection': u 'headings'
+  , 'theme_id': 1
+  , 'output': u '1.1'
+  , 'type': u 'line-height'
+  , 'id': 61
+}, {
+  'category': u 'core'
+  , 'name': u 'headings-color'
+  , 'section': u 'typography'
+  , 'subsection': u 'headings'
+  , 'theme_id': 1
+  , 'output': u 'inherit'
+  , 'type': u 'color'
+  , 'id': 62
+}, {
+  'category': u 'core'
+  , 'name': u 'icon-font-path'
+  , 'section': u 'typography'
+  , 'subsection': u 'glyphicons'
+  , 'theme_id': 1
+  , 'output': u '"../fonts/"'
+  , 'type': u 'string'
+  , 'id': 63
+}, {
+  'category': u 'core'
+  , 'name': u 'icon-font-name'
+  , 'section': u 'typography'
+  , 'subsection': u 'glyphicons'
+  , 'theme_id': 1
+  , 'output': u '"glyphicons-halflings-regular"'
+  , 'type': u 'string'
+  , 'id': 64
+}, {
+  'category': u 'core'
+  , 'name': u 'icon-font-svg-id'
+  , 'section': u 'typography'
+  , 'subsection': u 'glyphicons'
+  , 'theme_id': 1
+  , 'output': u '"glyphicons_halflingsregular"'
+  , 'type': u 'string'
+  , 'id': 65
+}, {
+  'category': u 'core'
+  , 'name': u 'padding-base-vertical'
+  , 'section': u 'components'
+  , 'subsection': u 'padding'
+  , 'theme_id': 1
+  , 'output': u '6px'
+  , 'type': u 'size'
+  , 'id': 66
+}, {
+  'category': u 'core'
+  , 'name': u 'padding-base-horizontal'
+  , 'section': u 'components'
+  , 'subsection': u 'padding'
+  , 'theme_id': 1
+  , 'output': u '12px'
+  , 'type': u 'size'
+  , 'id': 67
+}, {
+  'category': u 'core'
+  , 'name': u 'padding-large-vertical'
+  , 'section': u 'components'
+  , 'subsection': u 'padding'
+  , 'theme_id': 1
+  , 'output': u '10px'
+  , 'type': u 'size'
+  , 'id': 68
+}, {
+  'category': u 'core'
+  , 'name': u 'padding-large-horizontal'
+  , 'section': u 'components'
+  , 'subsection': u 'padding'
+  , 'theme_id': 1
+  , 'output': u '16px'
+  , 'type': u 'size'
+  , 'id': 69
+}, {
+  'category': u 'core'
+  , 'name': u 'padding-small-vertical'
+  , 'section': u 'components'
+  , 'subsection': u 'padding'
+  , 'theme_id': 1
+  , 'output': u '5px'
+  , 'type': u 'size'
+  , 'id': 70
+}, {
+  'category': u 'core'
+  , 'name': u 'padding-small-horizontal'
+  , 'section': u 'components'
+  , 'subsection': u 'padding'
+  , 'theme_id': 1
+  , 'output': u '10px'
+  , 'type': u 'size'
+  , 'id': 71
+}, {
+  'category': u 'core'
+  , 'name': u 'padding-xs-vertical'
+  , 'section': u 'components'
+  , 'subsection': u 'padding'
+  , 'theme_id': 1
+  , 'output': u '1px'
+  , 'type': u 'size'
+  , 'id': 72
+}, {
+  'category': u 'core'
+  , 'name': u 'padding-xs-horizontal'
+  , 'section': u 'components'
+  , 'subsection': u 'padding'
+  , 'theme_id': 1
+  , 'output': u '5px'
+  , 'type': u 'size'
+  , 'id': 73
+}, {
+  'category': u 'core'
+  , 'name': u 'border-radius-base'
+  , 'section': u 'components'
+  , 'subsection': u 'border-radius'
+  , 'theme_id': 1
+  , 'output': u '4px'
+  , 'type': u 'size'
+  , 'id': 74
+}, {
+  'category': u 'core'
+  , 'name': u 'border-radius-large'
+  , 'section': u 'components'
+  , 'subsection': u 'border-radius'
+  , 'theme_id': 1
+  , 'output': u '6px'
+  , 'type': u 'size'
+  , 'id': 75
+}, {
+  'category': u 'core'
+  , 'name': u 'border-radius-small'
+  , 'section': u 'components'
+  , 'subsection': u 'border-radius'
+  , 'theme_id': 1
+  , 'output': u '3px'
+  , 'type': u 'size'
+  , 'id': 76
+}, {
+  'category': u 'elements'
+  , 'name': u 'btn-font-weight'
+  , 'section': u 'buttons'
+  , 'subsection': u 'default-button'
+  , 'theme_id': 1
+  , 'output': u 'normal'
+  , 'type': u 'font-weight'
+  , 'id': 77
+}, {
+  'category': u 'elements'
+  , 'name': u 'btn-default-color'
+  , 'section': u 'buttons'
+  , 'subsection': u 'default-button'
+  , 'theme_id': 1
+  , 'output': u '#333'
+  , 'type': u 'color'
+  , 'id': 78
+}, {
+  'category': u 'elements'
+  , 'name': u 'btn-default-bg'
+  , 'section': u 'buttons'
+  , 'subsection': u 'default-button'
+  , 'theme_id': 1
+  , 'output': u '#fff'
+  , 'type': u 'color'
+  , 'id': 79
+}, {
+  'category': u 'elements'
+  , 'name': u 'btn-default-border'
+  , 'section': u 'buttons'
+  , 'subsection': u 'default-button'
+  , 'theme_id': 1
+  , 'output': u '#ccc'
+  , 'type': u 'color'
+  , 'id': 80
+}, {
+  'category': u 'elements'
+  , 'name': u 'btn-border-radius-base'
+  , 'section': u 'buttons'
+  , 'subsection': u 'default-button'
+  , 'theme_id': 1
+  , 'output': u '@border-radius-base'
+  , 'type': u 'size'
+  , 'id': 81
+}, {
+  'category': u 'elements'
+  , 'name': u 'btn-border-radius-large'
+  , 'section': u 'buttons'
+  , 'subsection': u 'default-button'
+  , 'theme_id': 1
+  , 'output': u '@border-radius-large'
+  , 'type': u 'size'
+  , 'id': 82
+}, {
+  'category': u 'elements'
+  , 'name': u 'btn-border-radius-small'
+  , 'section': u 'buttons'
+  , 'subsection': u 'default-button'
+  , 'theme_id': 1
+  , 'output': u '@border-radius-small'
+  , 'type': u 'size'
+  , 'id': 83
+}, {
+  'category': u 'elements'
+  , 'name': u 'btn-primary-color'
+  , 'section': u 'buttons'
+  , 'subsection': u 'primary-button'
+  , 'theme_id': 1
+  , 'output': u '#fff'
+  , 'type': u 'color'
+  , 'id': 84
+}, {
+  'category': u 'elements'
+  , 'name': u 'btn-primary-bg'
+  , 'section': u 'buttons'
+  , 'subsection': u 'primary-button'
+  , 'theme_id': 1
+  , 'output': u '@brand-primary'
+  , 'type': u 'color'
+  , 'id': 85
+}, {
+  'category': u 'elements'
+  , 'name': u 'btn-primary-border'
+  , 'section': u 'buttons'
+  , 'subsection': u 'primary-button'
+  , 'theme_id': 1
+  , 'output': u 'darken(@btn-primary-bg, 5%)'
+  , 'type': u 'color'
+  , 'id': 86
+}, {
+  'category': u 'elements'
+  , 'name': u 'btn-success-color'
+  , 'section': u 'buttons'
+  , 'subsection': u 'success-button'
+  , 'theme_id': 1
+  , 'output': u '#fff'
+  , 'type': u 'color'
+  , 'id': 87
+}, {
+  'category': u 'elements'
+  , 'name': u 'btn-success-bg'
+  , 'section': u 'buttons'
+  , 'subsection': u 'success-button'
+  , 'theme_id': 1
+  , 'output': u '@brand-success'
+  , 'type': u 'color'
+  , 'id': 88
+}, {
+  'category': u 'elements'
+  , 'name': u 'btn-success-border'
+  , 'section': u 'buttons'
+  , 'subsection': u 'success-button'
+  , 'theme_id': 1
+  , 'output': u 'darken(@btn-success-bg, 5%)'
+  , 'type': u 'color'
+  , 'id': 89
+}, {
+  'category': u 'elements'
+  , 'name': u 'btn-info-color'
+  , 'section': u 'buttons'
+  , 'subsection': u 'info-button'
+  , 'theme_id': 1
+  , 'output': u '#fff'
+  , 'type': u 'color'
+  , 'id': 90
+}, {
+  'category': u 'elements'
+  , 'name': u 'btn-info-bg'
+  , 'section': u 'buttons'
+  , 'subsection': u 'info-button'
+  , 'theme_id': 1
+  , 'output': u '@brand-info'
+  , 'type': u 'color'
+  , 'id': 91
+}, {
+  'category': u 'elements'
+  , 'name': u 'btn-info-border'
+  , 'section': u 'buttons'
+  , 'subsection': u 'info-button'
+  , 'theme_id': 1
+  , 'output': u 'darken(@btn-info-bg, 5%)'
+  , 'type': u 'color'
+  , 'id': 92
+}, {
+  'category': u 'elements'
+  , 'name': u 'btn-warning-color'
+  , 'section': u 'buttons'
+  , 'subsection': u 'warning-button'
+  , 'theme_id': 1
+  , 'output': u '#fff'
+  , 'type': u 'color'
+  , 'id': 93
+}, {
+  'category': u 'elements'
+  , 'name': u 'btn-warning-bg'
+  , 'section': u 'buttons'
+  , 'subsection': u 'warning-button'
+  , 'theme_id': 1
+  , 'output': u '@brand-warning'
+  , 'type': u 'color'
+  , 'id': 94
+}, {
+  'category': u 'elements'
+  , 'name': u 'btn-warning-border'
+  , 'section': u 'buttons'
+  , 'subsection': u 'warning-button'
+  , 'theme_id': 1
+  , 'output': u 'darken(@btn-warning-bg, 5%)'
+  , 'type': u 'color'
+  , 'id': 95
+}, {
+  'category': u 'elements'
+  , 'name': u 'btn-danger-color'
+  , 'section': u 'buttons'
+  , 'subsection': u 'danger-button'
+  , 'theme_id': 1
+  , 'output': u '#fff'
+  , 'type': u 'color'
+  , 'id': 96
+}, {
+  'category': u 'elements'
+  , 'name': u 'btn-danger-bg'
+  , 'section': u 'buttons'
+  , 'subsection': u 'danger-button'
+  , 'theme_id': 1
+  , 'output': u '@brand-danger'
+  , 'type': u 'color'
+  , 'id': 97
+}, {
+  'category': u 'elements'
+  , 'name': u 'btn-danger-border'
+  , 'section': u 'buttons'
+  , 'subsection': u 'danger-button'
+  , 'theme_id': 1
+  , 'output': u 'darken(@btn-danger-bg, 5%)'
+  , 'type': u 'color'
+  , 'id': 98
+}, {
+  'category': u 'elements'
+  , 'name': u 'btn-link-disabled-color'
+  , 'section': u 'buttons'
+  , 'subsection': u 'default-button'
+  , 'theme_id': 1
+  , 'output': u '@gray-light'
+  , 'type': u 'color'
+  , 'id': 99
+}, {
+  'category': u 'elements'
+  , 'name': u 'dropdown-bg'
+  , 'section': u 'dropdowns'
+  , 'subsection': u 'dropdown-elements'
+  , 'theme_id': 1
+  , 'output': u '#fff'
+  , 'type': u 'color'
+  , 'id': 100
+}, {
+  'category': u 'elements'
+  , 'name': u 'dropdown-border'
+  , 'section': u 'dropdowns'
+  , 'subsection': u 'dropdown-elements'
+  , 'theme_id': 1
+  , 'output': u 'rgba(0,0,0,.15)'
+  , 'type': u 'color'
+  , 'id': 101
+}, {
+  'category': u 'elements'
+  , 'name': u 'dropdown-fallback-border'
+  , 'section': u 'dropdowns'
+  , 'subsection': u 'dropdown-elements'
+  , 'theme_id': 1
+  , 'output': u '#ccc'
+  , 'type': u 'color'
+  , 'id': 102
+}, {
+  'category': u 'elements'
+  , 'name': u 'dropdown-divider-bg'
+  , 'section': u 'dropdowns'
+  , 'subsection': u 'dropdown-elements'
+  , 'theme_id': 1
+  , 'output': u '#e5e5e5'
+  , 'type': u 'color'
+  , 'id': 103
+}, {
+  'category': u 'elements'
+  , 'name': u 'dropdown-link-color'
+  , 'section': u 'dropdowns'
+  , 'subsection': u 'dropdown-links'
+  , 'theme_id': 1
+  , 'output': u '@gray-dark'
+  , 'type': u 'color'
+  , 'id': 104
+}, {
+  'category': u 'elements'
+  , 'name': u 'dropdown-link-hover-color'
+  , 'section': u 'dropdowns'
+  , 'subsection': u 'dropdown-links'
+  , 'theme_id': 1
+  , 'output': u 'darken(@gray-dark, 5%)'
+  , 'type': u 'color'
+  , 'id': 105
+}, {
+  'category': u 'elements'
+  , 'name': u 'dropdown-link-hover-bg'
+  , 'section': u 'dropdowns'
+  , 'subsection': u 'dropdown-links'
+  , 'theme_id': 1
+  , 'output': u '#f5f5f5'
+  , 'type': u 'color'
+  , 'id': 106
+}, {
+  'category': u 'elements'
+  , 'name': u 'dropdown-link-active-color'
+  , 'section': u 'dropdowns'
+  , 'subsection': u 'dropdown-links'
+  , 'theme_id': 1
+  , 'output': u '@component-active-color'
+  , 'type': u 'color'
+  , 'id': 107
+}, {
+  'category': u 'elements'
+  , 'name': u 'dropdown-link-active-bg'
+  , 'section': u 'dropdowns'
+  , 'subsection': u 'dropdown-links'
+  , 'theme_id': 1
+  , 'output': u '@component-active-bg'
+  , 'type': u 'color'
+  , 'id': 108
+}, {
+  'category': u 'elements'
+  , 'name': u 'dropdown-link-disabled-color'
+  , 'section': u 'dropdowns'
+  , 'subsection': u 'dropdown-links'
+  , 'theme_id': 1
+  , 'output': u '@gray-light'
+  , 'type': u 'color'
+  , 'id': 109
+}, {
+  'category': u 'elements'
+  , 'name': u 'dropdown-header-color'
+  , 'section': u 'dropdowns'
+  , 'subsection': u 'dropdown-elements'
+  , 'theme_id': 1
+  , 'output': u '@gray-light'
+  , 'type': u 'color'
+  , 'id': 110
+}, {
+  'category': u 'elements'
+  , 'name': u 'dropdown-caret-color'
+  , 'section': u 'dropdowns'
+  , 'subsection': u 'dropdown-elements'
+  , 'theme_id': 1
+  , 'output': u '#000'
+  , 'type': u 'color'
+  , 'id': 111
+}, {
+  'category': u 'elements'
+  , 'name': u 'component-active-color'
+  , 'section': u 'components'
+  , 'subsection': u 'active-components'
+  , 'theme_id': 1
+  , 'output': u '#fff'
+  , 'type': u 'color'
+  , 'id': 112
+}, {
+  'category': u 'elements'
+  , 'name': u 'component-active-bg'
+  , 'section': u 'components'
+  , 'subsection': u 'active-components'
+  , 'theme_id': 1
+  , 'output': u '@brand-primary'
+  , 'type': u 'color'
+  , 'id': 113
+}, {
+  'category': u 'elements'
+  , 'name': u 'caret-width-base'
+  , 'section': u 'components'
+  , 'subsection': u 'caret-size'
+  , 'theme_id': 1
+  , 'output': u '4px'
+  , 'type': u 'size'
+  , 'id': 114
+}, {
+  'category': u 'elements'
+  , 'name': u 'caret-width-large'
+  , 'section': u 'components'
+  , 'subsection': u 'caret-size'
+  , 'theme_id': 1
+  , 'output': u '5px'
+  , 'type': u 'size'
+  , 'id': 115
+}, {
+  'category': u 'elements'
+  , 'name': u 'thumbnail-padding'
+  , 'section': u 'thumbnails'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '4px'
+  , 'type': u 'size'
+  , 'id': 116
+}, {
+  'category': u 'elements'
+  , 'name': u 'thumbnail-bg'
+  , 'section': u 'thumbnails'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '@body-bg'
+  , 'type': u 'color'
+  , 'id': 117
+}, {
+  'category': u 'elements'
+  , 'name': u 'thumbnail-border'
+  , 'section': u 'thumbnails'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '#ddd'
+  , 'type': u 'color'
+  , 'id': 118
+}, {
+  'category': u 'elements'
+  , 'name': u 'thumbnail-border-radius'
+  , 'section': u 'thumbnails'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '@border-radius-base'
+  , 'type': u 'size'
+  , 'id': 119
+}, {
+  'category': u 'elements'
+  , 'name': u 'thumbnail-caption-color'
+  , 'section': u 'thumbnails'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '@text-color'
+  , 'type': u 'color'
+  , 'id': 120
+}, {
+  'category': u 'elements'
+  , 'name': u 'thumbnail-caption-padding'
+  , 'section': u 'thumbnails'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '9px'
+  , 'type': u 'size'
+  , 'id': 121
+}, {
+  'category': u 'elements'
+  , 'name': u 'component-offset-horizontal'
+  , 'section': u 'type'
+  , 'subsection': u 'type-components'
+  , 'theme_id': 1
+  , 'output': u '180px'
+  , 'type': u 'size'
+  , 'id': 122
+}, {
+  'category': u 'elements'
+  , 'name': u 'text-muted'
+  , 'section': u 'type'
+  , 'subsection': u 'type-components'
+  , 'theme_id': 1
+  , 'output': u '@gray-light'
+  , 'type': u 'color'
+  , 'id': 123
+}, {
+  'category': u 'elements'
+  , 'name': u 'abbr-border-color'
+  , 'section': u 'type'
+  , 'subsection': u 'type-components'
+  , 'theme_id': 1
+  , 'output': u '@gray-light'
+  , 'type': u 'color'
+  , 'id': 124
+}, {
+  'category': u 'elements'
+  , 'name': u 'headings-small-color'
+  , 'section': u 'type'
+  , 'subsection': u 'type-components'
+  , 'theme_id': 1
+  , 'output': u '@gray-light'
+  , 'type': u 'color'
+  , 'id': 125
+}, {
+  'category': u 'elements'
+  , 'name': u 'blockquote-small-color'
+  , 'section': u 'type'
+  , 'subsection': u 'blockquote'
+  , 'theme_id': 1
+  , 'output': u '@gray-light'
+  , 'type': u 'color'
+  , 'id': 126
+}, {
+  'category': u 'elements'
+  , 'name': u 'blockquote-font-size'
+  , 'section': u 'type'
+  , 'subsection': u 'blockquote'
+  , 'theme_id': 1
+  , 'output': u '(@font-size-base * 1.25)'
+  , 'type': u 'size-font'
+  , 'id': 127
+}, {
+  'category': u 'elements'
+  , 'name': u 'blockquote-border-color'
+  , 'section': u 'type'
+  , 'subsection': u 'blockquote'
+  , 'theme_id': 1
+  , 'output': u '@gray-lighter'
+  , 'type': u 'color'
+  , 'id': 128
+}, {
+  'category': u 'elements'
+  , 'name': u 'page-header-border-color'
+  , 'section': u 'type'
+  , 'subsection': u 'type-components'
+  , 'theme_id': 1
+  , 'output': u '@gray-lighter'
+  , 'type': u 'color'
+  , 'id': 129
+}, {
+  'category': u 'elements'
+  , 'name': u 'dl-horizontal-offset'
+  , 'section': u 'type'
+  , 'subsection': u 'description-list'
+  , 'theme_id': 1
+  , 'output': u '@component-offset-horizontal'
+  , 'type': u 'size'
+  , 'id': 130
+}, {
+  'category': u 'elements'
+  , 'name': u 'dl-horizontal-breakpoint'
+  , 'section': u 'type'
+  , 'subsection': u 'description-list'
+  , 'theme_id': 1
+  , 'output': u '@grid-float-breakpoint'
+  , 'type': u 'size'
+  , 'id': 131
+}, {
+  'category': u 'elements'
+  , 'name': u 'hr-border'
+  , 'section': u 'type'
+  , 'subsection': u 'type-components'
+  , 'theme_id': 1
+  , 'output': u '@gray-lighter'
+  , 'type': u 'color'
+  , 'id': 132
+}, {
+  'category': u 'elements'
+  , 'name': u 'code-color'
+  , 'section': u 'code'
+  , 'subsection': u 'inline-code'
+  , 'theme_id': 1
+  , 'output': u '#c7254e'
+  , 'type': u 'color'
+  , 'id': 133
+}, {
+  'category': u 'elements'
+  , 'name': u 'code-bg'
+  , 'section': u 'code'
+  , 'subsection': u 'inline-code'
+  , 'theme_id': 1
+  , 'output': u '#f9f2f4'
+  , 'type': u 'color'
+  , 'id': 134
+}, {
+  'category': u 'elements'
+  , 'name': u 'kbd-color'
+  , 'section': u 'code'
+  , 'subsection': u 'keyboard'
+  , 'theme_id': 1
+  , 'output': u '#fff'
+  , 'type': u 'color'
+  , 'id': 135
+}, {
+  'category': u 'elements'
+  , 'name': u 'kbd-bg'
+  , 'section': u 'code'
+  , 'subsection': u 'keyboard'
+  , 'theme_id': 1
+  , 'output': u '#333'
+  , 'type': u 'color'
+  , 'id': 136
+}, {
+  'category': u 'elements'
+  , 'name': u 'pre-bg'
+  , 'section': u 'code'
+  , 'subsection': u 'preformatted'
+  , 'theme_id': 1
+  , 'output': u '#f5f5f5'
+  , 'type': u 'color'
+  , 'id': 137
+}, {
+  'category': u 'elements'
+  , 'name': u 'pre-color'
+  , 'section': u 'code'
+  , 'subsection': u 'preformatted'
+  , 'theme_id': 1
+  , 'output': u '@gray-dark'
+  , 'type': u 'color'
+  , 'id': 138
+}, {
+  'category': u 'elements'
+  , 'name': u 'pre-border-color'
+  , 'section': u 'code'
+  , 'subsection': u 'preformatted'
+  , 'theme_id': 1
+  , 'output': u '#ccc'
+  , 'type': u 'color'
+  , 'id': 139
+}, {
+  'category': u 'elements'
+  , 'name': u 'pre-scrollable-max-height'
+  , 'section': u 'code'
+  , 'subsection': u 'preformatted'
+  , 'theme_id': 1
+  , 'output': u '340px'
+  , 'type': u 'size'
+  , 'id': 140
+}, {
+  'category': u 'tables-and-forms'
+  , 'name': u 'table-cell-padding'
+  , 'section': u 'tables'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '8px'
+  , 'type': u 'size'
+  , 'id': 141
+}, {
+  'category': u 'tables-and-forms'
+  , 'name': u 'table-condensed-cell-padding'
+  , 'section': u 'tables'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '5px'
+  , 'type': u 'size'
+  , 'id': 142
+}, {
+  'category': u 'tables-and-forms'
+  , 'name': u 'table-bg'
+  , 'section': u 'tables'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u 'transparent'
+  , 'type': u 'color'
+  , 'id': 143
+}, {
+  'category': u 'tables-and-forms'
+  , 'name': u 'table-bg-accent'
+  , 'section': u 'tables'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '#f9f9f9'
+  , 'type': u 'color'
+  , 'id': 144
+}, {
+  'category': u 'tables-and-forms'
+  , 'name': u 'table-bg-hover'
+  , 'section': u 'tables'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '#f5f5f5'
+  , 'type': u 'color'
+  , 'id': 145
+}, {
+  'category': u 'tables-and-forms'
+  , 'name': u 'table-bg-active'
+  , 'section': u 'tables'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '@table-bg-hover'
+  , 'type': u 'color'
+  , 'id': 146
+}, {
+  'category': u 'tables-and-forms'
+  , 'name': u 'table-border-color'
+  , 'section': u 'tables'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '#ddd'
+  , 'type': u 'color'
+  , 'id': 147
+}, {
+  'category': u 'tables-and-forms'
+  , 'name': u 'input-bg'
+  , 'section': u 'inputs'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '#fff'
+  , 'type': u 'color'
+  , 'id': 148
+}, {
+  'category': u 'tables-and-forms'
+  , 'name': u 'input-bg-disabled'
+  , 'section': u 'inputs'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '@gray-lighter'
+  , 'type': u 'color'
+  , 'id': 149
+}, {
+  'category': u 'tables-and-forms'
+  , 'name': u 'input-color'
+  , 'section': u 'inputs'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '@gray'
+  , 'type': u 'color'
+  , 'id': 150
+}, {
+  'category': u 'tables-and-forms'
+  , 'name': u 'input-border'
+  , 'section': u 'inputs'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '#ccc'
+  , 'type': u 'color'
+  , 'id': 151
+}, {
+  'category': u 'tables-and-forms'
+  , 'name': u 'input-border-radius'
+  , 'section': u 'inputs'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '@border-radius-base'
+  , 'type': u 'size'
+  , 'id': 152
+}, {
+  'category': u 'tables-and-forms'
+  , 'name': u 'input-border-radius-large'
+  , 'section': u 'inputs'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '@border-radius-large'
+  , 'type': u 'size'
+  , 'id': 153
+}, {
+  'category': u 'tables-and-forms'
+  , 'name': u 'input-border-radius-small'
+  , 'section': u 'inputs'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '@border-radius-small'
+  , 'type': u 'size'
+  , 'id': 154
+}, {
+  'category': u 'tables-and-forms'
+  , 'name': u 'input-border-focus'
+  , 'section': u 'inputs'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '#66afe9'
+  , 'type': u 'color'
+  , 'id': 155
+}, {
+  'category': u 'tables-and-forms'
+  , 'name': u 'input-color-placeholder'
+  , 'section': u 'inputs'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '#999'
+  , 'type': u 'color'
+  , 'id': 156
+}, {
+  'category': u 'tables-and-forms'
+  , 'name': u 'input-height-base'
+  , 'section': u 'inputs'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '(@line-height-computed + (@padding-base-vertical * 2) + 2)'
+  , 'type': u 'size'
+  , 'id': 157
+}, {
+  'category': u 'tables-and-forms'
+  , 'name': u 'input-height-large'
+  , 'section': u 'inputs'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '(ceil(@font-size-large * @line-height-large) + (@padding-large-vertical * 2) + 2)'
+  , 'type': u 'size'
+  , 'id': 158
+}, {
+  'category': u 'tables-and-forms'
+  , 'name': u 'input-height-small'
+  , 'section': u 'inputs'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '(floor(@font-size-small * @line-height-small) + (@padding-small-vertical * 2) + 2)'
+  , 'type': u 'size'
+  , 'id': 159
+}, {
+  'category': u 'tables-and-forms'
+  , 'name': u 'form-group-margin-bottom'
+  , 'section': u 'forms'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '15px'
+  , 'type': u 'size'
+  , 'id': 160
+}, {
+  'category': u 'tables-and-forms'
+  , 'name': u 'legend-color'
+  , 'section': u 'forms'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '@gray-dark'
+  , 'type': u 'color'
+  , 'id': 161
+}, {
+  'category': u 'tables-and-forms'
+  , 'name': u 'legend-border-color'
+  , 'section': u 'forms'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '#e5e5e5'
+  , 'type': u 'color'
+  , 'id': 162
+}, {
+  'category': u 'tables-and-forms'
+  , 'name': u 'input-group-addon-bg'
+  , 'section': u 'forms'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '@gray-lighter'
+  , 'type': u 'color'
+  , 'id': 163
+}, {
+  'category': u 'tables-and-forms'
+  , 'name': u 'input-group-addon-border-color'
+  , 'section': u 'forms'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '@input-border'
+  , 'type': u 'color'
+  , 'id': 164
+}, {
+  'category': u 'tables-and-forms'
+  , 'name': u 'cursor-disabled'
+  , 'section': u 'forms'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u 'not-allowed'
+  , 'type': u 'attribute'
+  , 'id': 165
+}, {
+  'category': u 'navigation'
+  , 'name': u 'navbar-height'
+  , 'section': u 'navbar'
+  , 'subsection': u 'navbar-base'
+  , 'theme_id': 1
+  , 'output': u '50px'
+  , 'type': u 'size'
+  , 'id': 166
+}, {
+  'category': u 'navigation'
+  , 'name': u 'navbar-margin-bottom'
+  , 'section': u 'navbar'
+  , 'subsection': u 'navbar-base'
+  , 'theme_id': 1
+  , 'output': u '@line-height-computed'
+  , 'type': u 'size'
+  , 'id': 167
+}, {
+  'category': u 'navigation'
+  , 'name': u 'navbar-border-radius'
+  , 'section': u 'navbar'
+  , 'subsection': u 'navbar-base'
+  , 'theme_id': 1
+  , 'output': u '@border-radius-base'
+  , 'type': u 'size'
+  , 'id': 168
+}, {
+  'category': u 'navigation'
+  , 'name': u 'navbar-padding-horizontal'
+  , 'section': u 'navbar'
+  , 'subsection': u 'navbar-base'
+  , 'theme_id': 1
+  , 'output': u 'floor((@grid-gutter-width / 2))'
+  , 'type': u 'size-padding'
+  , 'id': 169
+}, {
+  'category': u 'navigation'
+  , 'name': u 'navbar-padding-vertical'
+  , 'section': u 'navbar'
+  , 'subsection': u 'navbar-base'
+  , 'theme_id': 1
+  , 'output': u '((@navbar-height - @line-height-computed) / 2)'
+  , 'type': u 'size-padding'
+  , 'id': 170
+}, {
+  'category': u 'navigation'
+  , 'name': u 'navbar-collapse-max-height'
+  , 'section': u 'navbar'
+  , 'subsection': u 'navbar-base'
+  , 'theme_id': 1
+  , 'output': u '340px'
+  , 'type': u 'size'
+  , 'id': 171
+}, {
+  'category': u 'navigation'
+  , 'name': u 'navbar-default-color'
+  , 'section': u 'navbar'
+  , 'subsection': u 'navbar-default'
+  , 'theme_id': 1
+  , 'output': u '#777'
+  , 'type': u 'color'
+  , 'id': 172
+}, {
+  'category': u 'navigation'
+  , 'name': u 'navbar-default-bg'
+  , 'section': u 'navbar'
+  , 'subsection': u 'navbar-default'
+  , 'theme_id': 1
+  , 'output': u '#f8f8f8'
+  , 'type': u 'color'
+  , 'id': 173
+}, {
+  'category': u 'navigation'
+  , 'name': u 'navbar-default-border'
+  , 'section': u 'navbar'
+  , 'subsection': u 'navbar-default'
+  , 'theme_id': 1
+  , 'output': u 'darken(@navbar-default-bg, 6.5%)'
+  , 'type': u 'color'
+  , 'id': 174
+}, {
+  'category': u 'navigation'
+  , 'name': u 'navbar-default-link-color'
+  , 'section': u 'navbar'
+  , 'subsection': u 'navbar-default'
+  , 'theme_id': 1
+  , 'output': u '#777'
+  , 'type': u 'color'
+  , 'id': 175
+}, {
+  'category': u 'navigation'
+  , 'name': u 'navbar-default-link-hover-color'
+  , 'section': u 'navbar'
+  , 'subsection': u 'navbar-default'
+  , 'theme_id': 1
+  , 'output': u '#333'
+  , 'type': u 'color'
+  , 'id': 176
+}, {
+  'category': u 'navigation'
+  , 'name': u 'navbar-default-link-hover-bg'
+  , 'section': u 'navbar'
+  , 'subsection': u 'navbar-default'
+  , 'theme_id': 1
+  , 'output': u 'transparent'
+  , 'type': u 'color'
+  , 'id': 177
+}, {
+  'category': u 'navigation'
+  , 'name': u 'navbar-default-link-active-color'
+  , 'section': u 'navbar'
+  , 'subsection': u 'navbar-default'
+  , 'theme_id': 1
+  , 'output': u '#555'
+  , 'type': u 'color'
+  , 'id': 178
+}, {
+  'category': u 'navigation'
+  , 'name': u 'navbar-default-link-active-bg'
+  , 'section': u 'navbar'
+  , 'subsection': u 'navbar-default'
+  , 'theme_id': 1
+  , 'output': u 'darken(@navbar-default-bg, 6.5%)'
+  , 'type': u 'color'
+  , 'id': 179
+}, {
+  'category': u 'navigation'
+  , 'name': u 'navbar-default-link-disabled-color'
+  , 'section': u 'navbar'
+  , 'subsection': u 'navbar-default'
+  , 'theme_id': 1
+  , 'output': u '#ccc'
+  , 'type': u 'color'
+  , 'id': 180
+}, {
+  'category': u 'navigation'
+  , 'name': u 'navbar-default-link-disabled-bg'
+  , 'section': u 'navbar'
+  , 'subsection': u 'navbar-default'
+  , 'theme_id': 1
+  , 'output': u 'transparent'
+  , 'type': u 'color'
+  , 'id': 181
+}, {
+  'category': u 'navigation'
+  , 'name': u 'navbar-default-brand-color'
+  , 'section': u 'navbar'
+  , 'subsection': u 'navbar-default'
+  , 'theme_id': 1
+  , 'output': u '@navbar-default-link-color'
+  , 'type': u 'color'
+  , 'id': 182
+}, {
+  'category': u 'navigation'
+  , 'name': u 'navbar-default-brand-hover-color'
+  , 'section': u 'navbar'
+  , 'subsection': u 'navbar-default'
+  , 'theme_id': 1
+  , 'output': u 'darken(@navbar-default-brand-color, 10%)'
+  , 'type': u 'color'
+  , 'id': 183
+}, {
+  'category': u 'navigation'
+  , 'name': u 'navbar-default-brand-hover-bg'
+  , 'section': u 'navbar'
+  , 'subsection': u 'navbar-default'
+  , 'theme_id': 1
+  , 'output': u 'transparent'
+  , 'type': u 'color'
+  , 'id': 184
+}, {
+  'category': u 'navigation'
+  , 'name': u 'navbar-default-toggle-hover-bg'
+  , 'section': u 'navbar'
+  , 'subsection': u 'navbar-default'
+  , 'theme_id': 1
+  , 'output': u '#ddd'
+  , 'type': u 'color'
+  , 'id': 185
+}, {
+  'category': u 'navigation'
+  , 'name': u 'navbar-default-toggle-icon-bar-bg'
+  , 'section': u 'navbar'
+  , 'subsection': u 'navbar-default'
+  , 'theme_id': 1
+  , 'output': u '#888'
+  , 'type': u 'color'
+  , 'id': 186
+}, {
+  'category': u 'navigation'
+  , 'name': u 'navbar-default-toggle-border-color'
+  , 'section': u 'navbar'
+  , 'subsection': u 'navbar-default'
+  , 'theme_id': 1
+  , 'output': u '#ddd'
+  , 'type': u 'color'
+  , 'id': 187
+}, {
+  'category': u 'navigation'
+  , 'name': u 'navbar-inverse-color'
+  , 'section': u 'navbar'
+  , 'subsection': u 'navbar-inverse'
+  , 'theme_id': 1
+  , 'output': u 'lighten(@gray-light, 15%)'
+  , 'type': u 'color'
+  , 'id': 188
+}, {
+  'category': u 'navigation'
+  , 'name': u 'navbar-inverse-bg'
+  , 'section': u 'navbar'
+  , 'subsection': u 'navbar-inverse'
+  , 'theme_id': 1
+  , 'output': u '#222'
+  , 'type': u 'color'
+  , 'id': 189
+}, {
+  'category': u 'navigation'
+  , 'name': u 'navbar-inverse-border'
+  , 'section': u 'navbar'
+  , 'subsection': u 'navbar-inverse'
+  , 'theme_id': 1
+  , 'output': u 'darken(@navbar-inverse-bg, 10%)'
+  , 'type': u 'color'
+  , 'id': 190
+}, {
+  'category': u 'navigation'
+  , 'name': u 'navbar-inverse-link-color'
+  , 'section': u 'navbar'
+  , 'subsection': u 'navbar-inverse'
+  , 'theme_id': 1
+  , 'output': u 'lighten(@gray-light, 15%)'
+  , 'type': u 'color'
+  , 'id': 191
+}, {
+  'category': u 'navigation'
+  , 'name': u 'navbar-inverse-link-hover-color'
+  , 'section': u 'navbar'
+  , 'subsection': u 'navbar-inverse'
+  , 'theme_id': 1
+  , 'output': u '#fff'
+  , 'type': u 'color'
+  , 'id': 192
+}, {
+  'category': u 'navigation'
+  , 'name': u 'navbar-inverse-link-hover-bg'
+  , 'section': u 'navbar'
+  , 'subsection': u 'navbar-inverse'
+  , 'theme_id': 1
+  , 'output': u 'transparent'
+  , 'type': u 'color'
+  , 'id': 193
+}, {
+  'category': u 'navigation'
+  , 'name': u 'navbar-inverse-link-active-color'
+  , 'section': u 'navbar'
+  , 'subsection': u 'navbar-inverse'
+  , 'theme_id': 1
+  , 'output': u '@navbar-inverse-link-hover-color'
+  , 'type': u 'color'
+  , 'id': 194
+}, {
+  'category': u 'navigation'
+  , 'name': u 'navbar-inverse-link-active-bg'
+  , 'section': u 'navbar'
+  , 'subsection': u 'navbar-inverse'
+  , 'theme_id': 1
+  , 'output': u 'darken(@navbar-inverse-bg, 10%)'
+  , 'type': u 'color'
+  , 'id': 195
+}, {
+  'category': u 'navigation'
+  , 'name': u 'navbar-inverse-link-disabled-color'
+  , 'section': u 'navbar'
+  , 'subsection': u 'navbar-inverse'
+  , 'theme_id': 1
+  , 'output': u '#444'
+  , 'type': u 'color'
+  , 'id': 196
+}, {
+  'category': u 'navigation'
+  , 'name': u 'navbar-inverse-link-disabled-bg'
+  , 'section': u 'navbar'
+  , 'subsection': u 'navbar-inverse'
+  , 'theme_id': 1
+  , 'output': u 'transparent'
+  , 'type': u 'color'
+  , 'id': 197
+}, {
+  'category': u 'navigation'
+  , 'name': u 'navbar-inverse-brand-color'
+  , 'section': u 'navbar'
+  , 'subsection': u 'navbar-inverse'
+  , 'theme_id': 1
+  , 'output': u '@navbar-inverse-link-color'
+  , 'type': u 'color'
+  , 'id': 198
+}, {
+  'category': u 'navigation'
+  , 'name': u 'navbar-inverse-brand-hover-color'
+  , 'section': u 'navbar'
+  , 'subsection': u 'navbar-inverse'
+  , 'theme_id': 1
+  , 'output': u '#fff'
+  , 'type': u 'color'
+  , 'id': 199
+}, {
+  'category': u 'navigation'
+  , 'name': u 'navbar-inverse-brand-hover-bg'
+  , 'section': u 'navbar'
+  , 'subsection': u 'navbar-inverse'
+  , 'theme_id': 1
+  , 'output': u 'transparent'
+  , 'type': u 'color'
+  , 'id': 200
+}, {
+  'category': u 'navigation'
+  , 'name': u 'navbar-inverse-toggle-hover-bg'
+  , 'section': u 'navbar'
+  , 'subsection': u 'navbar-inverse'
+  , 'theme_id': 1
+  , 'output': u '#333'
+  , 'type': u 'color'
+  , 'id': 201
+}, {
+  'category': u 'navigation'
+  , 'name': u 'navbar-inverse-toggle-icon-bar-bg'
+  , 'section': u 'navbar'
+  , 'subsection': u 'navbar-inverse'
+  , 'theme_id': 1
+  , 'output': u '#fff'
+  , 'type': u 'color'
+  , 'id': 202
+}, {
+  'category': u 'navigation'
+  , 'name': u 'navbar-inverse-toggle-border-color'
+  , 'section': u 'navbar'
+  , 'subsection': u 'navbar-inverse'
+  , 'theme_id': 1
+  , 'output': u '#333'
+  , 'type': u 'color'
+  , 'id': 203
+}, {
+  'category': u 'navigation'
+  , 'name': u 'nav-link-padding'
+  , 'section': u 'nav-links'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '10px 15px'
+  , 'type': u 'size'
+  , 'id': 204
+}, {
+  'category': u 'navigation'
+  , 'name': u 'nav-link-hover-bg'
+  , 'section': u 'nav-links'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '@gray-lighter'
+  , 'type': u 'color'
+  , 'id': 205
+}, {
+  'category': u 'navigation'
+  , 'name': u 'nav-disabled-link-color'
+  , 'section': u 'nav-links'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '@gray-light'
+  , 'type': u 'color'
+  , 'id': 206
+}, {
+  'category': u 'navigation'
+  , 'name': u 'nav-disabled-link-hover-color'
+  , 'section': u 'nav-links'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '@gray-light'
+  , 'type': u 'color'
+  , 'id': 207
+}, {
+  'category': u 'navigation'
+  , 'name': u 'nav-tabs-border-color'
+  , 'section': u 'tabs'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '#ddd'
+  , 'type': u 'color'
+  , 'id': 208
+}, {
+  'category': u 'navigation'
+  , 'name': u 'nav-tabs-link-hover-border-color'
+  , 'section': u 'tabs'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '@gray-lighter'
+  , 'type': u 'color'
+  , 'id': 209
+}, {
+  'category': u 'navigation'
+  , 'name': u 'nav-tabs-active-link-hover-bg'
+  , 'section': u 'tabs'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '@body-bg'
+  , 'type': u 'color'
+  , 'id': 210
+}, {
+  'category': u 'navigation'
+  , 'name': u 'nav-tabs-active-link-hover-color'
+  , 'section': u 'tabs'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '@gray'
+  , 'type': u 'color'
+  , 'id': 211
+}, {
+  'category': u 'navigation'
+  , 'name': u 'nav-tabs-active-link-hover-border-color'
+  , 'section': u 'tabs'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '#ddd'
+  , 'type': u 'color'
+  , 'id': 212
+}, {
+  'category': u 'navigation'
+  , 'name': u 'nav-tabs-justified-link-border-color'
+  , 'section': u 'tabs'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '#ddd'
+  , 'type': u 'color'
+  , 'id': 213
+}, {
+  'category': u 'navigation'
+  , 'name': u 'nav-tabs-justified-active-link-border-color'
+  , 'section': u 'tabs'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '@body-bg'
+  , 'type': u 'color'
+  , 'id': 214
+}, {
+  'category': u 'navigation'
+  , 'name': u 'nav-pills-border-radius'
+  , 'section': u 'pills'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '@border-radius-base'
+  , 'type': u 'size'
+  , 'id': 215
+}, {
+  'category': u 'navigation'
+  , 'name': u 'nav-pills-active-link-hover-bg'
+  , 'section': u 'pills'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '@component-active-bg'
+  , 'type': u 'color'
+  , 'id': 216
+}, {
+  'category': u 'navigation'
+  , 'name': u 'nav-pills-active-link-hover-color'
+  , 'section': u 'pills'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '@component-active-color'
+  , 'type': u 'color'
+  , 'id': 217
+}, {
+  'category': u 'navigation'
+  , 'name': u 'breadcrumb-padding-vertical'
+  , 'section': u 'breadcrumbs'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '8px'
+  , 'type': u 'size'
+  , 'id': 218
+}, {
+  'category': u 'navigation'
+  , 'name': u 'breadcrumb-padding-horizontal'
+  , 'section': u 'breadcrumbs'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '15px'
+  , 'type': u 'size'
+  , 'id': 219
+}, {
+  'category': u 'navigation'
+  , 'name': u 'breadcrumb-bg'
+  , 'section': u 'breadcrumbs'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '#f5f5f5'
+  , 'type': u 'color'
+  , 'id': 220
+}, {
+  'category': u 'navigation'
+  , 'name': u 'breadcrumb-color'
+  , 'section': u 'breadcrumbs'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '#ccc'
+  , 'type': u 'color'
+  , 'id': 221
+}, {
+  'category': u 'navigation'
+  , 'name': u 'breadcrumb-active-color'
+  , 'section': u 'breadcrumbs'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '@gray-light'
+  , 'type': u 'color'
+  , 'id': 222
+}, {
+  'category': u 'navigation'
+  , 'name': u 'breadcrumb-separator'
+  , 'section': u 'breadcrumbs'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '"/"'
+  , 'type': u 'string'
+  , 'id': 223
+}, {
+  'category': u 'navigation'
+  , 'name': u 'pagination-color'
+  , 'section': u 'pagination'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '@link-color'
+  , 'type': u 'color'
+  , 'id': 224
+}, {
+  'category': u 'navigation'
+  , 'name': u 'pagination-bg'
+  , 'section': u 'pagination'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '#fff'
+  , 'type': u 'color'
+  , 'id': 225
+}, {
+  'category': u 'navigation'
+  , 'name': u 'pagination-border'
+  , 'section': u 'pagination'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '#ddd'
+  , 'type': u 'color'
+  , 'id': 226
+}, {
+  'category': u 'navigation'
+  , 'name': u 'pagination-hover-color'
+  , 'section': u 'pagination'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '@link-hover-color'
+  , 'type': u 'color'
+  , 'id': 227
+}, {
+  'category': u 'navigation'
+  , 'name': u 'pagination-hover-bg'
+  , 'section': u 'pagination'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '@gray-lighter'
+  , 'type': u 'color'
+  , 'id': 228
+}, {
+  'category': u 'navigation'
+  , 'name': u 'pagination-hover-border'
+  , 'section': u 'pagination'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '#ddd'
+  , 'type': u 'color'
+  , 'id': 229
+}, {
+  'category': u 'navigation'
+  , 'name': u 'pagination-active-color'
+  , 'section': u 'pagination'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '#fff'
+  , 'type': u 'color'
+  , 'id': 230
+}, {
+  'category': u 'navigation'
+  , 'name': u 'pagination-active-bg'
+  , 'section': u 'pagination'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '@brand-primary'
+  , 'type': u 'color'
+  , 'id': 231
+}, {
+  'category': u 'navigation'
+  , 'name': u 'pagination-active-border'
+  , 'section': u 'pagination'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '@brand-primary'
+  , 'type': u 'color'
+  , 'id': 232
+}, {
+  'category': u 'navigation'
+  , 'name': u 'pagination-disabled-color'
+  , 'section': u 'pagination'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '@gray-light'
+  , 'type': u 'color'
+  , 'id': 233
+}, {
+  'category': u 'navigation'
+  , 'name': u 'pagination-disabled-bg'
+  , 'section': u 'pagination'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '#fff'
+  , 'type': u 'color'
+  , 'id': 234
+}, {
+  'category': u 'navigation'
+  , 'name': u 'pagination-disabled-border'
+  , 'section': u 'pagination'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '#ddd'
+  , 'type': u 'color'
+  , 'id': 235
+}, {
+  'category': u 'navigation'
+  , 'name': u 'pager-bg'
+  , 'section': u 'pager'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '@pagination-bg'
+  , 'type': u 'color'
+  , 'id': 236
+}, {
+  'category': u 'navigation'
+  , 'name': u 'pager-border'
+  , 'section': u 'pager'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '@pagination-border'
+  , 'type': u 'color'
+  , 'id': 237
+}, {
+  'category': u 'navigation'
+  , 'name': u 'pager-border-radius'
+  , 'section': u 'pager'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '15px'
+  , 'type': u 'size'
+  , 'id': 238
+}, {
+  'category': u 'navigation'
+  , 'name': u 'pager-hover-bg'
+  , 'section': u 'pager'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '@pagination-hover-bg'
+  , 'type': u 'color'
+  , 'id': 239
+}, {
+  'category': u 'navigation'
+  , 'name': u 'pager-active-bg'
+  , 'section': u 'pager'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '@pagination-active-bg'
+  , 'type': u 'color'
+  , 'id': 240
+}, {
+  'category': u 'navigation'
+  , 'name': u 'pager-active-color'
+  , 'section': u 'pager'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '@pagination-active-color'
+  , 'type': u 'color'
+  , 'id': 241
+}, {
+  'category': u 'navigation'
+  , 'name': u 'pager-disabled-color'
+  , 'section': u 'pager'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '@pagination-disabled-color'
+  , 'type': u 'color'
+  , 'id': 242
+}, {
+  'category': u 'indicators'
+  , 'name': u 'state-success-text'
+  , 'section': u 'form-states'
+  , 'subsection': u 'success'
+  , 'theme_id': 1
+  , 'output': u '#3c763d'
+  , 'type': u 'color'
+  , 'id': 243
+}, {
+  'category': u 'indicators'
+  , 'name': u 'state-success-bg'
+  , 'section': u 'form-states'
+  , 'subsection': u 'success'
+  , 'theme_id': 1
+  , 'output': u '#dff0d8'
+  , 'type': u 'color'
+  , 'id': 244
+}, {
+  'category': u 'indicators'
+  , 'name': u 'state-success-border'
+  , 'section': u 'form-states'
+  , 'subsection': u 'success'
+  , 'theme_id': 1
+  , 'output': u 'darken(spin(@state-success-bg, -10), 5%)'
+  , 'type': u 'color'
+  , 'id': 245
+}, {
+  'category': u 'indicators'
+  , 'name': u 'state-info-text'
+  , 'section': u 'form-states'
+  , 'subsection': u 'info'
+  , 'theme_id': 1
+  , 'output': u '#31708f'
+  , 'type': u 'color'
+  , 'id': 246
+}, {
+  'category': u 'indicators'
+  , 'name': u 'state-info-bg'
+  , 'section': u 'form-states'
+  , 'subsection': u 'info'
+  , 'theme_id': 1
+  , 'output': u '#d9edf7'
+  , 'type': u 'color'
+  , 'id': 247
+}, {
+  'category': u 'indicators'
+  , 'name': u 'state-info-border'
+  , 'section': u 'form-states'
+  , 'subsection': u 'info'
+  , 'theme_id': 1
+  , 'output': u 'darken(spin(@state-info-bg, -10), 7%)'
+  , 'type': u 'color'
+  , 'id': 248
+}, {
+  'category': u 'indicators'
+  , 'name': u 'state-warning-text'
+  , 'section': u 'form-states'
+  , 'subsection': u 'warning'
+  , 'theme_id': 1
+  , 'output': u '#8a6d3b'
+  , 'type': u 'color'
+  , 'id': 249
+}, {
+  'category': u 'indicators'
+  , 'name': u 'state-warning-bg'
+  , 'section': u 'form-states'
+  , 'subsection': u 'warning'
+  , 'theme_id': 1
+  , 'output': u '#fcf8e3'
+  , 'type': u 'color'
+  , 'id': 250
+}, {
+  'category': u 'indicators'
+  , 'name': u 'state-warning-border'
+  , 'section': u 'form-states'
+  , 'subsection': u 'warning'
+  , 'theme_id': 1
+  , 'output': u 'darken(spin(@state-warning-bg, -10), 5%)'
+  , 'type': u 'color'
+  , 'id': 251
+}, {
+  'category': u 'indicators'
+  , 'name': u 'state-danger-text'
+  , 'section': u 'form-states'
+  , 'subsection': u 'danger'
+  , 'theme_id': 1
+  , 'output': u '#a94442'
+  , 'type': u 'color'
+  , 'id': 252
+}, {
+  'category': u 'indicators'
+  , 'name': u 'state-danger-bg'
+  , 'section': u 'form-states'
+  , 'subsection': u 'danger'
+  , 'theme_id': 1
+  , 'output': u '#f2dede'
+  , 'type': u 'color'
+  , 'id': 253
+}, {
+  'category': u 'indicators'
+  , 'name': u 'state-danger-border'
+  , 'section': u 'form-states'
+  , 'subsection': u 'danger'
+  , 'theme_id': 1
+  , 'output': u 'darken(spin(@state-danger-bg, -10), 5%)'
+  , 'type': u 'color'
+  , 'id': 254
+}, {
+  'category': u 'indicators'
+  , 'name': u 'alert-padding'
+  , 'section': u 'alerts'
+  , 'subsection': u 'default-alert'
+  , 'theme_id': 1
+  , 'output': u '15px'
+  , 'type': u 'size'
+  , 'id': 255
+}, {
+  'category': u 'indicators'
+  , 'name': u 'alert-border-radius'
+  , 'section': u 'alerts'
+  , 'subsection': u 'default-alert'
+  , 'theme_id': 1
+  , 'output': u '@border-radius-base'
+  , 'type': u 'size'
+  , 'id': 256
+}, {
+  'category': u 'indicators'
+  , 'name': u 'alert-link-font-weight'
+  , 'section': u 'alerts'
+  , 'subsection': u 'default-alert'
+  , 'theme_id': 1
+  , 'output': u 'bold'
+  , 'type': u 'font-weight'
+  , 'id': 257
+}, {
+  'category': u 'indicators'
+  , 'name': u 'alert-success-bg'
+  , 'section': u 'alerts'
+  , 'subsection': u 'success-alert'
+  , 'theme_id': 1
+  , 'output': u '@state-success-bg'
+  , 'type': u 'color'
+  , 'id': 258
+}, {
+  'category': u 'indicators'
+  , 'name': u 'alert-success-text'
+  , 'section': u 'alerts'
+  , 'subsection': u 'success-alert'
+  , 'theme_id': 1
+  , 'output': u '@state-success-text'
+  , 'type': u 'color'
+  , 'id': 259
+}, {
+  'category': u 'indicators'
+  , 'name': u 'alert-success-border'
+  , 'section': u 'alerts'
+  , 'subsection': u 'success-alert'
+  , 'theme_id': 1
+  , 'output': u '@state-success-border'
+  , 'type': u 'color'
+  , 'id': 260
+}, {
+  'category': u 'indicators'
+  , 'name': u 'alert-info-bg'
+  , 'section': u 'alerts'
+  , 'subsection': u 'info-alert'
+  , 'theme_id': 1
+  , 'output': u '@state-info-bg'
+  , 'type': u 'color'
+  , 'id': 261
+}, {
+  'category': u 'indicators'
+  , 'name': u 'alert-info-text'
+  , 'section': u 'alerts'
+  , 'subsection': u 'info-alert'
+  , 'theme_id': 1
+  , 'output': u '@state-info-text'
+  , 'type': u 'color'
+  , 'id': 262
+}, {
+  'category': u 'indicators'
+  , 'name': u 'alert-info-border'
+  , 'section': u 'alerts'
+  , 'subsection': u 'info-alert'
+  , 'theme_id': 1
+  , 'output': u '@state-info-border'
+  , 'type': u 'color'
+  , 'id': 263
+}, {
+  'category': u 'indicators'
+  , 'name': u 'alert-warning-bg'
+  , 'section': u 'alerts'
+  , 'subsection': u 'warning-alert'
+  , 'theme_id': 1
+  , 'output': u '@state-warning-bg'
+  , 'type': u 'color'
+  , 'id': 264
+}, {
+  'category': u 'indicators'
+  , 'name': u 'alert-warning-text'
+  , 'section': u 'alerts'
+  , 'subsection': u 'warning-alert'
+  , 'theme_id': 1
+  , 'output': u '@state-warning-text'
+  , 'type': u 'color'
+  , 'id': 265
+}, {
+  'category': u 'indicators'
+  , 'name': u 'alert-warning-border'
+  , 'section': u 'alerts'
+  , 'subsection': u 'warning-alert'
+  , 'theme_id': 1
+  , 'output': u '@state-warning-border'
+  , 'type': u 'color'
+  , 'id': 266
+}, {
+  'category': u 'indicators'
+  , 'name': u 'alert-danger-bg'
+  , 'section': u 'alerts'
+  , 'subsection': u 'danger-alert'
+  , 'theme_id': 1
+  , 'output': u '@state-danger-bg'
+  , 'type': u 'color'
+  , 'id': 267
+}, {
+  'category': u 'indicators'
+  , 'name': u 'alert-danger-text'
+  , 'section': u 'alerts'
+  , 'subsection': u 'danger-alert'
+  , 'theme_id': 1
+  , 'output': u '@state-danger-text'
+  , 'type': u 'color'
+  , 'id': 268
+}, {
+  'category': u 'indicators'
+  , 'name': u 'alert-danger-border'
+  , 'section': u 'alerts'
+  , 'subsection': u 'danger-alert'
+  , 'theme_id': 1
+  , 'output': u '@state-danger-border'
+  , 'type': u 'color'
+  , 'id': 269
+}, {
+  'category': u 'indicators'
+  , 'name': u 'label-color'
+  , 'section': u 'labels'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '#fff'
+  , 'type': u 'color'
+  , 'id': 270
+}, {
+  'category': u 'indicators'
+  , 'name': u 'label-link-hover-color'
+  , 'section': u 'labels'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '#fff'
+  , 'type': u 'color'
+  , 'id': 271
+}, {
+  'category': u 'indicators'
+  , 'name': u 'label-default-bg'
+  , 'section': u 'labels'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '@gray-light'
+  , 'type': u 'color'
+  , 'id': 272
+}, {
+  'category': u 'indicators'
+  , 'name': u 'label-primary-bg'
+  , 'section': u 'labels'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '@brand-primary'
+  , 'type': u 'color'
+  , 'id': 273
+}, {
+  'category': u 'indicators'
+  , 'name': u 'label-success-bg'
+  , 'section': u 'labels'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '@brand-success'
+  , 'type': u 'color'
+  , 'id': 274
+}, {
+  'category': u 'indicators'
+  , 'name': u 'label-info-bg'
+  , 'section': u 'labels'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '@brand-info'
+  , 'type': u 'color'
+  , 'id': 275
+}, {
+  'category': u 'indicators'
+  , 'name': u 'label-warning-bg'
+  , 'section': u 'labels'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '@brand-warning'
+  , 'type': u 'color'
+  , 'id': 276
+}, {
+  'category': u 'indicators'
+  , 'name': u 'label-danger-bg'
+  , 'section': u 'labels'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '@brand-danger'
+  , 'type': u 'color'
+  , 'id': 277
+}, {
+  'category': u 'indicators'
+  , 'name': u 'badge-color'
+  , 'section': u 'badges'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '#fff'
+  , 'type': u 'color'
+  , 'id': 278
+}, {
+  'category': u 'indicators'
+  , 'name': u 'badge-link-hover-color'
+  , 'section': u 'badges'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '#fff'
+  , 'type': u 'color'
+  , 'id': 279
+}, {
+  'category': u 'indicators'
+  , 'name': u 'badge-bg'
+  , 'section': u 'badges'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '@gray-light'
+  , 'type': u 'color'
+  , 'id': 280
+}, {
+  'category': u 'indicators'
+  , 'name': u 'badge-active-color'
+  , 'section': u 'badges'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '@link-color'
+  , 'type': u 'color'
+  , 'id': 281
+}, {
+  'category': u 'indicators'
+  , 'name': u 'badge-active-bg'
+  , 'section': u 'badges'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '#fff'
+  , 'type': u 'color'
+  , 'id': 282
+}, {
+  'category': u 'indicators'
+  , 'name': u 'badge-font-weight'
+  , 'section': u 'badges'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u 'bold'
+  , 'type': u 'font-weight'
+  , 'id': 283
+}, {
+  'category': u 'indicators'
+  , 'name': u 'badge-line-height'
+  , 'section': u 'badges'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '1'
+  , 'type': u 'line-height'
+  , 'id': 284
+}, {
+  'category': u 'indicators'
+  , 'name': u 'badge-border-radius'
+  , 'section': u 'badges'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '10px'
+  , 'type': u 'size'
+  , 'id': 285
+}, {
+  'category': u 'indicators'
+  , 'name': u 'progress-bg'
+  , 'section': u 'progress-bars'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '#f5f5f5'
+  , 'type': u 'color'
+  , 'id': 286
+}, {
+  'category': u 'indicators'
+  , 'name': u 'progress-bar-color'
+  , 'section': u 'progress-bars'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '#fff'
+  , 'type': u 'color'
+  , 'id': 287
+}, {
+  'category': u 'indicators'
+  , 'name': u 'progress-border-radius'
+  , 'section': u 'progress-bars'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '@border-radius-base'
+  , 'type': u 'size'
+  , 'id': 288
+}, {
+  'category': u 'indicators'
+  , 'name': u 'progress-bar-bg'
+  , 'section': u 'progress-bars'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '@brand-primary'
+  , 'type': u 'color'
+  , 'id': 289
+}, {
+  'category': u 'indicators'
+  , 'name': u 'progress-bar-success-bg'
+  , 'section': u 'progress-bars'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '@brand-success'
+  , 'type': u 'color'
+  , 'id': 290
+}, {
+  'category': u 'indicators'
+  , 'name': u 'progress-bar-warning-bg'
+  , 'section': u 'progress-bars'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '@brand-warning'
+  , 'type': u 'color'
+  , 'id': 291
+}, {
+  'category': u 'indicators'
+  , 'name': u 'progress-bar-danger-bg'
+  , 'section': u 'progress-bars'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '@brand-danger'
+  , 'type': u 'color'
+  , 'id': 292
+}, {
+  'category': u 'indicators'
+  , 'name': u 'progress-bar-info-bg'
+  , 'section': u 'progress-bars'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '@brand-info'
+  , 'type': u 'color'
+  , 'id': 293
+}, {
+  'category': u 'containers'
+  , 'name': u 'jumbotron-padding'
+  , 'section': u 'jumbotron'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '30px'
+  , 'type': u 'size'
+  , 'id': 294
+}, {
+  'category': u 'containers'
+  , 'name': u 'jumbotron-color'
+  , 'section': u 'jumbotron'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u 'inherit'
+  , 'type': u 'color'
+  , 'id': 295
+}, {
+  'category': u 'containers'
+  , 'name': u 'jumbotron-bg'
+  , 'section': u 'jumbotron'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '@gray-lighter'
+  , 'type': u 'color'
+  , 'id': 296
+}, {
+  'category': u 'containers'
+  , 'name': u 'jumbotron-heading-color'
+  , 'section': u 'jumbotron'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u 'inherit'
+  , 'type': u 'color'
+  , 'id': 297
+}, {
+  'category': u 'containers'
+  , 'name': u 'jumbotron-font-size'
+  , 'section': u 'jumbotron'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u 'ceil((@font-size-base * 1.5))'
+  , 'type': u 'size-font'
+  , 'id': 298
+}, {
+  'category': u 'containers'
+  , 'name': u 'jumbotron-heading-font-size'
+  , 'section': u 'jumbotron'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u 'ceil((@font-size-base * 4.5))'
+  , 'type': u 'size-font'
+  , 'id': 299
+}, {
+  'category': u 'containers'
+  , 'name': u 'list-group-bg'
+  , 'section': u 'list-groups'
+  , 'subsection': u 'default-list-groups'
+  , 'theme_id': 1
+  , 'output': u '#fff'
+  , 'type': u 'color'
+  , 'id': 300
+}, {
+  'category': u 'containers'
+  , 'name': u 'list-group-border'
+  , 'section': u 'list-groups'
+  , 'subsection': u 'default-list-groups'
+  , 'theme_id': 1
+  , 'output': u '#ddd'
+  , 'type': u 'color'
+  , 'id': 301
+}, {
+  'category': u 'containers'
+  , 'name': u 'list-group-border-radius'
+  , 'section': u 'list-groups'
+  , 'subsection': u 'default-list-groups'
+  , 'theme_id': 1
+  , 'output': u '@border-radius-base'
+  , 'type': u 'size'
+  , 'id': 302
+}, {
+  'category': u 'containers'
+  , 'name': u 'list-group-hover-bg'
+  , 'section': u 'list-groups'
+  , 'subsection': u 'default-list-groups'
+  , 'theme_id': 1
+  , 'output': u '#f5f5f5'
+  , 'type': u 'color'
+  , 'id': 303
+}, {
+  'category': u 'containers'
+  , 'name': u 'list-group-active-color'
+  , 'section': u 'list-groups'
+  , 'subsection': u 'active-list-groups'
+  , 'theme_id': 1
+  , 'output': u '@component-active-color'
+  , 'type': u 'color'
+  , 'id': 304
+}, {
+  'category': u 'containers'
+  , 'name': u 'list-group-active-bg'
+  , 'section': u 'list-groups'
+  , 'subsection': u 'active-list-groups'
+  , 'theme_id': 1
+  , 'output': u '@component-active-bg'
+  , 'type': u 'color'
+  , 'id': 305
+}, {
+  'category': u 'containers'
+  , 'name': u 'list-group-active-border'
+  , 'section': u 'list-groups'
+  , 'subsection': u 'active-list-groups'
+  , 'theme_id': 1
+  , 'output': u '@list-group-active-bg'
+  , 'type': u 'color'
+  , 'id': 306
+}, {
+  'category': u 'containers'
+  , 'name': u 'list-group-active-text-color'
+  , 'section': u 'list-groups'
+  , 'subsection': u 'active-list-groups'
+  , 'theme_id': 1
+  , 'output': u 'lighten(@list-group-active-bg, 40%)'
+  , 'type': u 'color'
+  , 'id': 307
+}, {
+  'category': u 'containers'
+  , 'name': u 'list-group-disabled-color'
+  , 'section': u 'list-groups'
+  , 'subsection': u 'disabled-list-groups'
+  , 'theme_id': 1
+  , 'output': u '@gray-light'
+  , 'type': u 'color'
+  , 'id': 308
+}, {
+  'category': u 'containers'
+  , 'name': u 'list-group-disabled-bg'
+  , 'section': u 'list-groups'
+  , 'subsection': u 'disabled-list-groups'
+  , 'theme_id': 1
+  , 'output': u '@gray-lighter'
+  , 'type': u 'color'
+  , 'id': 309
+}, {
+  'category': u 'containers'
+  , 'name': u 'list-group-disabled-text-color'
+  , 'section': u 'list-groups'
+  , 'subsection': u 'disabled-list-groups'
+  , 'theme_id': 1
+  , 'output': u '@list-group-disabled-color'
+  , 'type': u 'color'
+  , 'id': 310
+}, {
+  'category': u 'containers'
+  , 'name': u 'list-group-link-color'
+  , 'section': u 'list-groups'
+  , 'subsection': u 'list-group-links'
+  , 'theme_id': 1
+  , 'output': u '#555'
+  , 'type': u 'color'
+  , 'id': 311
+}, {
+  'category': u 'containers'
+  , 'name': u 'list-group-link-hover-color'
+  , 'section': u 'list-groups'
+  , 'subsection': u 'list-group-links'
+  , 'theme_id': 1
+  , 'output': u '@list-group-link-color'
+  , 'type': u 'color'
+  , 'id': 312
+}, {
+  'category': u 'containers'
+  , 'name': u 'list-group-link-heading-color'
+  , 'section': u 'list-groups'
+  , 'subsection': u 'list-group-links'
+  , 'theme_id': 1
+  , 'output': u '#333'
+  , 'type': u 'color'
+  , 'id': 313
+}, {
+  'category': u 'containers'
+  , 'name': u 'panel-bg'
+  , 'section': u 'panels'
+  , 'subsection': u 'default-panel'
+  , 'theme_id': 1
+  , 'output': u '#fff'
+  , 'type': u 'color'
+  , 'id': 314
+}, {
+  'category': u 'containers'
+  , 'name': u 'panel-body-padding'
+  , 'section': u 'panels'
+  , 'subsection': u 'default-panel'
+  , 'theme_id': 1
+  , 'output': u '15px'
+  , 'type': u 'size'
+  , 'id': 315
+}, {
+  'category': u 'containers'
+  , 'name': u 'panel-heading-padding'
+  , 'section': u 'panels'
+  , 'subsection': u 'default-panel'
+  , 'theme_id': 1
+  , 'output': u '10px 15px'
+  , 'type': u 'size'
+  , 'id': 316
+}, {
+  'category': u 'containers'
+  , 'name': u 'panel-footer-padding'
+  , 'section': u 'panels'
+  , 'subsection': u 'default-panel'
+  , 'theme_id': 1
+  , 'output': u '@panel-heading-padding'
+  , 'type': u 'size'
+  , 'id': 317
+}, {
+  'category': u 'containers'
+  , 'name': u 'panel-border-radius'
+  , 'section': u 'panels'
+  , 'subsection': u 'default-panel'
+  , 'theme_id': 1
+  , 'output': u '@border-radius-base'
+  , 'type': u 'size'
+  , 'id': 318
+}, {
+  'category': u 'containers'
+  , 'name': u 'panel-inner-border'
+  , 'section': u 'panels'
+  , 'subsection': u 'default-panel'
+  , 'theme_id': 1
+  , 'output': u '#ddd'
+  , 'type': u 'color'
+  , 'id': 319
+}, {
+  'category': u 'containers'
+  , 'name': u 'panel-footer-bg'
+  , 'section': u 'panels'
+  , 'subsection': u 'default-panel'
+  , 'theme_id': 1
+  , 'output': u '#f5f5f5'
+  , 'type': u 'color'
+  , 'id': 320
+}, {
+  'category': u 'containers'
+  , 'name': u 'panel-default-text'
+  , 'section': u 'panels'
+  , 'subsection': u 'default-panel'
+  , 'theme_id': 1
+  , 'output': u '@gray-dark'
+  , 'type': u 'color'
+  , 'id': 321
+}, {
+  'category': u 'containers'
+  , 'name': u 'panel-default-border'
+  , 'section': u 'panels'
+  , 'subsection': u 'default-panel'
+  , 'theme_id': 1
+  , 'output': u '#ddd'
+  , 'type': u 'color'
+  , 'id': 322
+}, {
+  'category': u 'containers'
+  , 'name': u 'panel-default-heading-bg'
+  , 'section': u 'panels'
+  , 'subsection': u 'default-panel'
+  , 'theme_id': 1
+  , 'output': u '#f5f5f5'
+  , 'type': u 'color'
+  , 'id': 323
+}, {
+  'category': u 'containers'
+  , 'name': u 'panel-primary-text'
+  , 'section': u 'panels'
+  , 'subsection': u 'primary-panel'
+  , 'theme_id': 1
+  , 'output': u '#fff'
+  , 'type': u 'color'
+  , 'id': 324
+}, {
+  'category': u 'containers'
+  , 'name': u 'panel-primary-border'
+  , 'section': u 'panels'
+  , 'subsection': u 'primary-panel'
+  , 'theme_id': 1
+  , 'output': u '@brand-primary'
+  , 'type': u 'color'
+  , 'id': 325
+}, {
+  'category': u 'containers'
+  , 'name': u 'panel-primary-heading-bg'
+  , 'section': u 'panels'
+  , 'subsection': u 'primary-panel'
+  , 'theme_id': 1
+  , 'output': u '@brand-primary'
+  , 'type': u 'color'
+  , 'id': 326
+}, {
+  'category': u 'containers'
+  , 'name': u 'panel-success-text'
+  , 'section': u 'panels'
+  , 'subsection': u 'success-panel'
+  , 'theme_id': 1
+  , 'output': u '@state-success-text'
+  , 'type': u 'color'
+  , 'id': 327
+}, {
+  'category': u 'containers'
+  , 'name': u 'panel-success-border'
+  , 'section': u 'panels'
+  , 'subsection': u 'success-panel'
+  , 'theme_id': 1
+  , 'output': u '@state-success-border'
+  , 'type': u 'color'
+  , 'id': 328
+}, {
+  'category': u 'containers'
+  , 'name': u 'panel-success-heading-bg'
+  , 'section': u 'panels'
+  , 'subsection': u 'success-panel'
+  , 'theme_id': 1
+  , 'output': u '@state-success-bg'
+  , 'type': u 'color'
+  , 'id': 329
+}, {
+  'category': u 'containers'
+  , 'name': u 'panel-info-text'
+  , 'section': u 'panels'
+  , 'subsection': u 'info-panel'
+  , 'theme_id': 1
+  , 'output': u '@state-info-text'
+  , 'type': u 'color'
+  , 'id': 330
+}, {
+  'category': u 'containers'
+  , 'name': u 'panel-info-border'
+  , 'section': u 'panels'
+  , 'subsection': u 'info-panel'
+  , 'theme_id': 1
+  , 'output': u '@state-info-border'
+  , 'type': u 'color'
+  , 'id': 331
+}, {
+  'category': u 'containers'
+  , 'name': u 'panel-info-heading-bg'
+  , 'section': u 'panels'
+  , 'subsection': u 'info-panel'
+  , 'theme_id': 1
+  , 'output': u '@state-info-bg'
+  , 'type': u 'color'
+  , 'id': 332
+}, {
+  'category': u 'containers'
+  , 'name': u 'panel-warning-text'
+  , 'section': u 'panels'
+  , 'subsection': u 'warning-panel'
+  , 'theme_id': 1
+  , 'output': u '@state-warning-text'
+  , 'type': u 'color'
+  , 'id': 333
+}, {
+  'category': u 'containers'
+  , 'name': u 'panel-warning-border'
+  , 'section': u 'panels'
+  , 'subsection': u 'warning-panel'
+  , 'theme_id': 1
+  , 'output': u '@state-warning-border'
+  , 'type': u 'color'
+  , 'id': 334
+}, {
+  'category': u 'containers'
+  , 'name': u 'panel-warning-heading-bg'
+  , 'section': u 'panels'
+  , 'subsection': u 'warning-panel'
+  , 'theme_id': 1
+  , 'output': u '@state-warning-bg'
+  , 'type': u 'color'
+  , 'id': 335
+}, {
+  'category': u 'containers'
+  , 'name': u 'panel-danger-text'
+  , 'section': u 'panels'
+  , 'subsection': u 'danger-panel'
+  , 'theme_id': 1
+  , 'output': u '@state-danger-text'
+  , 'type': u 'color'
+  , 'id': 336
+}, {
+  'category': u 'containers'
+  , 'name': u 'panel-danger-border'
+  , 'section': u 'panels'
+  , 'subsection': u 'danger-panel'
+  , 'theme_id': 1
+  , 'output': u '@state-danger-border'
+  , 'type': u 'color'
+  , 'id': 337
+}, {
+  'category': u 'containers'
+  , 'name': u 'panel-danger-heading-bg'
+  , 'section': u 'panels'
+  , 'subsection': u 'danger-panel'
+  , 'theme_id': 1
+  , 'output': u '@state-danger-bg'
+  , 'type': u 'color'
+  , 'id': 338
+}, {
+  'category': u 'containers'
+  , 'name': u 'well-bg'
+  , 'section': u 'wells'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '#f5f5f5'
+  , 'type': u 'color'
+  , 'id': 339
+}, {
+  'category': u 'containers'
+  , 'name': u 'well-border'
+  , 'section': u 'wells'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u 'darken(@well-bg, 7%)'
+  , 'type': u 'color'
+  , 'id': 340
+}, {
+  'category': u 'dialogs'
+  , 'name': u 'tooltip-max-width'
+  , 'section': u 'tooltips'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '200px'
+  , 'type': u 'size'
+  , 'id': 341
+}, {
+  'category': u 'dialogs'
+  , 'name': u 'tooltip-color'
+  , 'section': u 'tooltips'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '#fff'
+  , 'type': u 'color'
+  , 'id': 342
+}, {
+  'category': u 'dialogs'
+  , 'name': u 'tooltip-bg'
+  , 'section': u 'tooltips'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '#000'
+  , 'type': u 'color'
+  , 'id': 343
+}, {
+  'category': u 'dialogs'
+  , 'name': u 'tooltip-opacity'
+  , 'section': u 'tooltips'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '0.9'
+  , 'type': u 'opacity'
+  , 'id': 344
+}, {
+  'category': u 'dialogs'
+  , 'name': u 'tooltip-arrow-width'
+  , 'section': u 'tooltips'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '5px'
+  , 'type': u 'size'
+  , 'id': 345
+}, {
+  'category': u 'dialogs'
+  , 'name': u 'tooltip-arrow-color'
+  , 'section': u 'tooltips'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '@tooltip-bg'
+  , 'type': u 'color'
+  , 'id': 346
+}, {
+  'category': u 'dialogs'
+  , 'name': u 'popover-bg'
+  , 'section': u 'popovers'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '#fff'
+  , 'type': u 'color'
+  , 'id': 347
+}, {
+  'category': u 'dialogs'
+  , 'name': u 'popover-max-width'
+  , 'section': u 'popovers'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '276px'
+  , 'type': u 'size'
+  , 'id': 348
+}, {
+  'category': u 'dialogs'
+  , 'name': u 'popover-border-color'
+  , 'section': u 'popovers'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u 'rgba(0,0,0,.2)'
+  , 'type': u 'color'
+  , 'id': 349
+}, {
+  'category': u 'dialogs'
+  , 'name': u 'popover-fallback-border-color'
+  , 'section': u 'popovers'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '#ccc'
+  , 'type': u 'color'
+  , 'id': 350
+}, {
+  'category': u 'dialogs'
+  , 'name': u 'popover-title-bg'
+  , 'section': u 'popovers'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u 'darken(@popover-bg, 3%)'
+  , 'type': u 'color'
+  , 'id': 351
+}, {
+  'category': u 'dialogs'
+  , 'name': u 'popover-arrow-width'
+  , 'section': u 'popovers'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '10px'
+  , 'type': u 'size'
+  , 'id': 352
+}, {
+  'category': u 'dialogs'
+  , 'name': u 'popover-arrow-color'
+  , 'section': u 'popovers'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '@popover-bg'
+  , 'type': u 'color'
+  , 'id': 353
+}, {
+  'category': u 'dialogs'
+  , 'name': u 'popover-arrow-outer-width'
+  , 'section': u 'popovers'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '(@popover-arrow-width + 1)'
+  , 'type': u 'size'
+  , 'id': 354
+}, {
+  'category': u 'dialogs'
+  , 'name': u 'popover-arrow-outer-color'
+  , 'section': u 'popovers'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u 'fadein(@popover-border-color, 5%)'
+  , 'type': u 'color'
+  , 'id': 355
+}, {
+  'category': u 'dialogs'
+  , 'name': u 'popover-arrow-outer-fallback-color'
+  , 'section': u 'popovers'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u 'darken(@popover-fallback-border-color, 20%)'
+  , 'type': u 'color'
+  , 'id': 356
+}, {
+  'category': u 'dialogs'
+  , 'name': u 'modal-inner-padding'
+  , 'section': u 'modals'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '15px'
+  , 'type': u 'size'
+  , 'id': 357
+}, {
+  'category': u 'dialogs'
+  , 'name': u 'modal-title-padding'
+  , 'section': u 'modals'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '15px'
+  , 'type': u 'size'
+  , 'id': 358
+}, {
+  'category': u 'dialogs'
+  , 'name': u 'modal-title-line-height'
+  , 'section': u 'modals'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '@line-height-base'
+  , 'type': u 'line-height'
+  , 'id': 359
+}, {
+  'category': u 'dialogs'
+  , 'name': u 'modal-content-bg'
+  , 'section': u 'modals'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '#fff'
+  , 'type': u 'color'
+  , 'id': 360
+}, {
+  'category': u 'dialogs'
+  , 'name': u 'modal-content-border-color'
+  , 'section': u 'modals'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u 'rgba(0,0,0,.2)'
+  , 'type': u 'color'
+  , 'id': 361
+}, {
+  'category': u 'dialogs'
+  , 'name': u 'modal-content-fallback-border-color'
+  , 'section': u 'modals'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '#999'
+  , 'type': u 'color'
+  , 'id': 362
+}, {
+  'category': u 'dialogs'
+  , 'name': u 'modal-backdrop-bg'
+  , 'section': u 'modals'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '#000'
+  , 'type': u 'color'
+  , 'id': 363
+}, {
+  'category': u 'dialogs'
+  , 'name': u 'modal-backdrop-opacity'
+  , 'section': u 'modals'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '0.5'
+  , 'type': u 'opacity'
+  , 'id': 364
+}, {
+  'category': u 'dialogs'
+  , 'name': u 'modal-header-border-color'
+  , 'section': u 'modals'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '#e5e5e5'
+  , 'type': u 'color'
+  , 'id': 365
+}, {
+  'category': u 'dialogs'
+  , 'name': u 'modal-footer-border-color'
+  , 'section': u 'modals'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '@modal-header-border-color'
+  , 'type': u 'color'
+  , 'id': 366
+}, {
+  'category': u 'dialogs'
+  , 'name': u 'modal-lg'
+  , 'section': u 'modals'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '900px'
+  , 'type': u 'size'
+  , 'id': 367
+}, {
+  'category': u 'dialogs'
+  , 'name': u 'modal-md'
+  , 'section': u 'modals'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '600px'
+  , 'type': u 'size'
+  , 'id': 368
+}, {
+  'category': u 'dialogs'
+  , 'name': u 'modal-sm'
+  , 'section': u 'modals'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '300px'
+  , 'type': u 'size'
+  , 'id': 369
+}, {
+  'category': u 'dialogs'
+  , 'name': u 'close-font-weight'
+  , 'section': u 'close'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u 'bold'
+  , 'type': u 'font-weight'
+  , 'id': 370
+}, {
+  'category': u 'dialogs'
+  , 'name': u 'close-color'
+  , 'section': u 'close'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '#000'
+  , 'type': u 'color'
+  , 'id': 371
+}, {
+  'category': u 'dialogs'
+  , 'name': u 'close-text-shadow'
+  , 'section': u 'close'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '0 1px 0 #fff'
+  , 'type': u 'shadow'
+  , 'id': 372
+}, {
+  'category': u 'containers'
+  , 'name': u 'carousel-text-shadow'
+  , 'section': u 'carousel'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '0 1px 2px rgba(0,0,0,.6)'
+  , 'type': u 'shadow'
+  , 'id': 373
+}, {
+  'category': u 'containers'
+  , 'name': u 'carousel-control-color'
+  , 'section': u 'carousel'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '#fff'
+  , 'type': u 'color'
+  , 'id': 374
+}, {
+  'category': u 'containers'
+  , 'name': u 'carousel-control-width'
+  , 'section': u 'carousel'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '15%'
+  , 'type': u 'percentage'
+  , 'id': 375
+}, {
+  'category': u 'containers'
+  , 'name': u 'carousel-control-opacity'
+  , 'section': u 'carousel'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '0.5'
+  , 'type': u 'opacity'
+  , 'id': 376
+}, {
+  'category': u 'containers'
+  , 'name': u 'carousel-control-font-size'
+  , 'section': u 'carousel'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '20px'
+  , 'type': u 'size-font'
+  , 'id': 377
+}, {
+  'category': u 'containers'
+  , 'name': u 'carousel-indicator-active-bg'
+  , 'section': u 'carousel'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '#fff'
+  , 'type': u 'color'
+  , 'id': 378
+}, {
+  'category': u 'containers'
+  , 'name': u 'carousel-indicator-border-color'
+  , 'section': u 'carousel'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '#fff'
+  , 'type': u 'color'
+  , 'id': 379
+}, {
+  'category': u 'containers'
+  , 'name': u 'carousel-caption-color'
+  , 'section': u 'carousel'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '#fff'
+  , 'type': u 'color'
+  , 'id': 380
+}, {
+  'category': u 'configuration'
+  , 'name': u 'zindex-navbar'
+  , 'section': u 'z-index'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '1000'
+  , 'type': u 'number'
+  , 'id': 381
+}, {
+  'category': u 'configuration'
+  , 'name': u 'zindex-dropdown'
+  , 'section': u 'z-index'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '1000'
+  , 'type': u 'number'
+  , 'id': 382
+}, {
+  'category': u 'configuration'
+  , 'name': u 'zindex-navbar-fixed'
+  , 'section': u 'z-index'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '1030'
+  , 'type': u 'number'
+  , 'id': 383
+}, {
+  'category': u 'configuration'
+  , 'name': u 'zindex-modal-background'
+  , 'section': u 'z-index'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '1040'
+  , 'type': u 'number'
+  , 'id': 384
+}, {
+  'category': u 'configuration'
+  , 'name': u 'zindex-modal'
+  , 'section': u 'z-index'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '1050'
+  , 'type': u 'number'
+  , 'id': 385
+}, {
+  'category': u 'configuration'
+  , 'name': u 'zindex-popover'
+  , 'section': u 'z-index'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '1060'
+  , 'type': u 'number'
+  , 'id': 386
+}, {
+  'category': u 'configuration'
+  , 'name': u 'zindex-tooltip'
+  , 'section': u 'z-index'
+  , 'subsection': None
+  , 'theme_id': 1
+  , 'output': u '1070'
+  , 'type': u 'number'
+  , 'id': 387
+}]

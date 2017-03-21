@@ -5,15 +5,16 @@
 {% endblock %}
 
 {% block main %}
-  <div class="application">
+<!--  <div class="application">-->
     <!--  iframe containing layout page -->
     <iframe src="{{ url_for('static', filename='layout.html') }}" id="layout">
       <p>Your browser does not support iframes.</p>
     </iframe>
 
     <!--  tool panel -->
-    <form id="config-panel" action="">
+    <form id="config-panel" action="{{ url_for('category') }}" method="post">
       <h4 class="category-title">{{ category }}</h4>
+      
       {% for section in vars|selectattr("category", "equalto", category)|groupby('section') %}
 
         <div class="panel panel-default panel-outer">
@@ -37,7 +38,7 @@
                 {% for var in subsection.list %}
                   <div id="{{ var.name }}" class="panel-body variable-display">
                     <div class="form-group">
-                      <a tabindex="0" role="button" class="help-icon" data-toggle="popover" data-trigger="focus" data-content="{{ var.message }}" data-placement="left"><span class='glyphicon glyphicon-question-sign'></span></a>
+                      <a tabindex="0" role="button" class="help-icon" data-toggle="popover" data-trigger="focus" title="@variable" data-content="{{ var.message }}" data-placement="left"><span class='glyphicon glyphicon-question-sign'></span></a>
                       <label for="input-@{{ var.name }}">@{{ var.name }}</label>
                       <input type="text" class="form-control" id="input-@{{ var.name }}" name="input-@{{ var.name }}" aria-describedby="help-block-@{{ var.var_name }}" value="{{ var.output }}" data-var="@{{ var.name }}">
                     </div>
@@ -53,5 +54,5 @@
         </div>
       {% endfor %}
     </form>
-  </div>
+<!--  </div>-->
 {% endblock %}

@@ -1,8 +1,8 @@
 import os
+import json
 import sqlite3 as sql
 
 from flask import Flask, g, flash, jsonify, redirect, render_template, request, session, url_for
-#from flask_session import Session
 from passlib.apps import custom_app_context as pwd_context
 from tempfile import gettempdir
 
@@ -12,7 +12,6 @@ from helpers import *
 
 app = Flask(__name__)
 currentTheme = None
-APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 #JSGlue(app)
 
@@ -28,21 +27,16 @@ if app.config["DEBUG"]:
     response.headers["Expires"] = 0
     response.headers["Pragma"] = "no-cache"
     return response
-
-
+  
 #
 # initApp()
 #
 
 def initApp(app):
+  print("initApp")
   global currentTheme
   currentTheme = None
-
-#  print "## MAIN "
-#  print currentTheme
 initApp(app)
-
-
 
 #
 # @app.route("/") = index(): home (index) page
@@ -54,17 +48,14 @@ def index():
   return render_template("index.html")
 
 #
-# @app.route("/init") = initTheme(): create new theme from default values
+# @app.route("/inittheme") = initTheme(): create new theme from default values
 #
 
-@app.route("/init", methods=["GET", "POST"])
+@app.route("/inittheme", methods=["GET", "POST"])
 @login_required
-def init():
+def initTheme():
   global currentTheme
   currentTheme = getDefaultTheme()
-
-#  print "## INIT CURRENTTHEME"
-#  print currentTheme
 
   return render_template("index.html", vars=currentTheme, messages=getHelpText(), category="layout")
 
@@ -75,19 +66,31 @@ def init():
 @app.route("/category", methods=["GET"])
 @login_required
 def category():
-  global currentTheme
-
   # http://builder.pliddy.com/category.html?c='Layout'
   # request.args.get("c")
-
-#   = flask.g.get('user', None)
-
-#  print "## CATEGORY"
-#  print request.args.get("c")
-#  print currentTheme
-
+  
+  global currentTheme
   return render_template("index.html", vars=currentTheme, messages=getHelpText(), category=request.args.get("c"))
 
+#
+#
+#
+
+@app.route("/update", methods=["POST"])
+@login_required
+def update():
+  global currentTheme
+  
+  post_data = request.form.to_dict()  
+  key = next(iter(post_data))
+  val = post_data[key]
+  
+  for var in currentTheme:
+    if var['name'] == key:
+      var['output'] = val
+  
+  return json.dumps({'status':'OK'});
+  
 #
 # @app.route("/register") = register(): new user account creation
 #
@@ -263,10 +266,19 @@ def logout():
 # @app.route("/export") = export(): export compiled CSS files
 #
 
-@app.route("/export")
+@app.route("/export", methods=["GET"])
 @login_required
 def export():
-  return render_template("index.html")
+  global currentTheme
+  return render_template("export.html", vars=currentTheme)
+
+#
+#
+#
+
+@app.route("/cancel")
+def cancel():
+  return redirect(redirect_url())
 
 #
 # close_connection(): utility class from flask sqlite3 documentation
