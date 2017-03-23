@@ -51,7 +51,7 @@
                           {{ subsection.grouper }} <span class="caret"></span>
                         </h4>
                       </div>
-                    <div id="collapse-{{ subsection.grouper }}" class="panel-collapse collapse">
+                      <div id="collapse-{{ subsection.grouper }}" class="panel-collapse collapse">
                   {% endif %}
 
                   {% for var in subsection.list %}
@@ -65,14 +65,15 @@
                   {% endfor %}
 
                   {% if subsection.grouper %}
-                    </div></div>
+                      </div>
+                    </div>
                   {% endif %}
                 </div>
               {% endfor %}
             </div>
           </div>
         {% endfor %}
-        <div>
+      </div>
     </form>
   </div>
 {% endblock %}

@@ -1,37 +1,37 @@
-  {% for section in vars|selectattr("category", "equalto", category)|groupby('section') %}
-    <div class="panel panel-default panel-outer">
-      <div class="panel-heading" data-toggle="collapse" href="#collapse-{{ section.grouper }}">
-        <h4 class="panel-title">{{ section.grouper }} <span class="caret"></span></h4>
-      </div>
-      <div id="collapse-{{ section.grouper }}" class="panel-collapse collapse">
-        {% for subsection in section.list|selectattr("section", "equalto", section.grouper)|groupby('subsection') %}
-          <div class="panel-body">
-
-            {% if subsection.grouper %}
-              <div class="panel panel-default panel-inner">
-                <div class="panel-heading" data-toggle="collapse" href="#collapse-{{ subsection.grouper }}">
-                  <h4 class="panel-title">
-                    {{ subsection.grouper }} <span class="caret"></span>
-                  </h4>
-                </div>
-              <div id="collapse-{{ subsection.grouper }}" class="panel-collapse collapse">
-            {% endif %}
-
-            {% for var in subsection.list %}
-              <div id="{{ var.name }}" class="panel-body variable-display">
-                <div class="form-group">
-                  <a tabindex="0" role="button" class="help-icon" data-toggle="popover" data-trigger="focus" title="@variable" data-content="{{ var.message }}" data-placement="left"><span class='glyphicon glyphicon-question-sign'></span></a>
-                  <label for="input-@{{ var.name }}">@{{ var.name }}</label>
-                  <input type="text" class="form-control" id="input-@{{ var.name }}" name="input-@{{ var.name }}" aria-describedby="help-block-@{{ var.var_name }}" value="{{ var.output }}" data-var="@{{ var.name }}">
-                </div>
-              </div>
-            {% endfor %}
-
-            {% if subsection.grouper %}
-              </div></div>
-            {% endif %}
-          </div>
-        {% endfor %}
-      </div>
+{% for section in vars|selectattr("category", "equalto", category)|groupby('section') %}
+  <div class="panel panel-default panel-outer">
+    <div class="panel-heading" data-toggle="collapse" href="#collapse-{{ section.grouper }}">
+      <h4 class="panel-title">{{ section.grouper }} <span class="caret"></span></h4>
     </div>
-  {% endfor %}
+    <div id="collapse-{{ section.grouper }}" class="panel-collapse collapse">
+      {% for subsection in section.list|selectattr("section", "equalto", section.grouper)|groupby('subsection') %}
+        <div class="panel-body">
+
+          {% if subsection.grouper %}
+            <div class="panel panel-default panel-inner">
+              <div class="panel-heading" data-toggle="collapse" href="#collapse-{{ subsection.grouper }}">
+                <h4 class="panel-title">
+                  {{ subsection.grouper }} <span class="caret"></span>
+                </h4>
+              </div>
+              <div id="collapse-{{ subsection.grouper }}" class="panel-collapse collapse">
+          {% endif %}
+
+          {% for var in subsection.list %}
+            <div id="{{ var.name }}" class="panel-body variable-display">
+              <div class="form-group">
+                <a tabindex="0" role="button" class="help-icon" data-toggle="popover" data-trigger="focus" title="@variable" data-content="{{ var.message }}" data-placement="left"><span class='glyphicon glyphicon-question-sign'></span></a>
+                <label for="input-@{{ var.name }}">@{{ var.name }}</label>
+                <input type="text" class="form-control" id="input-@{{ var.name }}" name="input-@{{ var.name }}" aria-describedby="help-block-@{{ var.var_name }}" value="{{ var.output }}" data-var="@{{ var.name }}">
+              </div>
+            </div>
+          {% endfor %}
+
+          {% if subsection.grouper %}
+            </div></div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endfor %}
