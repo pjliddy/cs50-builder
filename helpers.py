@@ -1,5 +1,5 @@
 import sqlite3
-from flask import g, jsonify, redirect, render_template, request, session, url_for
+from flask import g, flash, jsonify, redirect, render_template, request, session, url_for
 from functools import wraps
 
 DATABASE = 'builder.db'
@@ -101,6 +101,33 @@ def get_theme(themeId):
   
   return theme
 
+#
+# delete_theme(): deletes theme and variables from database
+#
+
+def delete_theme(themeId):
+  print "delete_theme()"
+  print themeId
+  
+  result = insert_db('DELETE FROM themes WHERE id = ?', (themeId,))
+  
+  print "delete from themes"
+  print result
+  
+  if not result:
+    flash("can't delete theme")
+    return render_template("user.html")
+  
+  result = insert_db('DELETE FROM variables WHERE theme_id = ?',(themeId,))
+  
+  print "delete from variables"
+  print result
+  
+  if not result:
+    flash("can't delete theme")
+    return render_template("user.html")
+
+  return result
 #
 # get_help_text(): returns helper text messages for variables in config ui
 #

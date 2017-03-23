@@ -37,6 +37,12 @@ header {
 .login {
   margin-top: 30px;
 }
+#saved-themes-list td {
+  vertical-align: middle;
+}
+.theme-name-list-item {
+  margin: 0 5px;
+}
 #layout {
   float: left;
   height: 100%;

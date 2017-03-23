@@ -3,9 +3,9 @@ from helpers import *
 def get_content( id, vars ):  
   if id == 'home':
     
-    return("<h1>Welcome, " + vars['username'] + ":</h1>" + 
-           "<p class='lead'>This is default content.</p>" + 
-           "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in tortor non erat auctor venenatis. Duis eu urna ac enim ullamcorper porta. Suspendisse sagittis nisl sem, id elementum arcu volutpat imperdiet. Integer tellus turpis, fermentum ut nisl eu, consectetur eleifend tellus. Aliquam erat volutpat. Nam a leo eget urna efficitur posuere. Morbi eget ullamcorper lorem. In in vulputate lorem. Nam suscipit, quam et mollis tincidunt, diam sapien porttitor risus, vel tristique turpis sapien et metus.</p>")
+    return("<h3>" + vars['username'] + "</h3>" +
+           "<h1>Welcome to Builder</h1>" + 
+           "<p class='lead'>Load one of your saved themes below or start a new theme from the default bootstrap style.</p>")
   elif id == 'core':
     return("<h1>CORE Heading Level 1 <small class='muted'>with muted small text</small></h1>" + 
            

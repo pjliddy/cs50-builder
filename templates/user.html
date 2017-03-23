@@ -7,5 +7,41 @@
 {% block main %}
   <div class="wrapper">
     {{ get_layout('home', { 'username':user_name() } )|safe }}
+    <div class="row">
+      <div class="col-md-8">
+        <div class="panel panel-default">
+          <!-- Default panel contents -->
+          <div class="panel-heading clearfix">
+            <button class="btn btn-primary pull-right" id="new-theme-btn">New Theme</button><h4>Saved Themes</h4>
+            
+          </div>
+
+          <!-- Table -->
+          <table class="table" id="saved-themes-list">
+            {% for theme in themes %}
+              <tr>
+                <td class='col-md-8'><p class="theme-name-list-item">{{ theme.name }}</p></td>
+                <td class='col-md-2 text-right'>
+                  <button class="btn btn-default load-theme-btn" data-value="{{ theme.id }}">Load</button>
+                </td>
+                <td class='col-md-2 text-right'>
+                  <button class="btn btn-link delete-theme-btn" data-value="{{ theme.id }}">Delete</button>
+                </td>
+              </tr>
+            {% endfor %}
+          </table>
+        </div>
+      </div>
+    </div>
+<!--
+    <div class="panel panel-info">
+      <div class="panel-heading">Saved Themes</div>
+      <ul class="list-group">
+        {% for theme in themes %}
+          <a href="#" class="list-group-item">{{ theme.name }}</a>
+        {% endfor %}
+      </ul>
+    </div>
+-->
   </div>
 {% endblock %}

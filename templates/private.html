@@ -32,7 +32,7 @@
             <div class="collapse navbar-collapse" id="navbar">
               {% if session.user_id %}
                 <ul class="nav navbar-nav">
-                  <li><a href="#" id="new-theme">New Theme</a></li>
+<!--                  <li><a href="#" id="new-theme">New Theme</a></li>-->
                   <li><a href="{{ url_for('export') }}">Export</a></li>
 
                   <li class="dropdown">
@@ -72,30 +72,57 @@
       </div>
     </nav>
     
-    <div class="modal fade" tabindex="-1" role="dialog" id="modal-private">
+    <div class="modal fade" tabindex="-1" role="dialog" id="modal-new-theme">
       <div class="modal-dialog modal-sm" role="document">
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title">New Theme</h4>
+            <h4 class="modal-title">Start a New Theme</h4>
           </div>
           <form>
             <div class="modal-body">
               <div class="form-group">
-                <label for="theme-name">Theme Name</label>
+                <label for="theme-name">Name Your Theme:</label>
                 <input type="text" class="form-control" id="theme-name-input" placeholder="New Theme..." required data-error="Please provide a theme name." >
                 <div class="help-block with-errors"></div>
               </div>
             </div>
             <div class=" form-group modal-footer">
+              <button type="button" class="btn btn-primary pull-right" disabled id="create-theme-btn">Save</button>
               <button type="button" class="btn btn-link" data-dismiss="modal">Cancel</button>
-              <button type="button" class="btn btn-primary" disabled id="create-theme-btn">Create Theme</button>
+            </div>
+          </form>
+        </div><!-- .modal-content -->
+      </div><!-- .modal-dialog -->
+    </div><!-- .modal -->
+
+    
+    
+    <div class="modal fade" tabindex="-1" role="dialog" id="modal-delete" data-value="">
+      <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Are You Sure?</h4>
+          </div>
+          <form>
+            <div class="modal-body">
+              <p>Do you really want to delete this theme?</p>
+            </div>
+            <div class=" form-group modal-footer">
+              <button type="button" class="btn btn-primary pull-right" id="confirm-delete-btn">Yes</button>
+              <button type="button" class="btn btn-link" data-dismiss="modal">No</button>
             </div>
           </form>
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
 
+    
+    
+    
+    
+    
     {% if get_flashed_messages() %}
       <header>
         <div class="alert alert-info " role="alert">

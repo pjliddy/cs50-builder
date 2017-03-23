@@ -1,16 +1,24 @@
 // initialize application when page loads
 
 $(function () {
-  // create application UI event listeners
-  $('#category-select a').click(selectCategory);
-  $('[data-toggle="popover"]').popover({
-      container:'#config-panel'
-    });
-  
-  $('#config-panel input').change(updateVar);
-  $('#new-theme').click(newTheme);
+  // new theme link listener
+  $('#new-theme-btn').click(newTheme);
+  // new theme name input field validation listener
   $('#theme-name-input').keyup(validateThemeNameInput);
+  // create theme button post-validation listener
   $('#create-theme-btn').click(submitNewTheme);
+  // create load theme button listener
+  $('.load-theme-btn').click(loadTheme);
+  // create delete theme button listener
+  $('.delete-theme-btn').click(deleteTheme);
+  // create confirm delete theme button listener
+  $('#confirm-delete-btn').click(confirmDelete);
+  // layout category selection menu item listener
+  $('#category-select a').click(selectCategory);
+  // variable config help text popover listener
+  $('[data-toggle="popover"]').popover({ container:'#config-panel'});
+  // variable config input field update listener
+  $('#config-panel input').change(updateVar);  
 });
 
 function selectCategory( evt ){
@@ -52,7 +60,7 @@ function updateVar( evt ) {
 
 function newTheme( evt ) {
   // show the modal
-  $('#modal-private').modal('show');
+  $('#modal-new-theme').modal('show');
 };
 
 function validateThemeNameInput( evt ) {
@@ -65,68 +73,26 @@ function validateThemeNameInput( evt ) {
   }
 };
 
+// replace these with post commands?
 function submitNewTheme( evt ) {
   themeName = $('#theme-name-input').val();
   window.location.replace("/new_theme?n=" + themeName);
-  // tell server to update theme data
-//  $.ajax({
-//      url: '/update',
-//      data: message,
-//      type: 'POST',
-//      success: function(response) {
-//        console.log(response);
-//      },
-//      error: function(error) {
-//        console.log(error);
-//      }
-//  });
 };
 
-  // let validator make sure form fields are valid  
-//  $('#theme-name-form').validator().on('submit', function( evt ) {
-//    if (! evt.isDefaultPrevented()) {
-//      // form is good
-//      var theme_name = $('#theme-name').val();
-//      console.log(theme_name)
-//      var path = '/new_theme?n=' + theme_name;
-//      console.log(path)
-//      $('#modal-private').modal('hide');
-//      window.location.replace(path);
-//    }
-//  });
+// replace these with post commands?
+function loadTheme( evt ) {
+  var value = $(this).data("value");
+  window.location.replace("/load?id=" + value);
+};
 
-//      $.ajax({
-//        url: '/new_theme',
-//        data: {'theme_name':theme_name },
-//        type: 'POST',
-//        success: function(response) {
-//          // go to new theme page 
-//          console.log(response);
-//          
-//        },
-//        error: function(error) {
-//          console.log('error: ' + error);
-//        }
-//      });
+// replace these with post commands?
+function deleteTheme( evt ) {
+  var value = $(this).data("value");
+  $('#modal-delete').attr('data-value', $(this).data("value"));
+  $('#modal-delete').modal('show');
+};
 
-
-//function validateThemeName( evt ) {
-//  var theme_name = $('#theme-name').val();
-//  
-//  if (theme_name){
-//    console.log('post: ' + theme_name)
-//    // tell server to validate
-//    $.ajax({
-//        url: '/new_theme',
-//        data: {'theme_name':theme_name },
-//        type: 'POST',
-//        success: function(response) {
-//          console.log('new:' + response);
-//        },
-//        error: function(error) {
-//          console.log('error: ' + error);
-//        }
-//    });
-//  };
-//};
-
+function confirmDelete( evt ) {
+  var value = $('#modal-delete').data('value');
+  window.location.replace("/delete?id=" + value);
+};

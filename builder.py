@@ -58,6 +58,15 @@ def index():
   return render_template("index.html")
 
 #
+# @app.route("/theme") = theme(): returns theme layout panel in iframe
+#
+
+@app.route("/theme")
+@login_required
+def theme():
+  return render_template("theme.html")
+
+#
 # @app.route("/login") = login(): user log in page
 #
 
@@ -229,10 +238,11 @@ def register():
 @app.route("/user")
 @login_required
 def user():
+  themes = query_db('SELECT * FROM themes WHERE user_id = ?', (session["user_id"],))
   
   # NEXT STEP: user home page list of themes in db for that user
   
-  return render_template("user.html")
+  return render_template("user.html", themes=themes)
 
 #
 # @app.route("/new") = new_theme(): create new theme in db from default values
@@ -281,23 +291,38 @@ def new_theme():
     return render_template("application.html", iframe=url_for('theme', category=category), vars=active_theme, messages=get_help_text(), category=category)
 
 #
-# @app.route("/layout") = layout(): returns theme layout panel in iframe
+# @app.route("/load") = load(): load a theme from the database
 #
 
-@app.route("/theme")
+@app.route("/load", methods=["GET"])
 @login_required
-def theme():
-  return render_template("theme.html")
-
-
-
-#######################################
-
-
-
-
+def load():
+  global active_theme
+  theme_id = request.args.get("id")
+  active_theme = get_theme(theme_id)
+  category="core"
+  
+  return render_template("application.html", iframe=url_for('theme', category=category), vars=active_theme, messages=get_help_text(), category=category)
+ 
 #
-# @app.route("/category") = initTheme(): create new theme from default values
+# @app.route("/delete") = delete(): delete a theme from the database
+#
+
+@app.route("/delete", methods=["GET"])
+@login_required
+def delete():
+  theme_id = request.args.get("id")
+  print '/delete()'
+  print theme_id
+  
+  delete_theme(theme_id)
+  
+  return redirect(url_for("user"))
+
+  
+#######################################
+#
+# @app.route("/category") = XXXX
 #
 
 @app.route("/category", methods=["GET"])
