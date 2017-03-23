@@ -61,10 +61,12 @@ def index():
 # @app.route("/theme") = theme(): returns theme layout panel in iframe
 #
 
-@app.route("/theme")
+@app.route("/theme", methods=["GET"])
 @login_required
 def theme():
-  return render_template("theme.html")
+  # includes &category=XXX
+  category = request.args.get("category")
+  return render_template("theme.html", category=category)
 
 #
 # @app.route("/login") = login(): user log in page
@@ -239,21 +241,19 @@ def register():
 @login_required
 def user():
   themes = query_db('SELECT * FROM themes WHERE user_id = ?', (session["user_id"],))
-  
-  # NEXT STEP: user home page list of themes in db for that user
-  
+
   return render_template("user.html", themes=themes)
 
 #
 # @app.route("/new") = new_theme(): create new theme in db from default values
 #
 
-@app.route("/new_theme", methods=["GET"])
+@app.route("/new", methods=["GET"])
 @login_required
-def new_theme():
+def new():
   global active_theme
   active_theme = get_default_theme()
-  category="core"
+  #category="core"
   
   # check to see if this name has been used by current user
   theme_name = request.args.get("n")
@@ -288,7 +288,7 @@ def new_theme():
         return render_template("user.html")
 
     # go to first page of theme layout
-    return render_template("application.html", iframe=url_for('theme', category=category), vars=active_theme, messages=get_help_text(), category=category)
+    return redirect(url_for("category"))
 
 #
 # @app.route("/load") = load(): load a theme from the database
@@ -300,9 +300,9 @@ def load():
   global active_theme
   theme_id = request.args.get("id")
   active_theme = get_theme(theme_id)
-  category="core"
+#  category="core"
   
-  return render_template("application.html", iframe=url_for('theme', category=category), vars=active_theme, messages=get_help_text(), category=category)
+  return redirect(url_for("category"))
  
 #
 # @app.route("/delete") = delete(): delete a theme from the database
@@ -312,29 +312,54 @@ def load():
 @login_required
 def delete():
   theme_id = request.args.get("id")
-  print '/delete()'
-  print theme_id
-  
   delete_theme(theme_id)
   
   return redirect(url_for("user"))
 
-  
-#######################################
 #
-# @app.route("/category") = XXXX
+# @app.route("/category") = call after new or load to render category page
 #
 
-@app.route("/category", methods=["GET"])
+@app.route("/category", methods=["GET", "POST"])
 @login_required
 def category():
   global active_theme
-  category = request.args.get("c")
+  if request.method == "POST":
+    post_data = request.form.to_dict()
+    post_key = next(iter(post_data))
+    post_val = post_data[post_key]
+    
+    html = get_content(post_val)
+  
+    return html
+  else:
+    category = "core"
+#    category = request.args.get("c")
 
-  return render_template("index.html", iframe = url_for('layout'), vars=active_theme, messages=get_help_text(), category=category)
+    return render_template("application.html", iframe=url_for('theme', category=category), vars=active_theme, messages=get_help_text(), category=category)
 
 #
-# 
+# @app.route("/save"): save(): 
+#
+
+@app.route("/save", methods=["GET", "POST"])
+@login_required
+def save():
+  global active_theme
+  
+  if request.method == "POST":
+    result = save_theme(active_theme)
+    return json.dumps({'status':'OK'});
+  else:
+    # redirect user to user home page
+    return redirect(url_for("user"))
+
+  
+#######################################
+
+
+#
+# @app.route("/update"): update(): 
 #
 
 @app.route("/update", methods=["POST"])
@@ -346,6 +371,8 @@ def update():
   post_key = next(iter(post_data))
   post_val = post_data[post_key]
   
+  # DON'T LOOP, JUST FIND MATCH
+  
   for var in active_theme:
     if var['name'] == post_key:
       var['output'] = post_val
@@ -353,7 +380,7 @@ def update():
   return json.dumps({'status':'OK'});
 
 #
-# 
+# @app.route("/getvars"): getvars(): 
 #
 
 @app.route("/getvars", methods=["POST"])
@@ -362,7 +389,22 @@ def getvars():
   global active_theme
   return jsonify(active_theme)
 
- 
+#
+# @app.route("/config"): config(): 
+#
+
+@app.route("/config", methods=["POST"])
+@login_required
+def config():
+  global active_theme
+  
+  post_data = request.form.to_dict()
+  post_key = next(iter(post_data))
+  post_val = post_data[post_key]
+  
+  rendered = render_template("configvars.html", vars=active_theme, messages=get_help_text(), category=post_val)
+
+  return rendered
 
 #
 # @app.route("/export") = export(): export compiled CSS files
@@ -375,7 +417,7 @@ def export():
   return render_template("export.html", vars=active_theme)
 
 #
-#
+# tried to have cancel link on change password to act like back()
 #
 
 @app.route("/cancel")
@@ -411,12 +453,12 @@ def utility_processor():
 
 @app.context_processor
 def utility_processor():
-  def get_layout(category, vars={}):
+  def get_html(category, vars={}):
     # return html content for a category
     return get_content(category, vars)
   
   # return dict as result of utility_processor call
-  return dict(get_layout=get_layout)
+  return dict(get_html=get_html)
 
 #
 # close_connection(): utility class from flask sqlite3 documentation

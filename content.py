@@ -1,11 +1,10 @@
 from helpers import *
 
-def get_content( id, vars ):  
+def get_content( id, vars={} ):  
   if id == 'home':
-    
     return("<h3>" + vars['username'] + "</h3>" +
            "<h1>Welcome to Builder</h1>" + 
-           "<p class='lead'>Load one of your saved themes below or start a new theme from the default bootstrap style.</p>")
+           "<p class='lead'>Load one of your saved themes or start a new one.</p>")
   elif id == 'core':
     return("<h1>CORE Heading Level 1 <small class='muted'>with muted small text</small></h1>" + 
            
@@ -30,6 +29,52 @@ def get_content( id, vars ):
            "<h6>Heading Level 6 <small class='muted'>with muted small text</small></h6>" +
            
            "<p class='small'><strong>Small Paragraph. </strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in tortor non erat auctor venenatis. Duis eu urna ac enim ullamcorper porta. Suspendisse sagittis nisl sem, id elementum arcu volutpat imperdiet. Integer tellus turpis, fermentum ut nisl eu, consectetur eleifend tellus. Aliquam erat volutpat. Nam a leo eget urna efficitur posuere. Morbi eget ullamcorper lorem. In in vulputate lorem. Nam suscipit, quam et mollis tincidunt, diam sapien porttitor risus, vel tristique turpis sapien et metus. Mauris pulvinar, libero vitae ultricies dictum, justo justo tristique metus, quis tincidunt dolor orci in sem. Quisque id lacus sit amet ex faucibus ultricies ac ac urna. Nulla vel erat lacus.</p>")
+  elif id == 'layout':
+    return("<h1>LAYOUT</h1>" + 
+           
+           "<h3>This is default content</h3>" + 
+           
+           "<p class='lead'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in tortor non erat auctor venenatis. Duis eu urna ac enim ullamcorper porta. Suspendisse sagittis nisl sem, id elementum arcu volutpat imperdiet. Integer tellus turpis, fermentum ut nisl eu, consectetur eleifend tellus. Aliquam erat volutpat. Nam a leo eget urna efficitur posuere. Morbi eget ullamcorper lorem. In in vulputate lorem. Nam suscipit, quam et mollis tincidunt, diam sapien porttitor risus, vel tristique turpis sapien et metus.</p>")
+  elif id == 'elements':
+    rendered = render_template("elements.html")
+    return(render_template("elements.html"))
+  
+  elif id == 'tables':
+    return("<h1>TABLES & FORMS</h1>" + 
+           
+           "<h3>This is default content</h3>" + 
+           
+           "<p class='lead'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in tortor non erat auctor venenatis. Duis eu urna ac enim ullamcorper porta. Suspendisse sagittis nisl sem, id elementum arcu volutpat imperdiet. Integer tellus turpis, fermentum ut nisl eu, consectetur eleifend tellus. Aliquam erat volutpat. Nam a leo eget urna efficitur posuere. Morbi eget ullamcorper lorem. In in vulputate lorem. Nam suscipit, quam et mollis tincidunt, diam sapien porttitor risus, vel tristique turpis sapien et metus.</p>")
+  elif id == 'navigation':
+    return("<h1>NAVIGATION</h1>" + 
+           
+           "<h3>This is default content</h3>" + 
+           
+           "<p class='lead'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in tortor non erat auctor venenatis. Duis eu urna ac enim ullamcorper porta. Suspendisse sagittis nisl sem, id elementum arcu volutpat imperdiet. Integer tellus turpis, fermentum ut nisl eu, consectetur eleifend tellus. Aliquam erat volutpat. Nam a leo eget urna efficitur posuere. Morbi eget ullamcorper lorem. In in vulputate lorem. Nam suscipit, quam et mollis tincidunt, diam sapien porttitor risus, vel tristique turpis sapien et metus.</p>")
+  elif id == 'indicators':
+    return("<h1>INDICATORS</h1>" + 
+           
+           "<h3>This is default content</h3>" + 
+           
+           "<p class='lead'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in tortor non erat auctor venenatis. Duis eu urna ac enim ullamcorper porta. Suspendisse sagittis nisl sem, id elementum arcu volutpat imperdiet. Integer tellus turpis, fermentum ut nisl eu, consectetur eleifend tellus. Aliquam erat volutpat. Nam a leo eget urna efficitur posuere. Morbi eget ullamcorper lorem. In in vulputate lorem. Nam suscipit, quam et mollis tincidunt, diam sapien porttitor risus, vel tristique turpis sapien et metus.</p>")
+  elif id == 'containers':
+    return("<h1>CONTAINERS</h1>" + 
+           
+           "<h3>This is default content</h3>" + 
+           
+           "<p class='lead'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in tortor non erat auctor venenatis. Duis eu urna ac enim ullamcorper porta. Suspendisse sagittis nisl sem, id elementum arcu volutpat imperdiet. Integer tellus turpis, fermentum ut nisl eu, consectetur eleifend tellus. Aliquam erat volutpat. Nam a leo eget urna efficitur posuere. Morbi eget ullamcorper lorem. In in vulputate lorem. Nam suscipit, quam et mollis tincidunt, diam sapien porttitor risus, vel tristique turpis sapien et metus.</p>")
+  elif id == 'dialogs':
+    return("<h1>DIALOGS</h1>" + 
+           
+           "<h3>This is default content</h3>" + 
+           
+           "<p class='lead'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in tortor non erat auctor venenatis. Duis eu urna ac enim ullamcorper porta. Suspendisse sagittis nisl sem, id elementum arcu volutpat imperdiet. Integer tellus turpis, fermentum ut nisl eu, consectetur eleifend tellus. Aliquam erat volutpat. Nam a leo eget urna efficitur posuere. Morbi eget ullamcorper lorem. In in vulputate lorem. Nam suscipit, quam et mollis tincidunt, diam sapien porttitor risus, vel tristique turpis sapien et metus.</p>")
+  elif id == 'configuration':
+    return("<h1>CONFIGURATION</h1>" + 
+           
+           "<h3>This is default content</h3>" + 
+           
+           "<p class='lead'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in tortor non erat auctor venenatis. Duis eu urna ac enim ullamcorper porta. Suspendisse sagittis nisl sem, id elementum arcu volutpat imperdiet. Integer tellus turpis, fermentum ut nisl eu, consectetur eleifend tellus. Aliquam erat volutpat. Nam a leo eget urna efficitur posuere. Morbi eget ullamcorper lorem. In in vulputate lorem. Nam suscipit, quam et mollis tincidunt, diam sapien porttitor risus, vel tristique turpis sapien et metus.</p>")
   else:
     return("<h3>This is default content</h3>" + 
            

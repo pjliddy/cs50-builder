@@ -19,6 +19,7 @@
 </head>
 <body>
   <div class="container clearfix">
+    
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
         <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -32,23 +33,9 @@
             <div class="collapse navbar-collapse" id="navbar">
               {% if session.user_id %}
                 <ul class="nav navbar-nav">
-<!--                  <li><a href="#" id="new-theme">New Theme</a></li>-->
+                  <li><a href="{{ url_for('user') }}">My Themes</a></li>
+                  <li><a href="" id="save-theme-btn">Save</a></li>
                   <li><a href="{{ url_for('export') }}">Export</a></li>
-
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Category <span class="caret"></span></a>
-                    <ul class="dropdown-menu" id="category-select">
-                      <li><a href="#" data-value="core">Core</a></li>
-                      <li><a href="#" data-value="layout">Layout</a></li>
-                      <li><a href="#" data-value="elements">Elements</a></li>
-                      <li><a href="#" data-value="tables-and-forms">Tables &amp; Forms</a></li>
-                      <li><a href="#" data-value="navigation">Navigation</a></li>
-                      <li><a href="#" data-value="indicators">Indicators</a></li>
-                      <li><a href="#" data-value="containers">Containers</a></li>
-                      <li><a href="#" data-value="dialogs">Dialogs</a></li>
-                      <li><a href="#" data-value="configuration">Configuration</a></li>
-                    </ul>
-                  </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                   <li class="dropdown">
@@ -83,7 +70,7 @@
             <div class="modal-body">
               <div class="form-group">
                 <label for="theme-name">Name Your Theme:</label>
-                <input type="text" class="form-control" id="theme-name-input" placeholder="New Theme..." required data-error="Please provide a theme name." >
+                <input type="text" class="form-control" id="theme-name-input" placeholder="New Theme..." required data-error="Please provide a theme name.">
                 <div class="help-block with-errors"></div>
               </div>
             </div>
@@ -92,11 +79,9 @@
               <button type="button" class="btn btn-link" data-dismiss="modal">Cancel</button>
             </div>
           </form>
-        </div><!-- .modal-content -->
-      </div><!-- .modal-dialog -->
-    </div><!-- .modal -->
-
-    
+        </div>
+      </div>
+    </div>
     
     <div class="modal fade" tabindex="-1" role="dialog" id="modal-delete" data-value="">
       <div class="modal-dialog modal-sm" role="document">
@@ -114,14 +99,9 @@
               <button type="button" class="btn btn-link" data-dismiss="modal">No</button>
             </div>
           </form>
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-
-    
-    
-    
-    
+        </div>
+      </div>
+    </div>    
     
     {% if get_flashed_messages() %}
       <header>
@@ -138,6 +118,7 @@
     <footer class="navbar-fixed-bottom">
       &copy; 2017 Patrick Liddy — MVP 1
     </footer>
+    
   </div>
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

@@ -79,7 +79,7 @@ def get_default_theme():
   return theme
 
 #
-# get_themeVars(): returns all variables for a specified theme
+# get_theme(): returns all variables for a specified theme
 #
 
 def get_theme(themeId):
@@ -89,6 +89,7 @@ def get_theme(themeId):
   
   for row in data:
     varObj = { }
+    varObj['id'] = row['id']
     varObj['name'] = row['name']
     varObj['output'] = row['output']
     varObj['type'] = row['type']
@@ -101,18 +102,29 @@ def get_theme(themeId):
   
   return theme
 
+
+
+#
+# save_theme( ): returns all variables for a specified theme
+#
+
+def save_theme( vars ):
+  for var in vars:
+    result = insert_db(
+        'UPDATE variables SET output = ? WHERE id = ?', (var['output'], var["id"])
+      )
+  return result
+
+
+
+
+
 #
 # delete_theme(): deletes theme and variables from database
 #
 
 def delete_theme(themeId):
-  print "delete_theme()"
-  print themeId
-  
   result = insert_db('DELETE FROM themes WHERE id = ?', (themeId,))
-  
-  print "delete from themes"
-  print result
   
   if not result:
     flash("can't delete theme")
@@ -120,14 +132,12 @@ def delete_theme(themeId):
   
   result = insert_db('DELETE FROM variables WHERE theme_id = ?',(themeId,))
   
-  print "delete from variables"
-  print result
-  
   if not result:
     flash("can't delete theme")
     return render_template("user.html")
 
   return result
+
 #
 # get_help_text(): returns helper text messages for variables in config ui
 #
@@ -144,6 +154,10 @@ def redirect_url(default='index'):
   test = request.referrer
   print test
   return test
+
+#
+# get_user_name(): returns user name based on session user_id 
+#
 
 def get_user_name():
   return query_db('SELECT name FROM users WHERE id =  ?',(session["user_id"],))[0]['name']

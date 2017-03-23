@@ -9,7 +9,7 @@
   <!--  default bootstrap theme for UI-->
   <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}" type="text/css">
 
-  <!--  <link rel="stylesheet" href="../static/css/builder.css" type="text/css">-->
+    <link rel="stylesheet" href="../static/css/builder.css" type="text/css">
 
   <link rel="stylesheet/less" href="{{ url_for('static', filename='bootstrap/theme/less/bootstrap.less') }}" type="text/less">
   
@@ -17,17 +17,8 @@
 </head>
 
 <body>
-  <div class="container" id="#content">
-    
-<!--
-    {% if category %}
-      {{ get_layout(category) }}
-    {% else %}
--->
-    <h1>Layout</h1>
-    <p>No category. Showing default layout content</p>
-<!--    {% endif %}-->
-    
+  <div class="container layout-content">
+    {{ get_html(category)|safe }}
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src={{ url_for('static', filename='js/bootstrap.js') }}></script>

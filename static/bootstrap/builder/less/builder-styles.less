@@ -5,7 +5,7 @@
 
 @ui-dark: @brand-primary;
 @ui-light: lighten(@brand-primary, 40%);
-  
+
 body,
 html {
   height: 100%;
@@ -17,18 +17,42 @@ header {
 .navbar {
   margin: 0;
 }
+.wrapper {
+  margin-top: 51px;
+  padding-top: 15px;
+}
 .application {
   height: 100%;
+  width:100%;
   margin-top: 50px;
   padding: 0;
   margin: 0 auto;
   top:51px;
-  position:absolute;
-  width:100%;
+  position:fixed;
+  right:232px;
+  left:0px
 }
-.wrapper {
-  margin-top: 51px;
-  padding-top: 15px;
+#layout {
+  float: left;
+  height: 100%;
+  width: 100%;
+  padding-right: 232px;
+  padding-bottom: 85px;
+//  position:relative;
+  border:none;
+//  overflow: auto;
+}
+#config-panel {
+  background-color: #eee;
+  float:right;
+  overflow: auto;
+  width: 232px;
+  height:100%;
+//  top:51px;
+  position:fixed;
+  right:0;
+  border-left:1px solid @gray-light;
+  padding: 0 0 85px 0;
 }
 .jumbotron {
   height: 100%;
@@ -49,51 +73,32 @@ header {
   vertical-align: middle;
 }
 .theme-name-list-item {
-  margin:0 5px;
-}
-#layout {
-  float: left;
-  height: 100%;
-  width: 100%;
-  padding-right: 232px;
-  padding-bottom: 85px;
-  position:fixed;
-  border:none;
+  margin:0 7px;
 }
 .export {
   height:100%;
-  margin:30px auto 84px;
+  margin:30px auto 64px;
 //  margin:30px auto;
 //  overflow-y:auto;
 //  border:1px solid @gray;
-  padding:15px 15px 45px 15px;
+//  padding:15px 15px 15px 15px;
 //  position:absolute;
 }
 .export p{
   font-family: @font-family-monospace;
 }
-#config-panel {
-  background-color: #eee;
-  float:right;
-  overflow: auto;
-  width: 232px;
-  height:100%;
-//  top:51px;
-  position:fixed;
-  right:0;
-  border-left:1px solid @gray-light;
-  padding: 0 0 85px 0;
-}
+
 footer {
   background: black;
   color: #9d9d9d;
   font-size: 10px;
   padding: 10px;
 }
-.category-title {
+.category-select-title {
   text-transform: capitalize;
-  display:block;
-  padding:12px 12px 12px 12px;
+  text-align:left;
+  padding: 8px 4px;
+//  padding:12px 12px 12px 12px;
   margin:0;
 }
 #config-panel .panel,
