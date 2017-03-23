@@ -59,18 +59,18 @@ def login_required(f):
     return decorated_function
 
 #
-# defaultThemeId(): returns ID of default theme
+# default_theme_id(): returns ID of default theme
 #
 
-def defaultThemeId():
+def default_theme_id():
   return query_db('SELECT * FROM themes WHERE name = "default"')[0]['id']
 
 #
-# getDefaultTheme(): returns all vars from default theme
+# get_default_theme(): returns all vars from default theme
 #
 
-def getDefaultTheme():
-  theme = getTheme(defaultThemeId())
+def get_default_theme():
+  theme = get_theme(default_theme_id())
   
   for var in theme:
     helptext = query_db('SELECT message FROM helptext WHERE var_name = ?',(var['name'],))[0]['message']
@@ -79,10 +79,10 @@ def getDefaultTheme():
   return theme
 
 #
-# getThemeVars(): returns all variables for a specified theme
+# get_themeVars(): returns all variables for a specified theme
 #
 
-def getTheme(themeId):
+def get_theme(themeId):
   data = query_db('SELECT * FROM variables WHERE theme_id = ?',(themeId,))
   
   theme = [ ]
@@ -102,10 +102,10 @@ def getTheme(themeId):
   return theme
 
 #
-# getHelpText(): returns helper text messages for variables in config ui
+# get_help_text(): returns helper text messages for variables in config ui
 #
 
-def getHelpText():
+def get_help_text():
   return query_db('SELECT * FROM helptext')
 
 #
@@ -118,3 +118,7 @@ def redirect_url(default='index'):
   print test
   return test
 
+def get_user_name():
+  return query_db('SELECT name FROM users WHERE id =  ?',(session["user_id"],))[0]['name']
+
+  

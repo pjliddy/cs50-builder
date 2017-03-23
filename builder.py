@@ -1,3 +1,7 @@
+#
+# import python libraries
+#
+
 import os
 import json
 import sqlite3 as sql
@@ -9,9 +13,14 @@ from tempfile import gettempdir
 #from flask_jsglue import JSGlue
 
 from helpers import *
+from content import *
+
+#
+# instantiate globals
+#
 
 app = Flask(__name__)
-currentTheme = None
+active_theme = None
 
 #JSGlue(app)
 
@@ -19,7 +28,10 @@ app.debug = True
 app.config['SECRET_KEY'] = 'developer key'
 #app.config['SECRET_KEY'] = '\x81\xb5\x14\x9a\x1a\xa2\x04\xc3\xc7\xd6\xe3\x98\xd3n\xc0\xe7\xd8\xcej\xba\xef^*\x8a'
 
-# ensure responses aren't cached
+#
+# ensure responses aren't cached - utility from CS-50 pset
+#
+
 if app.config["DEBUG"]:
   @app.after_request
   def after_request(response):
@@ -29,83 +41,32 @@ if app.config["DEBUG"]:
     return response
   
 #
-# initApp()
+# init_app(): initialize global variables
 #
 
-def initApp(app):
-  print("initApp")
-  global currentTheme
-  currentTheme = None
-initApp(app)
+def init_app(app):
+  global active_theme
+  active_theme = None
+init_app(app)
 
 #
-# @app.route("/") = index(): home (index) page
+# @app.route("/") = index(): public-facing home page
 #
 
 @app.route("/")
-@login_required
 def index():
   return render_template("index.html")
 
 #
-# @app.route("/inittheme") = initTheme(): create new theme from default values
+# @app.route("/login") = login(): user log in page
 #
 
-@app.route("/inittheme", methods=["GET", "POST"])
-@login_required
-def initTheme():
-  global currentTheme
-  currentTheme = getDefaultTheme()
+@app.route("/login", methods=["GET", "POST"])
+def login():
+  # clear current session user_id
+  session.clear()
 
-  return render_template("index.html", vars=currentTheme, messages=getHelpText(), category="layout")
-
-#
-# @app.route("/category") = initTheme(): create new theme from default values
-#
-
-@app.route("/category", methods=["GET"])
-@login_required
-def category():
-  # http://builder.pliddy.com/category.html?c='Layout'
-  # request.args.get("c")
-  
-  global currentTheme
-  return render_template("index.html", vars=currentTheme, messages=getHelpText(), category=request.args.get("c"))
-
-#
-#
-#
-
-@app.route("/update", methods=["POST"])
-@login_required
-def update():
-  global currentTheme
-  
-  post_data = request.form.to_dict()  
-  key = next(iter(post_data))
-  val = post_data[key]
-  
-  for var in currentTheme:
-    if var['name'] == key:
-      var['output'] = val
-  
-  return json.dumps({'status':'OK'});
- 
-
-@app.route("/getvars", methods=["POST"])
-@login_required
-def getvars():
-  global currentTheme
-  return jsonify(currentTheme)
-
-  
-#
-# @app.route("/register") = register(): new user account creation
-#
-
-@app.route("/register", methods=["GET", "POST"])
-def register():
-  # if user submitted form via POST)
+  # if user submitted form via POST
   if request.method == "POST":
     email = request.form.get("email")
     password = request.form.get("password")
@@ -114,46 +75,44 @@ def register():
     # check if email submitted
     if not email:
       flash("must provide email")
-      return render_template("register.html")
+      return render_template("login.html")
 
     # check if password submitted
     elif not password:
       flash("must provide password")
-      return render_template("register.html")
+      return render_template("login.html")
 
-    # check if password confirmed and both passwords match
-    elif not confirmation or confirmation != password:
-      flash("passwords must match")
-      return render_template("register.html")
-    
-    # generate hash based on user's password
-    hashed = pwd_context.encrypt(password)
-    
-    # if name is unique, add to db
-    exists = query_db('SELECT count(*) AS count FROM users WHERE name = ?',(email,))[0]['count']
-    
-    if not exists:
-      result = insert_db(
-        'INSERT INTO users (name, hash) VALUES (?,?)', (email, hashed)
-      )
+    # query database for username
+    rows = query_db('SELECT * FROM users WHERE name =  ?',(email,))
 
-      if not result:
-        flash("can't create user")
-        return render_template("register.html")
-    else:
-      flash("can't create user")
-      return render_template("register.html")
-
-    # log user in to application using new account credentials
-    login()
+    # ensure username exists and password is correct
+    if len(rows) != 1 or not pwd_context.verify(password, rows[0]["hash"]):
+      flash("invalid username and/or password")
+      return render_template("login.html")
     
+    # remember which user has logged in
+    session["user_id"] = rows[0]["id"]
+
     # redirect user to home page
-    return redirect(url_for("index"))
+    return redirect(url_for("user"))
 
   # else if user arrived via GET (link or redirect)
   else:
-      return render_template("register.html")
-    
+    return render_template("login.html")
+
+#
+# @app.route("/logout") = logout(): log user out of application
+#
+
+@app.route("/logout")
+@login_required
+def logout():
+  # clear current session user_id
+  session.clear()
+
+  # redirect user to login page
+  return redirect(url_for("index"))  
+
 #
 # @app.route("/password") = password(): user can change password
 #
@@ -204,25 +163,18 @@ def password():
 
     # flash message for flask to update alert message in header on index template
     flash("Password changed!")
-
     return render_template("password.html")
   
   # else if user arrived via GET (link or redirect)
   else:
-    # redirect user to home page
     return render_template("password.html")
   
 #
-# @app.route("/login") = login(): existing user log in page
+# @app.route("/register") = register(): new user account creation
 #
 
-@app.route("/login", methods=["GET", "POST"])
-def login():
-  """Log user in."""
-
-  # clear current session user_id
-  session.clear()
-
+@app.route("/register", methods=["GET", "POST"])
+def register():
   # if user submitted form via POST)
   if request.method == "POST":
     email = request.form.get("email")
@@ -232,43 +184,160 @@ def login():
     # check if email submitted
     if not email:
       flash("must provide email")
-      return render_template("login.html")
+      return render_template("register.html")
 
     # check if password submitted
     elif not password:
       flash("must provide password")
-      return render_template("login.html")
+      return render_template("register.html")
 
-    # query database for username
-    rows = query_db('SELECT * FROM users WHERE name =  ?',(email,))
-
-    # ensure username exists and password is correct
-    if len(rows) != 1 or not pwd_context.verify(password, rows[0]["hash"]):
-      flash("invalid username and/or password")
-      return render_template("login.html")
+    # check if password confirmed and both passwords match
+    elif not confirmation or confirmation != password:
+      flash("passwords must match")
+      return render_template("register.html")
     
-    # remember which user has logged in
-    session["user_id"] = rows[0]["id"]
+    # generate hash based on user's password
+    hashed = pwd_context.encrypt(password)
+    
+    # if name is unique, add to db
+    exists = query_db('SELECT count(*) AS count FROM users WHERE name = ?',(email,))[0]['count']
+    
+    if not exists:
+      result = insert_db('INSERT INTO users (name, hash) VALUES (?,?)', (email, hashed))
 
-    # redirect user to home page
-    return redirect(url_for("index"))
+      if not result:
+        flash("can't create user")
+        return render_template("register.html")
+    else:
+      flash("can't create user")
+      return render_template("register.html")
+
+    # log user in to application using new account credentials
+    login()
+    
+    # redirect user to user home page
+    return redirect(url_for("user"))
 
   # else if user arrived via GET (link or redirect)
   else:
-    return render_template("login.html")
-
+      return render_template("register.html")
+  
 #
-# @app.route("/logout") = logout(): log user out of application
+# @app.route("/user") = index(): user home page
 #
 
-@app.route("/logout")
+@app.route("/user")
 @login_required
-def logout():
-  # clear current session user_id
-  session.clear()
+def user():
+  
+  # NEXT STEP: user home page list of themes in db for that user
+  
+  return render_template("user.html")
 
-  # redirect user to login page
-  return redirect(url_for("login"))  
+#
+# @app.route("/new") = new_theme(): create new theme in db from default values
+#
+
+@app.route("/new_theme", methods=["GET"])
+@login_required
+def new_theme():
+  global active_theme
+  active_theme = get_default_theme()
+  category="core"
+  
+  # check to see if this name has been used by current user
+  theme_name = request.args.get("n")
+
+  # if name is in use by this user
+  if query_db('SELECT * FROM themes WHERE user_id =  ? AND name = ?',(session["user_id"], theme_name)):
+    flash("theme name already in use")
+    return render_template("user.html")
+  # if name is unique and unused
+  else:
+    # create new theme in themes table
+    result = insert_db('INSERT INTO themes (name, user_id) VALUES (?,?)', (theme_name, session["user_id"]))
+    
+    # validate insert into themes table
+    if not result:
+      flash("can't create theme")
+      return render_template("user.html")
+    
+    theme_id =  result.lastrowid
+
+    if not theme_id:
+      flash("can't create theme")
+      return render_template("user.html")
+
+    # clone default theme with new theme id in variables table
+    for varObj in active_theme:
+      result = insert_db('INSERT INTO variables (name, output, type, category, section, subsection, theme_id) VALUES (?, ?, ?, ?, ?, ?, ?)', (varObj['name'], varObj['output'], varObj['type'], varObj['category'], varObj['section'], varObj['subsection'], theme_id))
+                  
+      # validate insert into variables table
+      if not result:
+        flash("can't create theme")
+        return render_template("user.html")
+
+    # go to first page of theme layout
+    return render_template("application.html", iframe=url_for('theme', category=category), vars=active_theme, messages=get_help_text(), category=category)
+
+#
+# @app.route("/layout") = layout(): returns theme layout panel in iframe
+#
+
+@app.route("/theme")
+@login_required
+def theme():
+  return render_template("theme.html")
+
+
+
+#######################################
+
+
+
+
+#
+# @app.route("/category") = initTheme(): create new theme from default values
+#
+
+@app.route("/category", methods=["GET"])
+@login_required
+def category():
+  global active_theme
+  category = request.args.get("c")
+
+  return render_template("index.html", iframe = url_for('layout'), vars=active_theme, messages=get_help_text(), category=category)
+
+#
+# 
+#
+
+@app.route("/update", methods=["POST"])
+@login_required
+def update():
+  global active_theme
+  
+  post_data = request.form.to_dict()
+  post_key = next(iter(post_data))
+  post_val = post_data[post_key]
+  
+  for var in active_theme:
+    if var['name'] == post_key:
+      var['output'] = post_val
+  
+  return json.dumps({'status':'OK'});
+
+#
+# 
+#
+
+@app.route("/getvars", methods=["POST"])
+@login_required
+def getvars():
+  global active_theme
+  return jsonify(active_theme)
+
+ 
 
 #
 # @app.route("/export") = export(): export compiled CSS files
@@ -277,8 +346,8 @@ def logout():
 @app.route("/export", methods=["GET"])
 @login_required
 def export():
-  global currentTheme
-  return render_template("export.html", vars=currentTheme)
+  global active_theme
+  return render_template("export.html", vars=active_theme)
 
 #
 #
@@ -287,6 +356,42 @@ def export():
 @app.route("/cancel")
 def cancel():
   return redirect(redirect_url())
+
+
+
+
+
+#######################################
+
+#
+# get_username(): utility context processor allows get_username to be used in jinja templates
+#
+
+@app.context_processor
+def utility_processor():
+  def user_name():
+    # return name of current user in database
+    user_name = get_user_name()
+    return user_name
+  
+  # return dict as result of utility_processor call
+  return dict(user_name=user_name)
+
+#
+# get_layout(): utility context processor allows get_layout to be used in jinja templates
+#
+
+# NEXT STEPS: get_content generates html; better if it cleanly read & returned html from text files (easier to process)
+# can be loaded once and accessed from memory
+
+@app.context_processor
+def utility_processor():
+  def get_layout(category, vars={}):
+    # return html content for a category
+    return get_content(category, vars)
+  
+  # return dict as result of utility_processor call
+  return dict(get_layout=get_layout)
 
 #
 # close_connection(): utility class from flask sqlite3 documentation

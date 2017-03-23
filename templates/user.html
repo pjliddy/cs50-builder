@@ -1,0 +1,11 @@
+{% extends "private.html" %}
+
+{% block title %}
+    Builder - Home
+{% endblock %}
+
+{% block main %}
+  <div class="wrapper">
+    {{ get_layout('home', { 'username':user_name() } )|safe }}
+  </div>
+{% endblock %}

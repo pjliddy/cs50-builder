@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<!--  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">-->
+
+  <!--  default bootstrap theme for UI-->
+  <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/builder/css/bootstrap.css') }}" type="text/css">
+
+  <!--  custom bootstrap elements for builder UI-->
+  <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/builder/css/builder-styles.css') }}" type="text/css">
+  
+  <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+              <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> 
+            </button>
+            <a class="navbar-brand" href="{{ url_for('index') }}">Bootstrap Theme Builder</a>
+          </div>
+          <div class="collapse navbar-collapse" id="navbar">
+            {% if session.user_id %}
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="{{ url_for('password') }}">Change Password</a></li>
+                <li><a href="{{ url_for('logout') }}">Sign Out</a></li>
+              </ul>
+            {% else %}
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="{{ url_for('register') }}">New User</a></li>
+                <li><a href="{{ url_for('login') }}">Sign In</a></li>
+              </ul>
+            {% endif %}
+          </div>
+        </div>
+      </nav>
+    </div>
+  </nav>
+
+  {% if get_flashed_messages() %}
+    <header>
+      <div class="container">
+        <div class="alert alert-info " role="alert">
+          {{ get_flashed_messages() | join(" ") }}
+        </div>
+      </div>
+    </header>
+  {% endif %}
+
+  {% block main %}
+    <!-- MOVE CONTENT TO MAIN BLOCK FOR TEMPLATES-->
+  {% endblock %}
+
+  <footer class="navbar-fixed-bottom">
+    &copy; 2017 Patrick Liddy — MVP 1
+  </footer>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

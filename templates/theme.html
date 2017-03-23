@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--  default bootstrap theme for UI-->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}" type="text/css">
+
+  <!--  <link rel="stylesheet" href="../static/css/builder.css" type="text/css">-->
+
+  <link rel="stylesheet/less" href="{{ url_for('static', filename='bootstrap/theme/less/bootstrap.less') }}" type="text/less">
+  
+  <title>Bootstrap Theme Builder</title>
+</head>
+
+<body>
+  <div class="container" id="#content">
+    
+<!--
+    {% if category %}
+      {{ get_layout(category) }}
+    {% else %}
+-->
+    <h1>Layout</h1>
+    <p>No category. Showing default layout content</p>
+<!--    {% endif %}-->
+    
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src={{ url_for('static', filename='js/bootstrap.js') }}></script>
+  <script>less = {env: "development"};</script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.7.2/less.js"></script>
+  <script src={{ url_for('static', filename='js/layout.js') }}></script>
+  
+</body>
+</html>

@@ -20,6 +20,21 @@ header {
   width: 100%;
 }
 .wrapper {
+  margin-top: 51px;
+  padding-top: 15px;
+}
+.jumbotron {
+  height: 100%;
+  margin: 51px 0 34px 0;
+  padding-top: 60px;
+}
+.jumbotron h1 {
+  text-align: center;
+}
+.jumbotron .btn-lg {
+  margin: 45px 15px;
+}
+.login {
   margin-top: 30px;
 }
 #layout {

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<!--  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">-->
+  
+  <!--  default bootstrap theme for UI-->
+  <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/builder/css/bootstrap.css') }}" type="text/css">
+
+  <!--  custom bootstrap elements for builder UI-->
+  <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/builder/css/builder-styles.css') }}" type="text/css">
+  
+  <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+  <div class="container clearfix">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> 
+              </button>
+              <a class="navbar-brand" href="{{ url_for('user') }}">Bootstrap Theme Builder</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              {% if session.user_id %}
+                <ul class="nav navbar-nav">
+                  <li><a href="#" id="new-theme">New Theme</a></li>
+                  <li><a href="{{ url_for('export') }}">Export</a></li>
+
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Category <span class="caret"></span></a>
+                    <ul class="dropdown-menu" id="category-select">
+                      <li><a href="#" data-value="core">Core</a></li>
+                      <li><a href="#" data-value="layout">Layout</a></li>
+                      <li><a href="#" data-value="elements">Elements</a></li>
+                      <li><a href="#" data-value="tables-and-forms">Tables &amp; Forms</a></li>
+                      <li><a href="#" data-value="navigation">Navigation</a></li>
+                      <li><a href="#" data-value="indicators">Indicators</a></li>
+                      <li><a href="#" data-value="containers">Containers</a></li>
+                      <li><a href="#" data-value="dialogs">Dialogs</a></li>
+                      <li><a href="#" data-value="configuration">Configuration</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ user_name() }} <span class="caret"></span></a>
+                    <ul class="dropdown-menu" id="user-select">
+                      <li><a href="{{ url_for('user') }}">My Themes</a></li>
+                      <li><a href="{{ url_for('password') }}">Change Password</a></li>
+                      <li><a href="{{ url_for('logout') }}">Sign Out</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              {% else %}
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="{{ url_for('register') }}">New User</a></li>
+                  <li><a href="{{ url_for('login') }}">Sign In</a></li>
+                </ul>
+              {% endif %}
+            </div>
+          </div>
+        </nav>
+      </div>
+    </nav>
+    
+    <div class="modal fade" tabindex="-1" role="dialog" id="modal-private">
+      <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">New Theme</h4>
+          </div>
+          <form>
+            <div class="modal-body">
+              <div class="form-group">
+                <label for="theme-name">Theme Name</label>
+                <input type="text" class="form-control" id="theme-name-input" placeholder="New Theme..." required data-error="Please provide a theme name." >
+                <div class="help-block with-errors"></div>
+              </div>
+            </div>
+            <div class=" form-group modal-footer">
+              <button type="button" class="btn btn-link" data-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-primary" disabled id="create-theme-btn">Create Theme</button>
+            </div>
+          </form>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    {% if get_flashed_messages() %}
+      <header>
+        <div class="alert alert-info " role="alert">
+          {{ get_flashed_messages() | join(" ") }}
+        </div>
+      </header>
+    {% endif %}
+
+    {% block main %}
+      <!-- MOVE CONTENT TO MAIN BLOCK FOR TEMPLATES-->
+    {% endblock %}
+    
+    <footer class="navbar-fixed-bottom">
+      &copy; 2017 Patrick Liddy — MVP 1
+    </footer>
+  </div>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.js'></script>
+  <script>less = {env: "development"};</script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.7.2/less.js"></script>
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

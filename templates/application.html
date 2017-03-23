@@ -1,89 +1,58 @@
-<!DOCTYPE html>
+{% extends "private.html" %}
 
-<html lang="en">
+{% block title %}
+    Bootstrap Theme Builder
+{% endblock %}
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <!--  default bootstrap theme for UI-->
-  <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/builder/css/bootstrap.css') }}" type="text/css">
+{% block main %}
+  <div class="application">
+    <!--  iframe containing layout page -->
+    <iframe src="{{ iframe }}" id="layout">
+      <p>Your browser does not support iframes.</p>
+    </iframe>
 
-  <!--  custom bootstrap elements for builder UI-->
-  <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/builder/css/builder-styles.css') }}" type="text/css">
+    <!--  tool panel -->
+    <form id="config-panel" action="{{ url_for('category') }}" method="post">
+      <h4 class="category-title">{{ category }}</h4>
+      
+      {% for section in vars|selectattr("category", "equalto", category)|groupby('section') %}
 
-  <title>{% block title %}{% endblock %}</title>
-</head>
-<body>
-  <div class="container-fluid application clearfix">
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container-fluid">
-        <nav class="navbar navbar-inverse navbar-fixed-top">
-          <div class="container-fluid">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> 
-              </button>
-              <a class="navbar-brand" href="{{ url_for('index') }}">Bootstrap Theme Builder</a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              {% if session.user_id %}
-                <ul class="nav navbar-nav">
-                  <li><a href="{{ url_for('initTheme') }}">Initialize</a></li>
-                  <li><a href="{{ url_for('export') }}">Export</a></li>
-
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Category <span class="caret"></span></a>
-                    <ul class="dropdown-menu" id="category-select">
-                      <li><a href="#" data-value="layout">Layout</a></li>
-                      <li><a href="#" data-value="core">Core</a></li>
-                      <li><a href="#" data-value="elements">Elements</a></li>
-                      <li><a href="#" data-value="tables-and-forms">Tables &amp; Forms</a></li>
-                      <li><a href="#" data-value="navigation">Navigation</a></li>
-                      <li><a href="#" data-value="indicators">Indicators</a></li>
-                      <li><a href="#" data-value="containers">Containers</a></li>
-                      <li><a href="#" data-value="dialogs">Dialogs</a></li>
-                      <li><a href="#" data-value="configuration">Configuration</a></li>
-                    </ul>
-                  </li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                  <li><a href="{{ url_for('password') }}">Change Password</a></li>
-                  <li><a href="{{ url_for('logout') }}">Sign Out</a></li>
-                </ul>
-              {% else %}
-                <ul class="nav navbar-nav navbar-right">
-                  <li><a href="{{ url_for('register') }}">New User</a></li>
-                  <li><a href="{{ url_for('login') }}">Sign In</a></li>
-                </ul>
-              {% endif %}
-            </div>
+        <div class="panel panel-default panel-outer">
+          <div class="panel-heading" data-toggle="collapse" href="#collapse-{{ section.grouper }}">
+            <h4 class="panel-title">{{ section.grouper }} <span class="caret"></span></h4>
           </div>
-        </nav>
-      </div>
-    </nav>
+          <div id="collapse-{{ section.grouper }}" class="panel-collapse collapse">
+            {% for subsection in section.list|selectattr("section", "equalto", section.grouper)|groupby('subsection') %}
+              <div class="panel-body">
 
-    {% if get_flashed_messages() %}
-      <header>
-        <div class="alert alert-info " role="alert">
-          {{ get_flashed_messages() | join(" ") }}
+                {% if subsection.grouper %}
+                  <div class="panel panel-default panel-inner">
+                    <div class="panel-heading" data-toggle="collapse" href="#collapse-{{ subsection.grouper }}">
+                      <h4 class="panel-title">
+                        {{ subsection.grouper }} <span class="caret"></span>
+                      </h4>
+                    </div>
+                  <div id="collapse-{{ subsection.grouper }}" class="panel-collapse collapse">
+                {% endif %}
+
+                {% for var in subsection.list %}
+                  <div id="{{ var.name }}" class="panel-body variable-display">
+                    <div class="form-group">
+                      <a tabindex="0" role="button" class="help-icon" data-toggle="popover" data-trigger="focus" title="@variable" data-content="{{ var.message }}" data-placement="left"><span class='glyphicon glyphicon-question-sign'></span></a>
+                      <label for="input-@{{ var.name }}">@{{ var.name }}</label>
+                      <input type="text" class="form-control" id="input-@{{ var.name }}" name="input-@{{ var.name }}" aria-describedby="help-block-@{{ var.var_name }}" value="{{ var.output }}" data-var="@{{ var.name }}">
+                    </div>
+                  </div>
+                {% endfor %}
+
+                {% if subsection.grouper %}
+                  </div></div>
+                {% endif %}
+              </div>
+            {% endfor %}
+          </div>
         </div>
-      </header>
-    {% endif %}
-
-    {% block main %}
-      <!-- MOVE CONTENT TO MAIN BLOCK FOR TEMPLATES-->
-    {% endblock %}
-    
-    <footer class="navbar-fixed-bottom">
-      &copy; 2017 Patrick Liddy — MVP 1
-    </footer>
+      {% endfor %}
+    </form>
   </div>
-  
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
-  <script>less = {env: "development"};</script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.7.2/less.js"></script>
-  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-</body>
-</html>
+{% endblock %}
