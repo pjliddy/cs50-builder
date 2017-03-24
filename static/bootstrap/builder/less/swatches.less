@@ -1,0 +1,78 @@
+// out: ../css/swatches.css, compress: false, strictMath: true, sourceMap: true
+@import "variables.less";
+
+body{
+  padding-bottom:50px;
+}
+
+.color-swatch {
+  height: 84px !important;
+  border: 1px solid #ddd;
+  background-color: #ddd;
+  padding:0;
+}
+
+  @media (max-width: @screen-sm) {
+    .color-swatch {
+      height:72px !important;
+    }
+  }
+
+// styles to replace when needing to update hover states
+.custom-link {
+  color:@link-color;
+}
+.custom-underline:hover {
+  text-decoration:@link-hover-decoration;
+}
+.brand-primary {
+  background-color: @brand-primary;
+}
+.brand-success {
+  background-color: @brand-success;
+}
+.brand-info {
+  background-color: @brand-info;
+}
+.brand-warning {
+  background-color: @brand-warning;
+}
+.brand-danger {
+  background-color: @brand-danger;
+}
+.gray-base {
+  background-color: @gray-base;
+}
+.gray-darker {
+  background-color: @gray-darker;
+}
+.gray-dark {
+  background-color: @gray-dark;
+}
+.gray {
+  background-color: @gray;
+}
+.gray-light {
+  background-color: @gray-light;
+}
+.gray-lighter {
+  background-color: @gray-lighter;
+}
+.body-bg {
+  background-color: @body-bg;
+}
+.text-color {
+  background-color: @text-color;
+}
+.font-family-sans-serif {
+  font-family: @font-family-sans-serif;
+}
+.font-family-serif {
+  font-family: @font-family-serif;
+}
+.font-family-monospace {
+  font-family: @font-family-monospace;
+}
+.font-family-base {
+  font-family: @font-family-base;
+}

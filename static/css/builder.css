@@ -16,3 +16,15 @@
 /*  @import 'bootstrap'; */
 }
 
+.color-swatch {
+  height: 84px !important;
+  border: 1px solid #ddd;
+  background-color: #ddd;
+}
+
+@media (max-width: 768px) {
+  .color-swatch {
+    height: 72px !important;
+  }
+}
+

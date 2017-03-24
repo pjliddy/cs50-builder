@@ -23,16 +23,16 @@ function handleMessage(e) {
   
       // POST new category to server
       $.ajax({
-          url: '/category',
-          data: data,
-          type: 'POST',
-          success: function(response) {
-            // use jquery to replace variables in #config-vars
-            updateLayoutContent(response);
-          },
-          error: function(error) {
-            console.log(error);
-          }
+        url: '/category',
+        data: data,
+        type: 'POST',
+        success: function(response) {
+          // use jquery to replace variables in #config-vars
+          updateLayoutContent(response);
+        },
+        error: function(error) {
+          console.log(error);
+        }
       });
     }
   }
@@ -62,7 +62,7 @@ function updateVars() {
 };
 
 function updateLayoutContent( content ){
-  console.log( $('.layout-content').html() );
+//  console.log( $('.layout-content').html() );
   
   $('.layout-content').html( content );
 };

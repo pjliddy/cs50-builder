@@ -1,0 +1,142 @@
+<div class="row">
+  <div class="col-sm-12">
+    <h1 class="page-header">Elements</h1>
+    <h2 class="page-header" id="buttons">Buttons</h2>
+  </div>
+
+  <div class="col-sm-6">
+    <button type="button" class="btn btn-default">Default</button>
+    <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-success">Success</button>
+    <button type="button" class="btn btn-info">Info</button>
+    <button type="button" class="btn btn-warning">Warning</button>
+    <button type="button" class="btn btn-danger">Danger</button>
+    <button type="button" class="btn btn-link">Link</button>
+  </div>
+    
+  <div class="col-sm-3">
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <li><a href="#">Menu Item 1</a></li>
+        <li class="divider"></li>
+        <li class="dropdown-header">Dropdown Header</li>
+        <li><a href="#">Menu Item 2</a></li>
+        <li><a href="#">Menu Item 3</a></li>
+      </ul>
+    </div>
+  </div>   
+    
+  <div class="col-sm-3">
+    <div class="dropdown">
+      <button class="btn btn-primary btn-lg dropdown-toggle" type="button" data-toggle="dropdown">Large Dropdown
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <li class="active"><a href="#">Active Item</a></li>
+        <li><a href="#">Menu Item</a></li>
+        <li class="disabled"><a href="#">Disabled Menu Item</a></li>
+      </ul>
+    </div>   
+  </div>
+  
+  <div class="col-sm-12">
+    <h2 class="page-header" id="code">Code</h2> 
+  </div>
+
+  <div class="col-sm-3">
+    <h3>Code</h3>
+    <code>.class</code> or <code>#id</code>
+  </div>
+  
+  <div class="col-sm-3">
+    <h3>Keyboard</h3>
+    <kbd>ctl-C</kbd> + <kbd>ctl-X</kbd>
+  </div>
+  
+  <div class="col-sm-6">
+    <h3>Pre-formatted</h3>
+    <pre>
+  &lt;div class='panel-group'&gt;
+    &lt;div class='panel panel-default'&gt;
+      &lt;div class='panel-body'&gt;Panel Content&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class='panel panel-default'&gt;
+      &lt;div class='panel-body'&gt;Panel Content&lt;/div&gt;
+    <&lt;div/div>
+  &lt;/div></pre>
+  </div>
+    
+  <div class="col-sm-12">
+    <h2 class="page-header" id="thumbnails">Thumbnails</h2> 
+  </div>
+    
+  <div class="col-md-4">
+      <h3>Rounded Image</h3>
+      <p>The <code>.img-rounded</code> class adds rounded corners to an image</p>
+      <img src="{{ url_for('static', filename='img/earth.jpg') }}" class="img-rounded" alt="Earth" width="240" height="240">
+  </div>
+    
+  <div class="col-md-4">
+      <h3>Circle Image</h3>
+      <p>The <code>.img-circle</code> class shapes the image to a circle</p>
+      <img src="{{ url_for('static', filename='img/earth.jpg') }}" class="img-circle" alt="Earth" width="240" height="240">
+  </div>
+    
+  <div class="col-md-4">
+      <h3>Thumbnail Image</h3>
+      <p>The <code>.img-thumbnail</code> class shapes the image to a thumbnail</p>
+      <img src="{{ url_for('static', filename='img/earth.jpg') }}" class="img-thumbnail" alt="Earth" width="240" height="240">
+  </div>
+  
+  <div class="col-sm-12">
+    <h2 class="page-header" id="type">Type</h2> 
+  </div>
+    
+  <div class="col-sm-6">
+    <h3>Blockquote</h3>
+    <p>The <code>&lt;blockquote&gt;</code> element is used to present content from another source with an optional citation.</p>
+
+    <blockquote>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <footer>Citation wrapped by a <code>&lt;footer&gt;</code> element inside <code>&lt;blockquote&gt;</code> tags</footer>
+    </blockquote>
+  </div>
+
+  <div class="col-sm-6">
+    <h3>Reverse Blockquote</h3>
+    <p>To right-align the quote, use the <code>.blockquote-reverse</code> class on a <code>&lt;blockquote&gt;</code> element.</p>
+
+    <blockquote class="blockquote-reverse">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <footer>Citation wrapped by a <code>&lt;footer&gt;</code> element inside <code>&lt;blockquote&gt;</code> tags</footer>
+    </blockquote>
+  </div>
+    
+  <div class="col-sm-6">
+    <h3>Description List Element</h3>
+    <p>The <code>&lt;dl&gt;</code> element indicates a description list. <code>&lt;dt&gt;</code> tag shows terms. <code>&lt;dd&gt;</code> tag shows descriptions.</p>
+
+    <dl>
+      <dt>Coffee</dt>
+      <dd>- black hot drink</dd>
+      <dt>Milk</dt>
+      <dd>- white cold drink</dd>
+    </dl>
+  </div>
+    
+  <div class="col-sm-6">
+    <h3>Horizontal Description List Class</h3>
+    <p>The <code>.dl-horizontal</code> class lines up the description list side-by-side when the browser window expands:</p>
+
+    <dl class="dl-horizontal">
+      <dt>Coffee</dt>
+      <dd>- black hot drink</dd>
+      <dt>Milk</dt>
+      <dd>- white cold drink</dd>
+    </dl>
+  </div>
+
+    
+    
+</div>

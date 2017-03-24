@@ -63,7 +63,8 @@ def login_required(f):
 #
 
 def default_theme_id():
-  return query_db('SELECT * FROM themes WHERE name = "default"')[0]['id']
+  # make more specific; users could have a theme named "default"
+  return query_db('SELECT * FROM themes WHERE name = "default" AND user_id="1"')[0]['id']
 
 #
 # get_default_theme(): returns all vars from default theme
@@ -162,4 +163,13 @@ def redirect_url(default='index'):
 def get_user_name():
   return query_db('SELECT name FROM users WHERE id =  ?',(session["user_id"],))[0]['name']
 
-  
+#
+# get_content(): returns html content for theme category layouts
+#
+
+def get_content( id, vars={} ):  
+  template_path = "/layouts/" + id + ".html"
+  if id == 'home':
+    return(render_template("/layouts/home.html", username=get_user_name())) 
+  else:
+    return(render_template("/layouts/" + id + ".html"))

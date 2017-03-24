@@ -1,81 +1,28 @@
 from helpers import *
 
 def get_content( id, vars={} ):  
+  template_path = "/layouts/" + id + ".html"
   if id == 'home':
-    return("<h3>" + vars['username'] + "</h3>" +
-           "<h1>Welcome to Builder</h1>" + 
-           "<p class='lead'>Load one of your saved themes or start a new one.</p>")
-  elif id == 'core':
-    return("<h1>CORE Heading Level 1 <small class='muted'>with muted small text</small></h1>" + 
-           
-           "<p class='lead'><strong>Lead Paragraph. </strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in tortor non erat auctor venenatis. Duis eu urna ac enim ullamcorper porta. Suspendisse sagittis nisl sem, id elementum arcu volutpat imperdiet. Integer tellus turpis, fermentum ut nisl eu, consectetur eleifend tellus. Aliquam erat volutpat. Nam a leo eget urna efficitur posuere. Morbi eget ullamcorper lorem. In in vulputate lorem. Nam suscipit, quam et mollis tincidunt, diam sapien porttitor risus, vel tristique turpis sapien et metus.</p>" +
-
-           "<h2>Heading Level 2 <small class='muted'>with muted small text</small></h2>" +
-           
-           "<p><strong>Paragraph. </strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in tortor non erat auctor venenatis. Duis eu urna ac enim ullamcorper porta. Suspendisse sagittis nisl sem, id elementum arcu volutpat imperdiet. Integer tellus turpis, fermentum ut nisl eu, consectetur eleifend tellus. Aliquam erat volutpat. Nam a leo eget urna efficitur posuere. Morbi eget ullamcorper lorem. In in vulputate lorem. Nam suscipit, quam et mollis tincidunt, diam sapien porttitor risus, vel tristique turpis sapien et metus.</p>" + 
-
-           "<h3>Heading Level 3 <small class='muted'>with muted small text</small></h3>" + 
-           
-           "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in tortor non erat auctor venenatis. Duis eu urna ac enim ullamcorper porta. Suspendisse sagittis nisl sem, id elementum arcu volutpat imperdiet. Integer tellus turpis, fermentum ut nisl eu, consectetur eleifend tellus. Aliquam erat volutpat. Nam a leo eget urna efficitur posuere. Morbi eget ullamcorper lorem. In in vulputate lorem. Nam suscipit, quam et mollis tincidunt, diam sapien porttitor risus, vel tristique turpis sapien et metus.</p>" +
-
-           "<h4>Heading Level 4 <small class='muted'>with muted small text</small></h4>" +
-           
-           "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in tortor non erat auctor venenatis. Duis eu urna ac enim ullamcorper porta. Suspendisse sagittis nisl sem, id elementum arcu volutpat imperdiet. Integer tellus turpis, fermentum ut nisl eu, consectetur eleifend tellus. Aliquam erat volutpat. Nam a leo eget urna efficitur posuere. Morbi eget ullamcorper lorem. In in vulputate lorem. Nam suscipit, quam et mollis tincidunt, diam sapien porttitor risus, vel tristique turpis sapien et metus. Mauris pulvinar, libero vitae ultricies dictum, justo justo tristique metus, quis tincidunt dolor orci in sem. Quisque id lacus sit amet ex faucibus ultricies ac ac urna. Nulla vel erat lacus.</p>" +
-
-           "<h5>Heading Level 5 <small class='muted'>with muted small text</small></h5>" +
-           
-           "<p>Vivamus non porttitor augue. Cras molestie nunc ante, sed condimentum massa pretium id. Vestibulum et dolor non justo tristique sodales in varius velit. Praesent nec dignissim ligula. Pellentesque non urna in nunc porta pellentesque eu sed tellus. Suspendisse molestie nunc at suscipit imperdiet. Etiam ut tincidunt purus. Proin maximus, lacus a iaculis aliquam, quam lectus fermentum ante, in dignissim arcu dui eu nulla. Sed sit amet accumsan tortor, sit amet efficitur ipsum.</p>" +
-
-           "<h6>Heading Level 6 <small class='muted'>with muted small text</small></h6>" +
-           
-           "<p class='small'><strong>Small Paragraph. </strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in tortor non erat auctor venenatis. Duis eu urna ac enim ullamcorper porta. Suspendisse sagittis nisl sem, id elementum arcu volutpat imperdiet. Integer tellus turpis, fermentum ut nisl eu, consectetur eleifend tellus. Aliquam erat volutpat. Nam a leo eget urna efficitur posuere. Morbi eget ullamcorper lorem. In in vulputate lorem. Nam suscipit, quam et mollis tincidunt, diam sapien porttitor risus, vel tristique turpis sapien et metus. Mauris pulvinar, libero vitae ultricies dictum, justo justo tristique metus, quis tincidunt dolor orci in sem. Quisque id lacus sit amet ex faucibus ultricies ac ac urna. Nulla vel erat lacus.</p>")
-  elif id == 'layout':
-    return("<h1>LAYOUT</h1>" + 
-           
-           "<h3>This is default content</h3>" + 
-           
-           "<p class='lead'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in tortor non erat auctor venenatis. Duis eu urna ac enim ullamcorper porta. Suspendisse sagittis nisl sem, id elementum arcu volutpat imperdiet. Integer tellus turpis, fermentum ut nisl eu, consectetur eleifend tellus. Aliquam erat volutpat. Nam a leo eget urna efficitur posuere. Morbi eget ullamcorper lorem. In in vulputate lorem. Nam suscipit, quam et mollis tincidunt, diam sapien porttitor risus, vel tristique turpis sapien et metus.</p>")
-  elif id == 'elements':
-    rendered = render_template("elements.html")
-    return(render_template("elements.html"))
-  
-  elif id == 'tables':
-    return("<h1>TABLES & FORMS</h1>" + 
-           
-           "<h3>This is default content</h3>" + 
-           
-           "<p class='lead'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in tortor non erat auctor venenatis. Duis eu urna ac enim ullamcorper porta. Suspendisse sagittis nisl sem, id elementum arcu volutpat imperdiet. Integer tellus turpis, fermentum ut nisl eu, consectetur eleifend tellus. Aliquam erat volutpat. Nam a leo eget urna efficitur posuere. Morbi eget ullamcorper lorem. In in vulputate lorem. Nam suscipit, quam et mollis tincidunt, diam sapien porttitor risus, vel tristique turpis sapien et metus.</p>")
-  elif id == 'navigation':
-    return("<h1>NAVIGATION</h1>" + 
-           
-           "<h3>This is default content</h3>" + 
-           
-           "<p class='lead'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in tortor non erat auctor venenatis. Duis eu urna ac enim ullamcorper porta. Suspendisse sagittis nisl sem, id elementum arcu volutpat imperdiet. Integer tellus turpis, fermentum ut nisl eu, consectetur eleifend tellus. Aliquam erat volutpat. Nam a leo eget urna efficitur posuere. Morbi eget ullamcorper lorem. In in vulputate lorem. Nam suscipit, quam et mollis tincidunt, diam sapien porttitor risus, vel tristique turpis sapien et metus.</p>")
-  elif id == 'indicators':
-    return("<h1>INDICATORS</h1>" + 
-           
-           "<h3>This is default content</h3>" + 
-           
-           "<p class='lead'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in tortor non erat auctor venenatis. Duis eu urna ac enim ullamcorper porta. Suspendisse sagittis nisl sem, id elementum arcu volutpat imperdiet. Integer tellus turpis, fermentum ut nisl eu, consectetur eleifend tellus. Aliquam erat volutpat. Nam a leo eget urna efficitur posuere. Morbi eget ullamcorper lorem. In in vulputate lorem. Nam suscipit, quam et mollis tincidunt, diam sapien porttitor risus, vel tristique turpis sapien et metus.</p>")
-  elif id == 'containers':
-    return("<h1>CONTAINERS</h1>" + 
-           
-           "<h3>This is default content</h3>" + 
-           
-           "<p class='lead'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in tortor non erat auctor venenatis. Duis eu urna ac enim ullamcorper porta. Suspendisse sagittis nisl sem, id elementum arcu volutpat imperdiet. Integer tellus turpis, fermentum ut nisl eu, consectetur eleifend tellus. Aliquam erat volutpat. Nam a leo eget urna efficitur posuere. Morbi eget ullamcorper lorem. In in vulputate lorem. Nam suscipit, quam et mollis tincidunt, diam sapien porttitor risus, vel tristique turpis sapien et metus.</p>")
-  elif id == 'dialogs':
-    return("<h1>DIALOGS</h1>" + 
-           
-           "<h3>This is default content</h3>" + 
-           
-           "<p class='lead'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in tortor non erat auctor venenatis. Duis eu urna ac enim ullamcorper porta. Suspendisse sagittis nisl sem, id elementum arcu volutpat imperdiet. Integer tellus turpis, fermentum ut nisl eu, consectetur eleifend tellus. Aliquam erat volutpat. Nam a leo eget urna efficitur posuere. Morbi eget ullamcorper lorem. In in vulputate lorem. Nam suscipit, quam et mollis tincidunt, diam sapien porttitor risus, vel tristique turpis sapien et metus.</p>")
-  elif id == 'configuration':
-    return("<h1>CONFIGURATION</h1>" + 
-           
-           "<h3>This is default content</h3>" + 
-           
-           "<p class='lead'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in tortor non erat auctor venenatis. Duis eu urna ac enim ullamcorper porta. Suspendisse sagittis nisl sem, id elementum arcu volutpat imperdiet. Integer tellus turpis, fermentum ut nisl eu, consectetur eleifend tellus. Aliquam erat volutpat. Nam a leo eget urna efficitur posuere. Morbi eget ullamcorper lorem. In in vulputate lorem. Nam suscipit, quam et mollis tincidunt, diam sapien porttitor risus, vel tristique turpis sapien et metus.</p>")
+    return(render_template("/layouts/home.html", username=get_user_name())) 
   else:
-    return("<h3>This is default content</h3>" + 
-           
-           "<p class='lead'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in tortor non erat auctor venenatis. Duis eu urna ac enim ullamcorper porta. Suspendisse sagittis nisl sem, id elementum arcu volutpat imperdiet. Integer tellus turpis, fermentum ut nisl eu, consectetur eleifend tellus. Aliquam erat volutpat. Nam a leo eget urna efficitur posuere. Morbi eget ullamcorper lorem. In in vulputate lorem. Nam suscipit, quam et mollis tincidunt, diam sapien porttitor risus, vel tristique turpis sapien et metus.</p>")
+    return(render_template("/layouts/" + id + ".html"))
+#  elif id == 'core':
+#    return(render_template("/layouts/core.html")) 
+#  elif id == 'layout':
+#    return(render_template("/layouts/layout.html"))
+#  elif id == 'elements':
+#    return(render_template("/layouts/elements.html"))
+#  elif id == 'tables':
+#    return(render_template("/layouts/tables.html")) 
+#  elif id == 'navigation':  
+#    return(render_template("/layouts/navigation.html"))
+#  elif id == 'indicators':
+#    return(render_template("/layouts/indicators.html"))
+#  elif id == 'containers':
+#    return(render_template("/layouts/containers.html"))  
+#  elif id == 'dialogs':
+#    return(render_template("/layouts/dialogs.html"))   
+#  elif id == 'configuration':
+#    return(render_template("/layouts/configuration.html"))    
+#  else:
+#    return(render_template("/layouts/default.html"))

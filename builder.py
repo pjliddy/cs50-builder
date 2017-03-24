@@ -10,10 +10,10 @@ from flask import Flask, g, flash, jsonify, redirect, render_template, request, 
 from passlib.apps import custom_app_context as pwd_context
 from tempfile import gettempdir
 
-#from flask_jsglue import JSGlue
+# from flask_jsglue import JSGlue
 
 from helpers import *
-from content import *
+#from content import *
 
 #
 # instantiate globals
@@ -431,7 +431,7 @@ def cancel():
 #######################################
 
 #
-# get_username(): utility context processor allows get_username to be used in jinja templates
+# user_name(): utility context processor allows get_username to be used in jinja templates
 #
 
 @app.context_processor
@@ -476,3 +476,20 @@ def close_connection(exception):
 
 if __name__ == "__main__":
   app.run()
+
+  
+#
+# TECH NOTES
+# 
+# ADD PARAMETERS TO ROUTE PATH INSTEAD OF PASSING
+# see: http://flask.pocoo.org/docs/0.12/quickstart/#rendering-templates
+#
+# @app.route('/hello/')
+# @app.route('/hello/<name>')
+# def hello(name=None):
+#     return render_template('hello.html', name=name)
+#
+#
+#
+
+
