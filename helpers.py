@@ -106,7 +106,7 @@ def get_theme(themeId):
 
 
 #
-# save_theme( ): returns all variables for a specified theme
+# save_theme( ): saves all variables for the current theme
 #
 
 def save_theme( vars ):

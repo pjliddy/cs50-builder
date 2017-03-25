@@ -1,0 +1,53 @@
+Git Deploy Setup
+================
+Based on: http://www.jeffhoefs.com/2012/09/setup-git-deploy-for-aws-ec2-ubuntu-instance/
+
+1. Copy your public key to your ec2 instance:
+
+	cat ~/.ssh/id_rsa.pub | ssh -i ~/.ssh/builderkey.pem ec2-user@pliddy.com "cat>> .ssh/authorized_keys"
+
+
+2. on remote server: create bare git directory
+
+	$ cd /var/git/
+	$ mkdir cs50-builder.git && cd cs50-builder.git
+	$ git init --bare
+
+3. on remote server: create post-receive hook
+
+	#!/bin/sh
+	GIT_WORK_TREE=/html/www/var/www.pliddy.com
+	export GIT_WORK_TREE
+	git checkout -f
+
+
+	$ chmod +x hooks/post-receive
+
+4. on local machine: init repo and add remote repository
+
+	git init
+	git remote add ec2 ssh://ec2-user@pliddy.com/home/ec2-user/ProjectDir.git
+	git push ec2 +master:refs/heads/master
+
+
+
+
+Push to Remote
+--------------
+
+	git push ec2 master
+
+
+Push to Multiple Remotes
+------------------------
+1. add to .git/config in local repo
+	
+	[remote "all"]
+    url = https://github.com/YourGitAccount/ProjectDir.git
+    url = ssh://ubuntu@your_ip_addr/home/ubuntu/projects/ProjectDir.git
+
+
+2. push to both repos simultaneously
+
+	$ git push all master
+

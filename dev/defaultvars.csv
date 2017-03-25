@@ -1,388 +1,388 @@
-var_id,var_name,output,var_type,category,section,subsection,theme_id
-1,screen-xs,480px,size,Layout,Breakpoints,,1
-2,screen-xs-min,@screen-xs,size,Layout,Breakpoints,,1
-3,screen-phone,@screen-xs-min,size,Layout,Breakpoints,,1
-4,screen-sm,768px,size,Layout,Breakpoints,,1
-5,screen-sm-min,@screen-sm,size,Layout,Breakpoints,,1
-6,screen-tablet,@screen-sm-min,size,Layout,Breakpoints,,1
-7,screen-md,992px,size,Layout,Breakpoints,,1
-8,screen-md-min,@screen-md,size,Layout,Breakpoints,,1
-9,screen-desktop,@screen-md-min,size,Layout,Breakpoints,,1
-10,screen-lg,1200px,size,Layout,Breakpoints,,1
-11,screen-lg-min,@screen-lg,size,Layout,Breakpoints,,1
-12,screen-lg-desktop,@screen-lg-min,size,Layout,Breakpoints,,1
-13,screen-xs-max,(@screen-sm-min - 1),size,Layout,Breakpoints,,1
-14,screen-sm-max,(@screen-md-min - 1),size,Layout,Breakpoints,,1
-15,screen-md-max,(@screen-lg-min - 1),size,Layout,Breakpoints,,1
-16,grid-columns,12,number,Layout,Grid System,,1
-17,grid-gutter-width,30px,size,Layout,Grid System,,1
-18,grid-float-breakpoint,@screen-sm-min,size,Layout,Grid System,,1
-19,grid-float-breakpoint-max,(@grid-float-breakpoint - 1),size,Layout,Grid System,,1
-20,container-tablet,(720px + @grid-gutter-width),size,Layout,Container Sizes,,1
-21,container-sm,@container-tablet,size,Layout,Container Sizes,,1
-22,container-desktop,(940px + @grid-gutter-width),size,Layout,Container Sizes,,1
-23,container-md,@container-desktop,size,Layout,Container Sizes,,1
-24,container-large-desktop,(1140px + @grid-gutter-width),size,Layout,Container Sizes,,1
-25,container-lg,@container-large-desktop,size,Layout,Container Sizes,,1
-26,gray-base,#000,color,Core,Colors,Grays,1
-27,gray-darker,"lighten(@gray-base, 13.5%)",color,Core,Colors,Grays,1
-28,gray-dark,"lighten(@gray-base, 20%)",color,Core,Colors,Grays,1
-29,gray,"lighten(@gray-base, 33.5%)",color,Core,Colors,Grays,1
-30,gray-light,"lighten(@gray-base, 46.7%)",color,Core,Colors,Grays,1
-31,gray-lighter,"lighten(@gray-base, 93.5%)",color,Core,Colors,Grays,1
-32,brand-primary,"darken(#428bca, 6.5%)",color,Core,Colors,Brand Colors,1
-33,brand-success,#5cb85c,color,Core,Colors,Brand Colors,1
-34,brand-info,#5bc0de,color,Core,Colors,Brand Colors,1
-35,brand-warning,#f0ad4e,color,Core,Colors,Brand Colors,1
-36,brand-danger,#d9534f,color,Core,Colors,Brand Colors,1
-37,body-bg,#fff,color,Core,Colors,Scaffolding,1
-38,text-color,@gray-dark,color,Core,Colors,Scaffolding,1
-39,link-color,@brand-primary,color,Core,Colors,Links,1
-40,link-hover-color,"darken(@link-color, 15%)",color,Core,Colors,Links,1
-41,link-hover-decoration,underline,attribute,Core,Colors,Links,1
-42,font-family-sans-serif,"""Helvetica Neue"", Helvetica, Arial, sans-serif",font-family,Core,Typography,Font Family,1
-43,font-family-serif,"Georgia, ""Times New Roman"", Times, serif",font-family,Core,Typography,Font Family,1
-44,font-family-monospace,"Menlo, Monaco, Consolas, ""Courier New"", monospace",font-family,Core,Typography,Font Family,1
-45,font-family-base,@font-family-sans-serif,font-family,Core,Typography,Font Family,1
-46,font-size-base,14px,size,Core,Typography,Font Size,1
-47,font-size-large,ceil((@font-size-base * 1.25)),size,Core,Typography,Font Size,1
-48,font-size-small,ceil((@font-size-base * 0.85)),size,Core,Typography,Font Size,1
-49,font-size-h1,floor((@font-size-base * 2.6)),size,Core,Typography,Font Size,1
-50,font-size-h2,floor((@font-size-base * 2.15)),size,Core,Typography,Font Size,1
-51,font-size-h3,ceil((@font-size-base * 1.7)),size,Core,Typography,Font Size,1
-52,font-size-h4,ceil((@font-size-base * 1.25)),size,Core,Typography,Font Size,1
-53,font-size-h5,@font-size-base,size,Core,Typography,Font Size,1
-54,font-size-h6,ceil((@font-size-base * 0.85)),size,Core,Typography,Font Size,1
-55,line-height-base,1.428571429,line-height,Core,Typography,Line Heights,1
-56,line-height-computed,floor((@font-size-base * @line-height-base)),line-height,Core,Typography,Line Heights,1
-57,line-height-large,1.3333333,line-height,Core,Typography,Line Heights,1
-58,line-height-small,1.5,line-height,Core,Typography,Line Heights,1
-59,headings-font-family,inherit,font-family,Core,Typography,Headings,1
-60,headings-font-weight,500,font-weight,Core,Typography,Headings,1
-61,headings-line-height,1.1,line-height,Core,Typography,Headings,1
-62,headings-color,inherit,color,Core,Typography,Headings,1
-63,icon-font-path,"""../fonts/""",string,Core,Typography,Iconography,1
-64,icon-font-name,"""glyphicons-halflings-regular""",string,Core,Typography,Iconography,1
-65,icon-font-svg-id,"""glyphicons_halflingsregular""",string,Core,Typography,Iconography,1
-66,padding-base-vertical,6px,size,Core,Components,Padding,1
-67,padding-base-horizontal,12px,size,Core,Components,Padding,1
-68,padding-large-vertical,10px,size,Core,Components,Padding,1
-69,padding-large-horizontal,16px,size,Core,Components,Padding,1
-70,padding-small-vertical,5px,size,Core,Components,Padding,1
-71,padding-small-horizontal,10px,size,Core,Components,Padding,1
-72,padding-xs-vertical,1px,size,Core,Components,Padding,1
-73,padding-xs-horizontal,5px,size,Core,Components,Padding,1
-74,border-radius-base,4px,size,Core,Components,Border Radius,1
-75,border-radius-large,6px,size,Core,Components,Border Radius,1
-76,border-radius-small,3px,size,Core,Components,Border Radius,1
-77,btn-font-weight,normal,font-weight,Elements,Buttons,Default Button,1
-78,btn-default-color,#333,color,Elements,Buttons,Default Button,1
-79,btn-default-bg,#fff,color,Elements,Buttons,Default Button,1
-80,btn-default-border,#ccc,color,Elements,Buttons,Default Button,1
-81,btn-border-radius-base,@border-radius-base,size,Elements,Buttons,Default Button,1
-82,btn-border-radius-large,@border-radius-large,size,Elements,Buttons,Default Button,1
-83,btn-border-radius-small,@border-radius-small,size,Elements,Buttons,Default Button,1
-84,btn-primary-color,#fff,color,Elements,Buttons,Primary Button,1
-85,btn-primary-bg,@brand-primary,color,Elements,Buttons,Primary Button,1
-86,btn-primary-border,"darken(@btn-primary-bg, 5%)",color,Elements,Buttons,Primary Button,1
-87,btn-success-color,#fff,color,Elements,Buttons,Success Button,1
-88,btn-success-bg,@brand-success,color,Elements,Buttons,Success Button,1
-89,btn-success-border,"darken(@btn-success-bg, 5%)",color,Elements,Buttons,Success Button,1
-90,btn-info-color,#fff,color,Elements,Buttons,Info Button,1
-91,btn-info-bg,@brand-info,color,Elements,Buttons,Info Button,1
-92,btn-info-border,"darken(@btn-info-bg, 5%)",color,Elements,Buttons,Info Button,1
-93,btn-warning-color,#fff,color,Elements,Buttons,Warning Button,1
-94,btn-warning-bg,@brand-warning,color,Elements,Buttons,Warning Button,1
-95,btn-warning-border,"darken(@btn-warning-bg, 5%)",color,Elements,Buttons,Warning Button,1
-96,btn-danger-color,#fff,color,Elements,Buttons,Danger Button,1
-97,btn-danger-bg,@brand-danger,color,Elements,Buttons,Danger Button,1
-98,btn-danger-border,"darken(@btn-danger-bg, 5%)",color,Elements,Buttons,Danger Button,1
-99,btn-link-disabled-color,@gray-light,color,Elements,Buttons,Default Button,1
-100,dropdown-bg,#fff,color,Elements,Dropdowns,,1
-101,dropdown-border,"rgba(0,0,0,.15)",color,Elements,Dropdowns,,1
-102,dropdown-fallback-border,#ccc,color,Elements,Dropdowns,,1
-103,dropdown-divider-bg,#e5e5e5,color,Elements,Dropdowns,,1
-104,dropdown-link-color,@gray-dark,color,Elements,Dropdowns,,1
-105,dropdown-link-hover-color,"darken(@gray-dark, 5%)",color,Elements,Dropdowns,,1
-106,dropdown-link-hover-bg,#f5f5f5,color,Elements,Dropdowns,,1
-107,dropdown-link-active-color,@component-active-color,color,Elements,Dropdowns,,1
-108,dropdown-link-active-bg,@component-active-bg,color,Elements,Dropdowns,,1
-109,dropdown-link-disabled-color,@gray-light,color,Elements,Dropdowns,,1
-110,dropdown-header-color,@gray-light,color,Elements,Dropdowns,,1
-111,dropdown-caret-color,#000,color,Elements,Dropdowns,,1
-112,component-active-color,#fff,color,Elements,Components,Active Components,1
-113,component-active-bg,@brand-primary,color,Elements,Components,Active Components,1
-114,caret-width-base,4px,size,Elements,Components,Caret Size,1
-115,caret-width-large,5px,size,Elements,Components,Caret Size,1
-116,thumbnail-padding,4px,size,Elements,Thumbnails,,1
-117,thumbnail-bg,@body-bg,color,Elements,Thumbnails,,1
-118,thumbnail-border,#ddd,color,Elements,Thumbnails,,1
-119,thumbnail-border-radius,@border-radius-base,size,Elements,Thumbnails,,1
-120,thumbnail-caption-color,@text-color,color,Elements,Thumbnails,,1
-121,thumbnail-caption-padding,9px,size,Elements,Thumbnails,,1
-122,component-offset-horizontal,180px,size,Elements,Type,Component Offset,1
-123,text-muted,@gray-light,color,Elements,Type,Muted Text,1
-124,abbr-border-color,@gray-light,color,Elements,Type,Abbreviation Border,1
-125,headings-small-color,@gray-light,color,Elements,Type,Heading Small,1
-126,blockquote-small-color,@gray-light,color,Elements,Type,Blockquote,1
-127,blockquote-font-size,(@font-size-base * 1.25),size-font,Elements,Type,Blockquote,1
-128,blockquote-border-color,@gray-lighter,color,Elements,Type,Blockquote,1
-129,page-header-border-color,@gray-lighter,color,Elements,Type,Page Header,1
-130,dl-horizontal-offset,@component-offset-horizontal,size,Elements,Type,Description List,1
-131,dl-horizontal-breakpoint,@grid-float-breakpoint,size,Elements,Type,Description List,1
-132,hr-border,@gray-lighter,color,Elements,Type,Horizontal Rule,1
-133,code-color,#c7254e,color,Elements,Code,Code,1
-134,code-bg,#f9f2f4,color,Elements,Code,Code,1
-135,kbd-color,#fff,color,Elements,Code,Keyboard,1
-136,kbd-bg,#333,color,Elements,Code,Keyboard,1
-137,pre-bg,#f5f5f5,color,Elements,Code,Keyboard,1
-138,pre-color,@gray-dark,color,Elements,Code,Preformatted,1
-139,pre-border-color,#ccc,color,Elements,Code,Preformatted,1
-140,pre-scrollable-max-height,340px,size,Elements,Code,Preformatted,1
-141,table-cell-padding,8px,size,Tables & Forms,Tables,,1
-142,table-condensed-cell-padding,5px,size,Tables & Forms,Tables,,1
-143,table-bg,transparent,color,Tables & Forms,Tables,,1
-144,table-bg-accent,#f9f9f9,color,Tables & Forms,Tables,,1
-145,table-bg-hover,#f5f5f5,color,Tables & Forms,Tables,,1
-146,table-bg-active,@table-bg-hover,color,Tables & Forms,Tables,,1
-147,table-border-color,#ddd,color,Tables & Forms,Tables,,1
-148,input-bg,#fff,color,Tables & Forms,Forms,Inputs,1
-149,input-bg-disabled,@gray-lighter,color,Tables & Forms,Forms,Inputs,1
-150,input-color,@gray,color,Tables & Forms,Forms,Inputs,1
-151,input-border,#ccc,color,Tables & Forms,Forms,Inputs,1
-152,input-border-radius,@border-radius-base,size,Tables & Forms,Forms,Inputs,1
-153,input-border-radius-large,@border-radius-large,size,Tables & Forms,Forms,Inputs,1
-154,input-border-radius-small,@border-radius-small,size,Tables & Forms,Forms,Inputs,1
-155,input-border-focus,#66afe9,color,Tables & Forms,Forms,Inputs,1
-156,input-color-placeholder,#999,color,Tables & Forms,Forms,Inputs,1
-157,input-height-base,(@line-height-computed + (@padding-base-vertical * 2) + 2),size,Tables & Forms,Forms,Inputs,1
-158,input-height-large,(ceil(@font-size-large * @line-height-large) + (@padding-large-vertical * 2) + 2),size,Tables & Forms,Forms,Inputs,1
-159,input-height-small,(floor(@font-size-small * @line-height-small) + (@padding-small-vertical * 2) + 2),size,Tables & Forms,Forms,Inputs,1
-160,form-group-margin-bottom,15px,size,Tables & Forms,Forms,Forms,1
-161,legend-color,@gray-dark,color,Tables & Forms,Forms,Forms,1
-162,legend-border-color,#e5e5e5,color,Tables & Forms,Forms,Forms,1
-163,input-group-addon-bg,@gray-lighter,color,Tables & Forms,Forms,Forms,1
-164,input-group-addon-border-color,@input-border,color,Tables & Forms,Forms,Forms,1
-165,cursor-disabled,not-allowed,attribute,Tables & Forms,Forms,Forms,1
-166,navbar-height,50px,size,Navigation,Navbar,Navbar,1
-167,navbar-margin-bottom,@line-height-computed,size,Navigation,Navbar,Navbar,1
-168,navbar-border-radius,@border-radius-base,size,Navigation,Navbar,Navbar,1
-169,navbar-padding-horizontal,floor((@grid-gutter-width / 2)),size-padding,Navigation,Navbar,Navbar,1
-170,navbar-padding-vertical,((@navbar-height - @line-height-computed) / 2),size-padding,Navigation,Navbar,Navbar,1
-171,navbar-collapse-max-height,340px,size,Navigation,Navbar,Navbar,1
-172,navbar-default-color,#777,color,Navigation,Navbar,Default Navbar,1
-173,navbar-default-bg,#f8f8f8,color,Navigation,Navbar,Default Navbar,1
-174,navbar-default-border,"darken(@navbar-default-bg, 6.5%)",color,Navigation,Navbar,Default Navbar,1
-175,navbar-default-link-color,#777,color,Navigation,Navbar,Default Navbar,1
-176,navbar-default-link-hover-color,#333,color,Navigation,Navbar,Default Navbar,1
-177,navbar-default-link-hover-bg,transparent,color,Navigation,Navbar,Default Navbar,1
-178,navbar-default-link-active-color,#555,color,Navigation,Navbar,Default Navbar,1
-179,navbar-default-link-active-bg,"darken(@navbar-default-bg, 6.5%)",color,Navigation,Navbar,Default Navbar,1
-180,navbar-default-link-disabled-color,#ccc,color,Navigation,Navbar,Default Navbar,1
-181,navbar-default-link-disabled-bg,transparent,color,Navigation,Navbar,Default Navbar,1
-182,navbar-default-brand-color,@navbar-default-link-color,color,Navigation,Navbar,Default Navbar,1
-183,navbar-default-brand-hover-color,"darken(@navbar-default-brand-color, 10%)",color,Navigation,Navbar,Default Navbar,1
-184,navbar-default-brand-hover-bg,transparent,color,Navigation,Navbar,Default Navbar,1
-185,navbar-default-toggle-hover-bg,#ddd,color,Navigation,Navbar,Default Navbar,1
-186,navbar-default-toggle-icon-bar-bg,#888,color,Navigation,Navbar,Default Navbar,1
-187,navbar-default-toggle-border-color,#ddd,color,Navigation,Navbar,Default Navbar,1
-188,navbar-inverse-color,"lighten(@gray-light, 15%)",color,Navigation,Navbar,Inverse Navbar,1
-189,navbar-inverse-bg,#222,color,Navigation,Navbar,Inverse Navbar,1
-190,navbar-inverse-border,"darken(@navbar-inverse-bg, 10%)",color,Navigation,Navbar,Inverse Navbar,1
-191,navbar-inverse-link-color,"lighten(@gray-light, 15%)",color,Navigation,Navbar,Inverse Navbar,1
-192,navbar-inverse-link-hover-color,#fff,color,Navigation,Navbar,Inverse Navbar,1
-193,navbar-inverse-link-hover-bg,transparent,color,Navigation,Navbar,Inverse Navbar,1
-194,navbar-inverse-link-active-color,@navbar-inverse-link-hover-color,color,Navigation,Navbar,Inverse Navbar,1
-195,navbar-inverse-link-active-bg,"darken(@navbar-inverse-bg, 10%)",color,Navigation,Navbar,Inverse Navbar,1
-196,navbar-inverse-link-disabled-color,#444,color,Navigation,Navbar,Inverse Navbar,1
-197,navbar-inverse-link-disabled-bg,transparent,color,Navigation,Navbar,Inverse Navbar,1
-198,navbar-inverse-brand-color,@navbar-inverse-link-color,color,Navigation,Navbar,Inverse Navbar,1
-199,navbar-inverse-brand-hover-color,#fff,color,Navigation,Navbar,Inverse Navbar,1
-200,navbar-inverse-brand-hover-bg,transparent,color,Navigation,Navbar,Inverse Navbar,1
-201,navbar-inverse-toggle-hover-bg,#333,color,Navigation,Navbar,Inverse Navbar,1
-202,navbar-inverse-toggle-icon-bar-bg,#fff,color,Navigation,Navbar,Inverse Navbar,1
-203,navbar-inverse-toggle-border-color,#333,color,Navigation,Navbar,Inverse Navbar,1
-204,nav-link-padding,10px 15px,size,Navigation,Nav Links,,1
-205,nav-link-hover-bg,@gray-lighter,color,Navigation,Nav Links,,1
-206,nav-disabled-link-color,@gray-light,color,Navigation,Nav Links,,1
-207,nav-disabled-link-hover-color,@gray-light,color,Navigation,Nav Links,,1
-208,nav-tabs-border-color,#ddd,color,Navigation,Tabs,,1
-209,nav-tabs-link-hover-border-color,@gray-lighter,color,Navigation,Tabs,,1
-210,nav-tabs-active-link-hover-bg,@body-bg,color,Navigation,Tabs,,1
-211,nav-tabs-active-link-hover-color,@gray,color,Navigation,Tabs,,1
-212,nav-tabs-active-link-hover-border-color,#ddd,color,Navigation,Tabs,,1
-213,nav-tabs-justified-link-border-color,#ddd,color,Navigation,Tabs,,1
-214,nav-tabs-justified-active-link-border-color,@body-bg,color,Navigation,Tabs,,1
-215,nav-pills-border-radius,@border-radius-base,size,Navigation,Pills,,1
-216,nav-pills-active-link-hover-bg,@component-active-bg,color,Navigation,Pills,,1
-217,nav-pills-active-link-hover-color,@component-active-color,color,Navigation,Pills,,1
-218,breadcrumb-padding-vertical,8px,size,Navigation,Breadcrumbs,,1
-219,breadcrumb-padding-horizontal,15px,size,Navigation,Breadcrumbs,,1
-220,breadcrumb-bg,#f5f5f5,color,Navigation,Breadcrumbs,,1
-221,breadcrumb-color,#ccc,color,Navigation,Breadcrumbs,,1
-222,breadcrumb-active-color,@gray-light,color,Navigation,Breadcrumbs,,1
-223,breadcrumb-separator,"""/""",string,Navigation,Breadcrumbs,,1
-224,pagination-color,@link-color,color,Navigation,Pagination,,1
-225,pagination-bg,#fff,color,Navigation,Pagination,,1
-226,pagination-border,#ddd,color,Navigation,Pagination,,1
-227,pagination-hover-color,@link-hover-color,color,Navigation,Pagination,,1
-228,pagination-hover-bg,@gray-lighter,color,Navigation,Pagination,,1
-229,pagination-hover-border,#ddd,color,Navigation,Pagination,,1
-230,pagination-active-color,#fff,color,Navigation,Pagination,,1
-231,pagination-active-bg,@brand-primary,color,Navigation,Pagination,,1
-232,pagination-active-border,@brand-primary,color,Navigation,Pagination,,1
-233,pagination-disabled-color,@gray-light,color,Navigation,Pagination,,1
-234,pagination-disabled-bg,#fff,color,Navigation,Pagination,,1
-235,pagination-disabled-border,#ddd,color,Navigation,Pagination,,1
-236,pager-bg,@pagination-bg,color,Navigation,Pager,,1
-237,pager-border,@pagination-border,color,Navigation,Pager,,1
-238,pager-border-radius,15px,size,Navigation,Pager,,1
-239,pager-hover-bg,@pagination-hover-bg,color,Navigation,Pager,,1
-240,pager-active-bg,@pagination-active-bg,color,Navigation,Pager,,1
-241,pager-active-color,@pagination-active-color,color,Navigation,Pager,,1
-242,pager-disabled-color,@pagination-disabled-color,color,Navigation,Pager,,1
-243,state-success-text,#3c763d,color,Indicators,Form States and Alerts,,1
-244,state-success-bg,#dff0d8,color,Indicators,Form States and Alerts,,1
-245,state-success-border,"darken(spin(@state-success-bg, -10), 5%)",color,Indicators,Form States and Alerts,,1
-246,state-info-text,#31708f,color,Indicators,Form States and Alerts,,1
-247,state-info-bg,#d9edf7,color,Indicators,Form States and Alerts,,1
-248,state-info-border,"darken(spin(@state-info-bg, -10), 7%)",color,Indicators,Form States and Alerts,,1
-249,state-warning-text,#8a6d3b,color,Indicators,Form States and Alerts,,1
-250,state-warning-bg,#fcf8e3,color,Indicators,Form States and Alerts,,1
-251,state-warning-border,"darken(spin(@state-warning-bg, -10), 5%)",color,Indicators,Form States and Alerts,,1
-252,state-danger-text,#a94442,color,Indicators,Form States and Alerts,,1
-253,state-danger-bg,#f2dede,color,Indicators,Form States and Alerts,,1
-254,state-danger-border,"darken(spin(@state-danger-bg, -10), 5%)",color,Indicators,Form States and Alerts,,1
-255,alert-padding,15px,size,Indicators,Alerts,,1
-256,alert-border-radius,@border-radius-base,size,Indicators,Alerts,,1
-257,alert-link-font-weight,bold,font-weight,Indicators,Alerts,,1
-258,alert-success-bg,@state-success-bg,color,Indicators,Alerts,,1
-259,alert-success-text,@state-success-text,color,Indicators,Alerts,,1
-260,alert-success-border,@state-success-border,color,Indicators,Alerts,,1
-261,alert-info-bg,@state-info-bg,color,Indicators,Alerts,,1
-262,alert-info-text,@state-info-text,color,Indicators,Alerts,,1
-263,alert-info-border,@state-info-border,color,Indicators,Alerts,,1
-264,alert-warning-bg,@state-warning-bg,color,Indicators,Alerts,,1
-265,alert-warning-text,@state-warning-text,color,Indicators,Alerts,,1
-266,alert-warning-border,@state-warning-border,color,Indicators,Alerts,,1
-267,alert-danger-bg,@state-danger-bg,color,Indicators,Alerts,,1
-268,alert-danger-text,@state-danger-text,color,Indicators,Alerts,,1
-269,alert-danger-border,@state-danger-border,color,Indicators,Alerts,,1
-270,label-color,#fff,color,Indicators,Labels,,1
-271,label-link-hover-color,#fff,color,Indicators,Labels,,1
-272,label-default-bg,@gray-light,color,Indicators,Labels,,1
-273,label-primary-bg,@brand-primary,color,Indicators,Labels,,1
-274,label-success-bg,@brand-success,color,Indicators,Labels,,1
-275,label-info-bg,@brand-info,color,Indicators,Labels,,1
-276,label-warning-bg,@brand-warning,color,Indicators,Labels,,1
-277,label-danger-bg,@brand-danger,color,Indicators,Labels,,1
-278,badge-color,#fff,color,Indicators,Badges,,1
-279,badge-link-hover-color,#fff,color,Indicators,Badges,,1
-280,badge-bg,@gray-light,color,Indicators,Badges,,1
-281,badge-active-color,@link-color,color,Indicators,Badges,,1
-282,badge-active-bg,#fff,color,Indicators,Badges,,1
-283,badge-font-weight,bold,font-weight,Indicators,Badges,,1
-284,badge-line-height,1,line-height,Indicators,Badges,,1
-285,badge-border-radius,10px,size,Indicators,Badges,,1
-286,progress-bg,#f5f5f5,color,Indicators,Progress Bars,,1
-287,progress-bar-color,#fff,color,Indicators,Progress Bars,,1
-288,progress-border-radius,@border-radius-base,size,Indicators,Progress Bars,,1
-289,progress-bar-bg,@brand-primary,color,Indicators,Progress Bars,,1
-290,progress-bar-success-bg,@brand-success,color,Indicators,Progress Bars,,1
-291,progress-bar-warning-bg,@brand-warning,color,Indicators,Progress Bars,,1
-292,progress-bar-danger-bg,@brand-danger,color,Indicators,Progress Bars,,1
-293,progress-bar-info-bg,@brand-info,color,Indicators,Progress Bars,,1
-294,jumbotron-padding,30px,size,Containers,Jumbotron,,1
-295,jumbotron-color,inherit,color,Containers,Jumbotron,,1
-296,jumbotron-bg,@gray-lighter,color,Containers,Jumbotron,,1
-297,jumbotron-heading-color,inherit,color,Containers,Jumbotron,,1
-298,jumbotron-font-size,ceil((@font-size-base * 1.5)),size-font,Containers,Jumbotron,,1
-299,jumbotron-heading-font-size,ceil((@font-size-base * 4.5)),size-font,Containers,Jumbotron,,1
-300,list-group-bg,#fff,color,Containers,List Groups,,1
-301,list-group-border,#ddd,color,Containers,List Groups,,1
-302,list-group-border-radius,@border-radius-base,size,Containers,List Groups,,1
-303,list-group-hover-bg,#f5f5f5,color,Containers,List Groups,,1
-304,list-group-active-color,@component-active-color,color,Containers,List Groups,,1
-305,list-group-active-bg,@component-active-bg,color,Containers,List Groups,,1
-306,list-group-active-border,@list-group-active-bg,color,Containers,List Groups,,1
-307,list-group-active-text-color,"lighten(@list-group-active-bg, 40%)",color,Containers,List Groups,,1
-308,list-group-disabled-color,@gray-light,color,Containers,List Groups,,1
-309,list-group-disabled-bg,@gray-lighter,color,Containers,List Groups,,1
-310,list-group-disabled-text-color,@list-group-disabled-color,color,Containers,List Groups,,1
-311,list-group-link-color,#555,color,Containers,List Groups,,1
-312,list-group-link-hover-color,@list-group-link-color,color,Containers,List Groups,,1
-313,list-group-link-heading-color,#333,color,Containers,List Groups,,1
-314,panel-bg,#fff,color,Containers,Panels,Default Panel,1
-315,panel-body-padding,15px,size,Containers,Panels,Default Panel,1
-316,panel-heading-padding,10px 15px,size,Containers,Panels,Default Panel,1
-317,panel-footer-padding,@panel-heading-padding,size,Containers,Panels,Default Panel,1
-318,panel-border-radius,@border-radius-base,size,Containers,Panels,Default Panel,1
-319,panel-inner-border,#ddd,color,Containers,Panels,Default Panel,1
-320,panel-footer-bg,#f5f5f5,color,Containers,Panels,Default Panel,1
-321,panel-default-text,@gray-dark,color,Containers,Panels,Default Panel,1
-322,panel-default-border,#ddd,color,Containers,Panels,Default Panel,1
-323,panel-default-heading-bg,#f5f5f5,color,Containers,Panels,Default Panel,1
-324,panel-primary-text,#fff,color,Containers,Panels,Primary Panel,1
-325,panel-primary-border,@brand-primary,color,Containers,Panels,Primary Panel,1
-326,panel-primary-heading-bg,@brand-primary,color,Containers,Panels,Primary Panel,1
-327,panel-success-text,@state-success-text,color,Containers,Panels,Success Panel,1
-328,panel-success-border,@state-success-border,color,Containers,Panels,Success Panel,1
-329,panel-success-heading-bg,@state-success-bg,color,Containers,Panels,Success Panel,1
-330,panel-info-text,@state-info-text,color,Containers,Panels,Info Panel,1
-331,panel-info-border,@state-info-border,color,Containers,Panels,Info Panel,1
-332,panel-info-heading-bg,@state-info-bg,color,Containers,Panels,Info Panel,1
-333,panel-warning-text,@state-warning-text,color,Containers,Panels,Warning Panel,1
-334,panel-warning-border,@state-warning-border,color,Containers,Panels,Warning Panel,1
-335,panel-warning-heading-bg,@state-warning-bg,color,Containers,Panels,Warning Panel,1
-336,panel-danger-text,@state-danger-text,color,Containers,Panels,Danger Panel,1
-337,panel-danger-border,@state-danger-border,color,Containers,Panels,Danger Panel,1
-338,panel-danger-heading-bg,@state-danger-bg,color,Containers,Panels,Danger Panel,1
-339,well-bg,#f5f5f5,color,Containers,Wells,,1
-340,well-border,"darken(@well-bg, 7%)",color,Containers,Wells,,1
-341,tooltip-max-width,200px,size,Containers,Tooltips,,1
-342,tooltip-color,#fff,color,Containers,Tooltips,,1
-343,tooltip-bg,#000,color,Containers,Tooltips,,1
-344,tooltip-opacity,0.9,opacity,Containers,Tooltips,,1
-345,tooltip-arrow-width,5px,size,Containers,Tooltips,,1
-346,tooltip-arrow-color,@tooltip-bg,color,Containers,Tooltips,,1
-347,popover-bg,#fff,color,Containers,Popovers,,1
-348,popover-max-width,276px,size,Containers,Popovers,,1
-349,popover-border-color,"rgba(0,0,0,.2)",color,Containers,Popovers,,1
-350,popover-fallback-border-color,#ccc,color,Containers,Popovers,,1
-351,popover-title-bg,"darken(@popover-bg, 3%)",color,Containers,Popovers,,1
-352,popover-arrow-width,10px,size,Containers,Popovers,,1
-353,popover-arrow-color,@popover-bg,color,Containers,Popovers,,1
-354,popover-arrow-outer-width,(@popover-arrow-width + 1),size,Containers,Popovers,,1
-355,popover-arrow-outer-color,"fadein(@popover-border-color, 5%)",color,Containers,Popovers,,1
-356,popover-arrow-outer-fallback-color,"darken(@popover-fallback-border-color, 20%)",color,Containers,Popovers,,1
-357,modal-inner-padding,15px,size,Containers,Modals,,1
-358,modal-title-padding,15px,size,Containers,Modals,,1
-359,modal-title-line-height,@line-height-base,line-height,Containers,Modals,,1
-360,modal-content-bg,#fff,color,Containers,Modals,,1
-361,modal-content-border-color,"rgba(0,0,0,.2)",color,Containers,Modals,,1
-362,modal-content-fallback-border-color,#999,color,Containers,Modals,,1
-363,modal-backdrop-bg,#000,color,Containers,Modals,,1
-364,modal-backdrop-opacity,0.5,opacity,Containers,Modals,,1
-365,modal-header-border-color,#e5e5e5,color,Containers,Modals,,1
-366,modal-footer-border-color,@modal-header-border-color,color,Containers,Modals,,1
-367,modal-lg,900px,size,Containers,Modals,,1
-368,modal-md,600px,size,Containers,Modals,,1
-369,modal-sm,300px,size,Containers,Modals,,1
-370,close-font-weight,bold,font-weight,Containers,Close,,1
-371,close-color,#000,color,Containers,Close,,1
-372,close-text-shadow,0 1px 0 #fff,shadow,Containers,Close,,1
-373,carousel-text-shadow,"0 1px 2px rgba(0,0,0,.6)",shadow,Containers,Carousel,,1
-374,carousel-control-color,#fff,color,Containers,Carousel,,1
-375,carousel-control-width,15%,percentage,Containers,Carousel,,1
-376,carousel-control-opacity,0.5,opacity,Containers,Carousel,,1
-377,carousel-control-font-size,20px,size-font,Containers,Carousel,,1
-378,carousel-indicator-active-bg,#fff,color,Containers,Carousel,,1
-379,carousel-indicator-border-color,#fff,color,Containers,Carousel,,1
-380,carousel-caption-color,#fff,color,Containers,Carousel,,1
-381,zindex-navbar,1000,number,Configuration,Z-Index,,1
-382,zindex-dropdown,1000,number,Configuration,Z-Index,,1
-383,zindex-navbar-fixed,1030,number,Configuration,Z-Index,,1
-384,zindex-modal-background,1040,number,Configuration,Z-Index,,1
-385,zindex-modal,1050,number,Configuration,Z-Index,,1
-386,zindex-popover,1060,number,Configuration,Z-Index,,1
-387,zindex-tooltip,1070,number,Configuration,Z-Index,,1
+id,name,output,type,category,section,subsection,theme_id
+1,screen-xs,480px,size,layout,breakpoints,,1
+2,screen-xs-min,@screen-xs,size,layout,breakpoints,,1
+3,screen-phone,@screen-xs-min,size,layout,breakpoints,,1
+4,screen-sm,768px,size,layout,breakpoints,,1
+5,screen-sm-min,@screen-sm,size,layout,breakpoints,,1
+6,screen-tablet,@screen-sm-min,size,layout,breakpoints,,1
+7,screen-md,992px,size,layout,breakpoints,,1
+8,screen-md-min,@screen-md,size,layout,breakpoints,,1
+9,screen-desktop,@screen-md-min,size,layout,breakpoints,,1
+10,screen-lg,1200px,size,layout,breakpoints,,1
+11,screen-lg-min,@screen-lg,size,layout,breakpoints,,1
+12,screen-lg-desktop,@screen-lg-min,size,layout,breakpoints,,1
+13,screen-xs-max,(@screen-sm-min - 1),size,layout,breakpoints,,1
+14,screen-sm-max,(@screen-md-min - 1),size,layout,breakpoints,,1
+15,screen-md-max,(@screen-lg-min - 1),size,layout,breakpoints,,1
+16,grid-columns,12,number,layout,grid-system,,1
+17,grid-gutter-width,30px,size,layout,grid-system,,1
+18,grid-float-breakpoint,@screen-sm-min,size,layout,grid-system,,1
+19,grid-float-breakpoint-max,(@grid-float-breakpoint - 1),size,layout,grid-system,,1
+20,container-tablet,(720px + @grid-gutter-width),size,layout,container-sizes,,1
+21,container-sm,@container-tablet,size,layout,container-sizes,,1
+22,container-desktop,(940px + @grid-gutter-width),size,layout,container-sizes,,1
+23,container-md,@container-desktop,size,layout,container-sizes,,1
+24,container-large-desktop,(1140px + @grid-gutter-width),size,layout,container-sizes,,1
+25,container-lg,@container-large-desktop,size,layout,container-sizes,,1
+26,gray-base,#000,color,core,colors,grays,1
+27,gray-darker,"lighten(@gray-base, 13.5%)",color,core,colors,grays,1
+28,gray-dark,"lighten(@gray-base, 20%)",color,core,colors,grays,1
+29,gray,"lighten(@gray-base, 33.5%)",color,core,colors,grays,1
+30,gray-light,"lighten(@gray-base, 46.7%)",color,core,colors,grays,1
+31,gray-lighter,"lighten(@gray-base, 93.5%)",color,core,colors,grays,1
+32,brand-primary,"darken(#428bca, 6.5%)",color,core,colors,brand-colors,1
+33,brand-success,#5cb85c,color,core,colors,brand-colors,1
+34,brand-info,#5bc0de,color,core,colors,brand-colors,1
+35,brand-warning,#f0ad4e,color,core,colors,brand-colors,1
+36,brand-danger,#d9534f,color,core,colors,brand-colors,1
+37,body-bg,#fff,color,core,colors,scaffolding,1
+38,text-color,@gray-dark,color,core,colors,scaffolding,1
+39,link-color,@brand-primary,color,core,colors,links,1
+40,link-hover-color,"darken(@link-color, 15%)",color,core,colors,links,1
+41,link-hover-decoration,underline,attribute,core,colors,links,1
+42,font-family-sans-serif,"""Helvetica Neue"", Helvetica, Arial, sans-serif",font-family,core,typography,font-family,1
+43,font-family-serif,"Georgia, ""Times New Roman"", Times, serif",font-family,core,typography,font-family,1
+44,font-family-monospace,"Menlo, Monaco, Consolas, ""Courier New"", monospace",font-family,core,typography,font-family,1
+45,font-family-base,@font-family-sans-serif,font-family,core,typography,font-family,1
+46,font-size-base,14px,size,core,typography,font-size,1
+47,font-size-large,ceil((@font-size-base * 1.25)),size,core,typography,font-size,1
+48,font-size-small,ceil((@font-size-base * 0.85)),size,core,typography,font-size,1
+49,font-size-h1,floor((@font-size-base * 2.6)),size,core,typography,font-size,1
+50,font-size-h2,floor((@font-size-base * 2.15)),size,core,typography,font-size,1
+51,font-size-h3,ceil((@font-size-base * 1.7)),size,core,typography,font-size,1
+52,font-size-h4,ceil((@font-size-base * 1.25)),size,core,typography,font-size,1
+53,font-size-h5,@font-size-base,size,core,typography,font-size,1
+54,font-size-h6,ceil((@font-size-base * 0.85)),size,core,typography,font-size,1
+55,line-height-base,1.428571429,line-height,core,typography,line-heights,1
+56,line-height-computed,floor((@font-size-base * @line-height-base)),line-height,core,typography,line-heights,1
+57,line-height-large,1.3333333,line-height,core,typography,line-heights,1
+58,line-height-small,1.5,line-height,core,typography,line-heights,1
+59,headings-font-family,inherit,font-family,core,typography,headings,1
+60,headings-font-weight,500,font-weight,core,typography,headings,1
+61,headings-line-height,1.1,line-height,core,typography,headings,1
+62,headings-color,inherit,color,core,typography,headings,1
+63,icon-font-path,"""../fonts/""",string,core,typography,iconography,1
+64,icon-font-name,"""glyphicons-halflings-regular""",string,core,typography,iconography,1
+65,icon-font-svg-id,"""glyphicons_halflingsregular""",string,core,typography,iconography,1
+66,padding-base-vertical,6px,size,core,components,padding,1
+67,padding-base-horizontal,12px,size,core,components,padding,1
+68,padding-large-vertical,10px,size,core,components,padding,1
+69,padding-large-horizontal,16px,size,core,components,padding,1
+70,padding-small-vertical,5px,size,core,components,padding,1
+71,padding-small-horizontal,10px,size,core,components,padding,1
+72,padding-xs-vertical,1px,size,core,components,padding,1
+73,padding-xs-horizontal,5px,size,core,components,padding,1
+74,border-radius-base,4px,size,core,components,border-radius,1
+75,border-radius-large,6px,size,core,components,border-radius,1
+76,border-radius-small,3px,size,core,components,border-radius,1
+77,btn-font-weight,normal,font-weight,elements,buttons,default-button,1
+78,btn-default-color,#333,color,elements,buttons,default-button,1
+79,btn-default-bg,#fff,color,elements,buttons,default-button,1
+80,btn-default-border,#ccc,color,elements,buttons,default-button,1
+81,btn-border-radius-base,@border-radius-base,size,elements,buttons,default-button,1
+82,btn-border-radius-large,@border-radius-large,size,elements,buttons,default-button,1
+83,btn-border-radius-small,@border-radius-small,size,elements,buttons,default-button,1
+84,btn-primary-color,#fff,color,elements,buttons,primary-button,1
+85,btn-primary-bg,@brand-primary,color,elements,buttons,primary-button,1
+86,btn-primary-border,"darken(@btn-primary-bg, 5%)",color,elements,buttons,primary-button,1
+87,btn-success-color,#fff,color,elements,buttons,success-button,1
+88,btn-success-bg,@brand-success,color,elements,buttons,success-button,1
+89,btn-success-border,"darken(@btn-success-bg, 5%)",color,elements,buttons,success-button,1
+90,btn-info-color,#fff,color,elements,buttons,info-button,1
+91,btn-info-bg,@brand-info,color,elements,buttons,info-button,1
+92,btn-info-border,"darken(@btn-info-bg, 5%)",color,elements,buttons,info-button,1
+93,btn-warning-color,#fff,color,elements,buttons,warning-button,1
+94,btn-warning-bg,@brand-warning,color,elements,buttons,warning-button,1
+95,btn-warning-border,"darken(@btn-warning-bg, 5%)",color,elements,buttons,warning-button,1
+96,btn-danger-color,#fff,color,elements,buttons,danger-button,1
+97,btn-danger-bg,@brand-danger,color,elements,buttons,danger-button,1
+98,btn-danger-border,"darken(@btn-danger-bg, 5%)",color,elements,buttons,danger-button,1
+99,btn-link-disabled-color,@gray-light,color,elements,buttons,default-button,1
+100,dropdown-bg,#fff,color,elements,dropdowns,,1
+101,dropdown-border,"rgba(0,0,0,.15)",color,elements,dropdowns,,1
+102,dropdown-fallback-border,#ccc,color,elements,dropdowns,,1
+103,dropdown-divider-bg,#e5e5e5,color,elements,dropdowns,,1
+104,dropdown-link-color,@gray-dark,color,elements,dropdowns,,1
+105,dropdown-link-hover-color,"darken(@gray-dark, 5%)",color,elements,dropdowns,,1
+106,dropdown-link-hover-bg,#f5f5f5,color,elements,dropdowns,,1
+107,dropdown-link-active-color,@component-active-color,color,elements,dropdowns,,1
+108,dropdown-link-active-bg,@component-active-bg,color,elements,dropdowns,,1
+109,dropdown-link-disabled-color,@gray-light,color,elements,dropdowns,,1
+110,dropdown-header-color,@gray-light,color,elements,dropdowns,,1
+111,dropdown-caret-color,#000,color,elements,dropdowns,,1
+112,component-active-color,#fff,color,elements,components,active-components,1
+113,component-active-bg,@brand-primary,color,elements,components,active-components,1
+114,caret-width-base,4px,size,elements,components,caret-size,1
+115,caret-width-large,5px,size,elements,components,caret-size,1
+116,thumbnail-padding,4px,size,elements,thumbnails,,1
+117,thumbnail-bg,@body-bg,color,elements,thumbnails,,1
+118,thumbnail-border,#ddd,color,elements,thumbnails,,1
+119,thumbnail-border-radius,@border-radius-base,size,elements,thumbnails,,1
+120,thumbnail-caption-color,@text-color,color,elements,thumbnails,,1
+121,thumbnail-caption-padding,9px,size,elements,thumbnails,,1
+122,component-offset-horizontal,180px,size,elements,type,component-offset,1
+123,text-muted,@gray-light,color,elements,type,muted-text,1
+124,abbr-border-color,@gray-light,color,elements,type,abbreviation-border,1
+125,headings-small-color,@gray-light,color,elements,type,heading-small,1
+126,blockquote-small-color,@gray-light,color,elements,type,blockquote,1
+127,blockquote-font-size,(@font-size-base * 1.25),size-font,elements,type,blockquote,1
+128,blockquote-border-color,@gray-lighter,color,elements,type,blockquote,1
+129,page-header-border-color,@gray-lighter,color,elements,type,page-header,1
+130,dl-horizontal-offset,@component-offset-horizontal,size,elements,type,description-list,1
+131,dl-horizontal-breakpoint,@grid-float-breakpoint,size,elements,type,description-list,1
+132,hr-border,@gray-lighter,color,elements,type,horizontal-rule,1
+133,code-color,#c7254e,color,elements,code,code,1
+134,code-bg,#f9f2f4,color,elements,code,code,1
+135,kbd-color,#fff,color,elements,code,keyboard,1
+136,kbd-bg,#333,color,elements,code,keyboard,1
+137,pre-bg,#f5f5f5,color,elements,code,keyboard,1
+138,pre-color,@gray-dark,color,elements,code,preformatted,1
+139,pre-border-color,#ccc,color,elements,code,preformatted,1
+140,pre-scrollable-max-height,340px,size,elements,code,preformatted,1
+141,table-cell-padding,8px,size,tables,tables,,1
+142,table-condensed-cell-padding,5px,size,tables,tables,,1
+143,table-bg,transparent,color,tables,tables,,1
+144,table-bg-accent,#f9f9f9,color,tables,tables,,1
+145,table-bg-hover,#f5f5f5,color,tables,tables,,1
+146,table-bg-active,@table-bg-hover,color,tables,tables,,1
+147,table-border-color,#ddd,color,tables,tables,,1
+148,input-bg,#fff,color,tables,forms,inputs,1
+149,input-bg-disabled,@gray-lighter,color,tables,forms,inputs,1
+150,input-color,@gray,color,tables,forms,inputs,1
+151,input-border,#ccc,color,tables,forms,inputs,1
+152,input-border-radius,@border-radius-base,size,tables,forms,inputs,1
+153,input-border-radius-large,@border-radius-large,size,tables,forms,inputs,1
+154,input-border-radius-small,@border-radius-small,size,tables,forms,inputs,1
+155,input-border-focus,#66afe9,color,tables,forms,inputs,1
+156,input-color-placeholder,#999,color,tables,forms,inputs,1
+157,input-height-base,(@line-height-computed + (@padding-base-vertical * 2) + 2),size,tables,forms,inputs,1
+158,input-height-large,(ceil(@font-size-large * @line-height-large) + (@padding-large-vertical * 2) + 2),size,tables,forms,inputs,1
+159,input-height-small,(floor(@font-size-small * @line-height-small) + (@padding-small-vertical * 2) + 2),size,tables,forms,inputs,1
+160,form-group-margin-bottom,15px,size,tables,forms,forms,1
+161,legend-color,@gray-dark,color,tables,forms,forms,1
+162,legend-border-color,#e5e5e5,color,tables,forms,forms,1
+163,input-group-addon-bg,@gray-lighter,color,tables,forms,forms,1
+164,input-group-addon-border-color,@input-border,color,tables,forms,forms,1
+165,cursor-disabled,not-allowed,attribute,tables,forms,forms,1
+166,navbar-height,50px,size,navigation,navbar,navbar,1
+167,navbar-margin-bottom,@line-height-computed,size,navigation,navbar,navbar,1
+168,navbar-border-radius,@border-radius-base,size,navigation,navbar,navbar,1
+169,navbar-padding-horizontal,floor((@grid-gutter-width / 2)),size-padding,navigation,navbar,navbar,1
+170,navbar-padding-vertical,((@navbar-height - @line-height-computed) / 2),size-padding,navigation,navbar,navbar,1
+171,navbar-collapse-max-height,340px,size,navigation,navbar,navbar,1
+172,navbar-default-color,#777,color,navigation,navbar,default-navbar,1
+173,navbar-default-bg,#f8f8f8,color,navigation,navbar,default-navbar,1
+174,navbar-default-border,"darken(@navbar-default-bg, 6.5%)",color,navigation,navbar,default-navbar,1
+175,navbar-default-link-color,#777,color,navigation,navbar,default-navbar,1
+176,navbar-default-link-hover-color,#333,color,navigation,navbar,default-navbar,1
+177,navbar-default-link-hover-bg,transparent,color,navigation,navbar,default-navbar,1
+178,navbar-default-link-active-color,#555,color,navigation,navbar,default-navbar,1
+179,navbar-default-link-active-bg,"darken(@navbar-default-bg, 6.5%)",color,navigation,navbar,default-navbar,1
+180,navbar-default-link-disabled-color,#ccc,color,navigation,navbar,default-navbar,1
+181,navbar-default-link-disabled-bg,transparent,color,navigation,navbar,default-navbar,1
+182,navbar-default-brand-color,@navbar-default-link-color,color,navigation,navbar,default-navbar,1
+183,navbar-default-brand-hover-color,"darken(@navbar-default-brand-color, 10%)",color,navigation,navbar,default-navbar,1
+184,navbar-default-brand-hover-bg,transparent,color,navigation,navbar,default-navbar,1
+185,navbar-default-toggle-hover-bg,#ddd,color,navigation,navbar,default-navbar,1
+186,navbar-default-toggle-icon-bar-bg,#888,color,navigation,navbar,default-navbar,1
+187,navbar-default-toggle-border-color,#ddd,color,navigation,navbar,default-navbar,1
+188,navbar-inverse-color,"lighten(@gray-light, 15%)",color,navigation,navbar,inverse-navbar,1
+189,navbar-inverse-bg,#222,color,navigation,navbar,inverse-navbar,1
+190,navbar-inverse-border,"darken(@navbar-inverse-bg, 10%)",color,navigation,navbar,inverse-navbar,1
+191,navbar-inverse-link-color,"lighten(@gray-light, 15%)",color,navigation,navbar,inverse-navbar,1
+192,navbar-inverse-link-hover-color,#fff,color,navigation,navbar,inverse-navbar,1
+193,navbar-inverse-link-hover-bg,transparent,color,navigation,navbar,inverse-navbar,1
+194,navbar-inverse-link-active-color,@navbar-inverse-link-hover-color,color,navigation,navbar,inverse-navbar,1
+195,navbar-inverse-link-active-bg,"darken(@navbar-inverse-bg, 10%)",color,navigation,navbar,inverse-navbar,1
+196,navbar-inverse-link-disabled-color,#444,color,navigation,navbar,inverse-navbar,1
+197,navbar-inverse-link-disabled-bg,transparent,color,navigation,navbar,inverse-navbar,1
+198,navbar-inverse-brand-color,@navbar-inverse-link-color,color,navigation,navbar,inverse-navbar,1
+199,navbar-inverse-brand-hover-color,#fff,color,navigation,navbar,inverse-navbar,1
+200,navbar-inverse-brand-hover-bg,transparent,color,navigation,navbar,inverse-navbar,1
+201,navbar-inverse-toggle-hover-bg,#333,color,navigation,navbar,inverse-navbar,1
+202,navbar-inverse-toggle-icon-bar-bg,#fff,color,navigation,navbar,inverse-navbar,1
+203,navbar-inverse-toggle-border-color,#333,color,navigation,navbar,inverse-navbar,1
+204,nav-link-padding,10px 15px,size,navigation,nav-links,,1
+205,nav-link-hover-bg,@gray-lighter,color,navigation,nav-links,,1
+206,nav-disabled-link-color,@gray-light,color,navigation,nav-links,,1
+207,nav-disabled-link-hover-color,@gray-light,color,navigation,nav-links,,1
+208,nav-tabs-border-color,#ddd,color,navigation,tabs,,1
+209,nav-tabs-link-hover-border-color,@gray-lighter,color,navigation,tabs,,1
+210,nav-tabs-active-link-hover-bg,@body-bg,color,navigation,tabs,,1
+211,nav-tabs-active-link-hover-color,@gray,color,navigation,tabs,,1
+212,nav-tabs-active-link-hover-border-color,#ddd,color,navigation,tabs,,1
+213,nav-tabs-justified-link-border-color,#ddd,color,navigation,tabs,,1
+214,nav-tabs-justified-active-link-border-color,@body-bg,color,navigation,tabs,,1
+215,nav-pills-border-radius,@border-radius-base,size,navigation,pills,,1
+216,nav-pills-active-link-hover-bg,@component-active-bg,color,navigation,pills,,1
+217,nav-pills-active-link-hover-color,@component-active-color,color,navigation,pills,,1
+218,breadcrumb-padding-vertical,8px,size,navigation,breadcrumbs,,1
+219,breadcrumb-padding-horizontal,15px,size,navigation,breadcrumbs,,1
+220,breadcrumb-bg,#f5f5f5,color,navigation,breadcrumbs,,1
+221,breadcrumb-color,#ccc,color,navigation,breadcrumbs,,1
+222,breadcrumb-active-color,@gray-light,color,navigation,breadcrumbs,,1
+223,breadcrumb-separator,"""/""",string,navigation,breadcrumbs,,1
+224,pagination-color,@link-color,color,navigation,pagination,,1
+225,pagination-bg,#fff,color,navigation,pagination,,1
+226,pagination-border,#ddd,color,navigation,pagination,,1
+227,pagination-hover-color,@link-hover-color,color,navigation,pagination,,1
+228,pagination-hover-bg,@gray-lighter,color,navigation,pagination,,1
+229,pagination-hover-border,#ddd,color,navigation,pagination,,1
+230,pagination-active-color,#fff,color,navigation,pagination,,1
+231,pagination-active-bg,@brand-primary,color,navigation,pagination,,1
+232,pagination-active-border,@brand-primary,color,navigation,pagination,,1
+233,pagination-disabled-color,@gray-light,color,navigation,pagination,,1
+234,pagination-disabled-bg,#fff,color,navigation,pagination,,1
+235,pagination-disabled-border,#ddd,color,navigation,pagination,,1
+236,pager-bg,@pagination-bg,color,navigation,pager,,1
+237,pager-border,@pagination-border,color,navigation,pager,,1
+238,pager-border-radius,15px,size,navigation,pager,,1
+239,pager-hover-bg,@pagination-hover-bg,color,navigation,pager,,1
+240,pager-active-bg,@pagination-active-bg,color,navigation,pager,,1
+241,pager-active-color,@pagination-active-color,color,navigation,pager,,1
+242,pager-disabled-color,@pagination-disabled-color,color,navigation,pager,,1
+243,state-success-text,#3c763d,color,indicators,form-states-and-alerts,,1
+244,state-success-bg,#dff0d8,color,indicators,form-states-and-alerts,,1
+245,state-success-border,"darken(spin(@state-success-bg, -10), 5%)",color,indicators,form-states-and-alerts,,1
+246,state-info-text,#31708f,color,indicators,form-states-and-alerts,,1
+247,state-info-bg,#d9edf7,color,indicators,form-states-and-alerts,,1
+248,state-info-border,"darken(spin(@state-info-bg, -10), 7%)",color,indicators,form-states-and-alerts,,1
+249,state-warning-text,#8a6d3b,color,indicators,form-states-and-alerts,,1
+250,state-warning-bg,#fcf8e3,color,indicators,form-states-and-alerts,,1
+251,state-warning-border,"darken(spin(@state-warning-bg, -10), 5%)",color,indicators,form-states-and-alerts,,1
+252,state-danger-text,#a94442,color,indicators,form-states-and-alerts,,1
+253,state-danger-bg,#f2dede,color,indicators,form-states-and-alerts,,1
+254,state-danger-border,"darken(spin(@state-danger-bg, -10), 5%)",color,indicators,form-states-and-alerts,,1
+255,alert-padding,15px,size,indicators,alerts,,1
+256,alert-border-radius,@border-radius-base,size,indicators,alerts,,1
+257,alert-link-font-weight,bold,font-weight,indicators,alerts,,1
+258,alert-success-bg,@state-success-bg,color,indicators,alerts,,1
+259,alert-success-text,@state-success-text,color,indicators,alerts,,1
+260,alert-success-border,@state-success-border,color,indicators,alerts,,1
+261,alert-info-bg,@state-info-bg,color,indicators,alerts,,1
+262,alert-info-text,@state-info-text,color,indicators,alerts,,1
+263,alert-info-border,@state-info-border,color,indicators,alerts,,1
+264,alert-warning-bg,@state-warning-bg,color,indicators,alerts,,1
+265,alert-warning-text,@state-warning-text,color,indicators,alerts,,1
+266,alert-warning-border,@state-warning-border,color,indicators,alerts,,1
+267,alert-danger-bg,@state-danger-bg,color,indicators,alerts,,1
+268,alert-danger-text,@state-danger-text,color,indicators,alerts,,1
+269,alert-danger-border,@state-danger-border,color,indicators,alerts,,1
+270,label-color,#fff,color,indicators,labels,,1
+271,label-link-hover-color,#fff,color,indicators,labels,,1
+272,label-default-bg,@gray-light,color,indicators,labels,,1
+273,label-primary-bg,@brand-primary,color,indicators,labels,,1
+274,label-success-bg,@brand-success,color,indicators,labels,,1
+275,label-info-bg,@brand-info,color,indicators,labels,,1
+276,label-warning-bg,@brand-warning,color,indicators,labels,,1
+277,label-danger-bg,@brand-danger,color,indicators,labels,,1
+278,badge-color,#fff,color,indicators,badges,,1
+279,badge-link-hover-color,#fff,color,indicators,badges,,1
+280,badge-bg,@gray-light,color,indicators,badges,,1
+281,badge-active-color,@link-color,color,indicators,badges,,1
+282,badge-active-bg,#fff,color,indicators,badges,,1
+283,badge-font-weight,bold,font-weight,indicators,badges,,1
+284,badge-line-height,1,line-height,indicators,badges,,1
+285,badge-border-radius,10px,size,indicators,badges,,1
+286,progress-bg,#f5f5f5,color,indicators,progress-bars,,1
+287,progress-bar-color,#fff,color,indicators,progress-bars,,1
+288,progress-border-radius,@border-radius-base,size,indicators,progress-bars,,1
+289,progress-bar-bg,@brand-primary,color,indicators,progress-bars,,1
+290,progress-bar-success-bg,@brand-success,color,indicators,progress-bars,,1
+291,progress-bar-warning-bg,@brand-warning,color,indicators,progress-bars,,1
+292,progress-bar-danger-bg,@brand-danger,color,indicators,progress-bars,,1
+293,progress-bar-info-bg,@brand-info,color,indicators,progress-bars,,1
+294,jumbotron-padding,30px,size,containers,jumbotron,,1
+295,jumbotron-color,inherit,color,containers,jumbotron,,1
+296,jumbotron-bg,@gray-lighter,color,containers,jumbotron,,1
+297,jumbotron-heading-color,inherit,color,containers,jumbotron,,1
+298,jumbotron-font-size,ceil((@font-size-base * 1.5)),size-font,containers,jumbotron,,1
+299,jumbotron-heading-font-size,ceil((@font-size-base * 4.5)),size-font,containers,jumbotron,,1
+300,list-group-bg,#fff,color,containers,list-groups,,1
+301,list-group-border,#ddd,color,containers,list-groups,,1
+302,list-group-border-radius,@border-radius-base,size,containers,list-groups,,1
+303,list-group-hover-bg,#f5f5f5,color,containers,list-groups,,1
+304,list-group-active-color,@component-active-color,color,containers,list-groups,,1
+305,list-group-active-bg,@component-active-bg,color,containers,list-groups,,1
+306,list-group-active-border,@list-group-active-bg,color,containers,list-groups,,1
+307,list-group-active-text-color,"lighten(@list-group-active-bg, 40%)",color,containers,list-groups,,1
+308,list-group-disabled-color,@gray-light,color,containers,list-groups,,1
+309,list-group-disabled-bg,@gray-lighter,color,containers,list-groups,,1
+310,list-group-disabled-text-color,@list-group-disabled-color,color,containers,list-groups,,1
+311,list-group-link-color,#555,color,containers,list-groups,,1
+312,list-group-link-hover-color,@list-group-link-color,color,containers,list-groups,,1
+313,list-group-link-heading-color,#333,color,containers,list-groups,,1
+314,panel-bg,#fff,color,containers,panels,default-panel,1
+315,panel-body-padding,15px,size,containers,panels,default-panel,1
+316,panel-heading-padding,10px 15px,size,containers,panels,default-panel,1
+317,panel-footer-padding,@panel-heading-padding,size,containers,panels,default-panel,1
+318,panel-border-radius,@border-radius-base,size,containers,panels,default-panel,1
+319,panel-inner-border,#ddd,color,containers,panels,default-panel,1
+320,panel-footer-bg,#f5f5f5,color,containers,panels,default-panel,1
+321,panel-default-text,@gray-dark,color,containers,panels,default-panel,1
+322,panel-default-border,#ddd,color,containers,panels,default-panel,1
+323,panel-default-heading-bg,#f5f5f5,color,containers,panels,default-panel,1
+324,panel-primary-text,#fff,color,containers,panels,primary-panel,1
+325,panel-primary-border,@brand-primary,color,containers,panels,primary-panel,1
+326,panel-primary-heading-bg,@brand-primary,color,containers,panels,primary-panel,1
+327,panel-success-text,@state-success-text,color,containers,panels,success-panel,1
+328,panel-success-border,@state-success-border,color,containers,panels,success-panel,1
+329,panel-success-heading-bg,@state-success-bg,color,containers,panels,success-panel,1
+330,panel-info-text,@state-info-text,color,containers,panels,info-panel,1
+331,panel-info-border,@state-info-border,color,containers,panels,info-panel,1
+332,panel-info-heading-bg,@state-info-bg,color,containers,panels,info-panel,1
+333,panel-warning-text,@state-warning-text,color,containers,panels,warning-panel,1
+334,panel-warning-border,@state-warning-border,color,containers,panels,warning-panel,1
+335,panel-warning-heading-bg,@state-warning-bg,color,containers,panels,warning-panel,1
+336,panel-danger-text,@state-danger-text,color,containers,panels,danger-panel,1
+337,panel-danger-border,@state-danger-border,color,containers,panels,danger-panel,1
+338,panel-danger-heading-bg,@state-danger-bg,color,containers,panels,danger-panel,1
+339,well-bg,#f5f5f5,color,containers,wells,,1
+340,well-border,"darken(@well-bg, 7%)",color,containers,wells,,1
+341,tooltip-max-width,200px,size,containers,tooltips,,1
+342,tooltip-color,#fff,color,containers,tooltips,,1
+343,tooltip-bg,#000,color,containers,tooltips,,1
+344,tooltip-opacity,0.9,opacity,containers,tooltips,,1
+345,tooltip-arrow-width,5px,size,containers,tooltips,,1
+346,tooltip-arrow-color,@tooltip-bg,color,containers,tooltips,,1
+347,popover-bg,#fff,color,containers,popovers,,1
+348,popover-max-width,276px,size,containers,popovers,,1
+349,popover-border-color,"rgba(0,0,0,.2)",color,containers,popovers,,1
+350,popover-fallback-border-color,#ccc,color,containers,popovers,,1
+351,popover-title-bg,"darken(@popover-bg, 3%)",color,containers,popovers,,1
+352,popover-arrow-width,10px,size,containers,popovers,,1
+353,popover-arrow-color,@popover-bg,color,containers,popovers,,1
+354,popover-arrow-outer-width,(@popover-arrow-width + 1),size,containers,popovers,,1
+355,popover-arrow-outer-color,"fadein(@popover-border-color, 5%)",color,containers,popovers,,1
+356,popover-arrow-outer-fallback-color,"darken(@popover-fallback-border-color, 20%)",color,containers,popovers,,1
+357,modal-inner-padding,15px,size,containers,modals,,1
+358,modal-title-padding,15px,size,containers,modals,,1
+359,modal-title-line-height,@line-height-base,line-height,containers,modals,,1
+360,modal-content-bg,#fff,color,containers,modals,,1
+361,modal-content-border-color,"rgba(0,0,0,.2)",color,containers,modals,,1
+362,modal-content-fallback-border-color,#999,color,containers,modals,,1
+363,modal-backdrop-bg,#000,color,containers,modals,,1
+364,modal-backdrop-opacity,0.5,opacity,containers,modals,,1
+365,modal-header-border-color,#e5e5e5,color,containers,modals,,1
+366,modal-footer-border-color,@modal-header-border-color,color,containers,modals,,1
+367,modal-lg,900px,size,containers,modals,,1
+368,modal-md,600px,size,containers,modals,,1
+369,modal-sm,300px,size,containers,modals,,1
+370,close-font-weight,bold,font-weight,containers,close,,1
+371,close-color,#000,color,containers,close,,1
+372,close-text-shadow,0 1px 0 #fff,shadow,containers,close,,1
+373,carousel-text-shadow,"0 1px 2px rgba(0,0,0,.6)",shadow,containers,carousel,,1
+374,carousel-control-color,#fff,color,containers,carousel,,1
+375,carousel-control-width,15%,percentage,containers,carousel,,1
+376,carousel-control-opacity,0.5,opacity,containers,carousel,,1
+377,carousel-control-font-size,20px,size-font,containers,carousel,,1
+378,carousel-indicator-active-bg,#fff,color,containers,carousel,,1
+379,carousel-indicator-border-color,#fff,color,containers,carousel,,1
+380,carousel-caption-color,#fff,color,containers,carousel,,1
+381,zindex-navbar,1000,number,configuration,z-index,,1
+382,zindex-dropdown,1000,number,configuration,z-index,,1
+383,zindex-navbar-fixed,1030,number,configuration,z-index,,1
+384,zindex-modal-background,1040,number,configuration,z-index,,1
+385,zindex-modal,1050,number,configuration,z-index,,1
+386,zindex-popover,1060,number,configuration,z-index,,1
+387,zindex-tooltip,1070,number,configuration,z-index,,1

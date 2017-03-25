@@ -10,27 +10,28 @@
     {{ get_html('home', { 'username':user_name() } )|safe }}
     
     <div class="row">
-      <div class="col-md-8">
+      <div class="col-sm-12">
         <div class="panel panel-default">
           <div class="panel-heading clearfix">
-            <h4>Saved Themes</h4>
+            <h4>Saved Themes <span class="pull-right">{{ user_name() }}</span></h4>
+            
           </div>
           <table class="table" id="saved-themes-list">
             {% if themes %}
               {% for theme in themes %}
                 <tr>
-                  <td class='col-md-8'><p class="theme-name-list-item">{{ theme.name }}</p></td>
-                  <td class='col-md-2 text-right'>
+                  <td class='col-sm-10'><p class="theme-name-list-item">{{ theme.name }}</p></td>
+                  <td class='col-sm-1 text-right'>
                     <button class="btn btn-default load-theme-btn" data-value="{{ theme.id }}">Load</button>
                   </td>
-                  <td class='col-md-2 text-right'>
+                  <td class='col-sm-1 text-right'>
                     <button class="btn btn-link delete-theme-btn" data-value="{{ theme.id }}">Delete</button>
                   </td>
                 </tr>
               {% endfor %}
             {% else %}
               <tr>
-                <td class='col-md-12'><p class="theme-name-list-item">You haven't built any themes yet.</p></td>
+                <td class='col-sm-12'><p class="theme-name-list-item">You haven't started any themes yet.</p></td>
               </tr>
             {% endif %}
           </table>

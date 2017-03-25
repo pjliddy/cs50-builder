@@ -118,6 +118,8 @@ def login():
 @app.route("/logout")
 @login_required
 def logout():
+  global active_theme
+  active_theme = None
   # clear current session user_id
   session.clear()
 
@@ -240,6 +242,9 @@ def register():
 @app.route("/user")
 @login_required
 def user():
+  global active_theme
+  
+  active_theme = None
   themes = query_db('SELECT * FROM themes WHERE user_id = ?', (session["user_id"],))
 
   return render_template("user.html", themes=themes)
@@ -253,7 +258,6 @@ def user():
 def new():
   global active_theme
   active_theme = get_default_theme()
-  #category="core"
   
   # check to see if this name has been used by current user
   theme_name = request.args.get("n")
@@ -281,6 +285,7 @@ def new():
     # clone default theme with new theme id in variables table
     for varObj in active_theme:
       result = insert_db('INSERT INTO variables (name, output, type, category, section, subsection, theme_id) VALUES (?, ?, ?, ?, ?, ?, ?)', (varObj['name'], varObj['output'], varObj['type'], varObj['category'], varObj['section'], varObj['subsection'], theme_id))
+      varObj['id'] = result.lastrowid
                   
       # validate insert into variables table
       if not result:
@@ -300,7 +305,6 @@ def load():
   global active_theme
   theme_id = request.args.get("id")
   active_theme = get_theme(theme_id)
-#  category="core"
   
   return redirect(url_for("category"))
  
@@ -342,7 +346,7 @@ def category():
 # @app.route("/save"): save(): 
 #
 
-@app.route("/save", methods=["GET", "POST"])
+@app.route("/save", methods=["POST"])
 @login_required
 def save():
   global active_theme
@@ -391,6 +395,9 @@ def getvars():
 
 #
 # @app.route("/config"): config(): 
+#
+# NOTE: RENDER TEMPALTE SHOULD BE CALLED WHEN THEME IS FIRST INITIALIZED, INSTEAD OF HAVING
+# DUPLICATE HTML IN APPLICATION.HTML AND CONFIGVARS.HTML
 #
 
 @app.route("/config", methods=["POST"])

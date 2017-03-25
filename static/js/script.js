@@ -111,16 +111,17 @@ function validateThemeNameInput( evt ) {
 // replace these with post commands?
 function submitNewTheme( evt ) {
   themeName = $('#theme-name-input').val();
+  // replace these with post commands?
   window.location.replace("/new?n=" + themeName);
 };
 
 // replace these with post commands?
 function loadTheme( evt ) {
   var value = $(this).data("value");
+  // replace these with post commands?
   window.location.replace("/load?id=" + value);
 };
 
-// replace these with post commands?
 function deleteTheme( evt ) {
   var value = $(this).data("value");
   $('#modal-delete').attr('data-value', $(this).data("value"));
@@ -129,6 +130,7 @@ function deleteTheme( evt ) {
 
 function confirmDelete( evt ) {
   var value = $('#modal-delete').data('value');
+  // replace these with post commands?
   window.location.replace("/delete?id=" + value);
 };
 
@@ -139,19 +141,19 @@ function updateTheme( layout ) {
   
   data = {
     "message": "updateVars"
-  }
+  };
   
   iframe.contentWindow.postMessage(data, '*');
 };
 
 function updateConfigVars( category ) {
-  message = {
+  data = {
     "category": category
   };
   
   $.ajax({
     url: '/config',
-    data: message,
+    data: data,
     type: 'POST',
     success: function(response) {
       // update category title
@@ -177,10 +179,10 @@ function saveTheme( ) {
   
   $.ajax({
     url: '/save',
-    data: message,
+    // data: message,
     type: 'POST',
     success: function(response) {
-      console.log('success: ' + error);
+      console.log('success: ' + response);
       // modal alert confirm
       alert("Theme saved!");
     },
