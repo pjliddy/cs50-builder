@@ -76,21 +76,6 @@ function updateVar( evt ) {
         console.log(error);
       }
   });
-  
-  
-
-  // send message to iframe for update
-//  iframe = document.getElementById('layout');
-//  
-//  data = {
-//    "message": "updateVars"
-//  }
-//  
-//  iframe.contentWindow.postMessage(message, '*');   
-  
-  // send message to iframe for update
-//  iframe = document.getElementById('layout');
-//  iframe.contentWindow.postMessage("updateVars", '*');
 };
 
 function newTheme( evt ) {
@@ -182,7 +167,7 @@ function saveTheme( ) {
     // data: message,
     type: 'POST',
     success: function(response) {
-      console.log('success: ' + response);
+      //      console.log('success: ' + response);
       // modal alert confirm
       alert("Theme saved!");
     },

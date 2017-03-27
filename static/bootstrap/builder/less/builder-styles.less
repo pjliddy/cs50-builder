@@ -100,7 +100,6 @@ header {
 .export p{
   font-family: @font-family-monospace;
 }
-
 footer {
   background-color: @brand-primary;
   color: #fff;
@@ -117,15 +116,19 @@ footer {
 #config-panel .panel,
 #config-panel .panel-heading{
   border: none;
-  border-radius:0;
   margin-bottom:0;
   box-shadow:none;
+}
+#config-panel .panel-outer{
+  border-bottom:1px solid @ui-light;
+}
+#config-panel .panel-outer:last-child {
+  border-bottom:1px solid @brand-primary;
 }
 #config-panel .panel-heading {
   text-transform: capitalize;
   cursor: pointer;
   text-decoration: none !important;
-  border-bottom: 1px solid white;
 }
 .panel-outer .panel-heading {
   color:white;

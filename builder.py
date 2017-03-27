@@ -58,6 +58,14 @@ def index():
   return render_template("index.html")
 
 #
+# @app.route("/about") = about(): public-facing home page
+#
+
+@app.route("/about")
+def about():
+  return render_template("about.html")
+
+#
 # @app.route("/theme") = theme(): returns theme layout panel in iframe
 #
 
@@ -172,7 +180,7 @@ def password():
     
     if not result:
       flash("can't update password")
-      return render_template("password.html")
+      return render_template("password.html", mode="theme")
 
     # flash message for flask to update alert message in header on index template
     flash("Password changed!")
@@ -265,7 +273,8 @@ def new():
   # if name is in use by this user
   if query_db('SELECT * FROM themes WHERE user_id =  ? AND name = ?',(session["user_id"], theme_name)):
     flash("theme name already in use")
-    return render_template("user.html")
+    return redirect(url_for("user"))
+#    return render_template("user.html")
   # if name is unique and unused
   else:
     # create new theme in themes table
@@ -274,13 +283,15 @@ def new():
     # validate insert into themes table
     if not result:
       flash("can't create theme")
-      return render_template("user.html")
+      return redirect(url_for("user"))
+#    return render_template("user.html")
     
     theme_id =  result.lastrowid
 
     if not theme_id:
       flash("can't create theme")
-      return render_template("user.html")
+      return redirect(url_for("user"))
+#    return render_template("user.html")
 
     # clone default theme with new theme id in variables table
     for varObj in active_theme:
@@ -290,7 +301,8 @@ def new():
       # validate insert into variables table
       if not result:
         flash("can't create theme")
-        return render_template("user.html")
+        return redirect(url_for("user"))
+#    return render_template("user.html")
 
     # go to first page of theme layout
     return redirect(url_for("category"))

@@ -1,0 +1,44 @@
+{% extends "private.html" %}
+
+{% set theme = "false" %}
+
+{% block title %}
+    Builder - About
+{% endblock %}
+
+{% block main %}
+  <div class="wrapper">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1>About Bootstrap Theme Builder</h1>
+        <p class="lead">This is a paragraph about this project. What it is. Why it matters.</p>
+      </div>
+      
+      <div class="col-sm-4">
+        <h2>Application</h2>
+        <ul>
+          <li>Flask Python Microframework</li>
+          <li>Jinja2 Templating Engine</li>
+          <li>SQLite 3 Database Engine</li>
+        </ul>
+      </div>
+      <div class="col-sm-4">
+        <h2>Presentation</h2>
+        <ul>
+          <li>HTML5/CSS3/JavaScript</li>
+          <li>Bootstrap</li>
+          <li>JQuery</li>
+          <li>LESS.js</li>
+        </ul>
+      </div>
+      <div class="col-sm-4">
+        <h2>Server</h2>
+        <ul>
+          <li>Amazon Web Services (AWS) EC2 Linux</li>
+          <li>NGINX Proxy Server</li>
+          <li>Gunicorn WSGI Server</li>
+        </ul>
+      </div>
+      
+  </div>
+{% endblock %}

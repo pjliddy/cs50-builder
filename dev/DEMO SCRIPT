@@ -1,0 +1,216 @@
+SCRIPT NOTES
+============
+
+          
+{ INTRO SLIDE   }
+
+  Hi. My name is Patrick Liddy.
+  
+  My final project for CS - Fifty - X is a Bootstrap Theme Builder.
+  
+  This application is a tool to help designers create custom themes in Bootstrap.
+  
+  
+{ BOOTSTRAP CUSTOM }
+
+  The Get Bootstrap website currently provides a tool to customize the LESS variables that define a default Bootstrap theme.
+  
+  The problem is, that tool is just a huge form with hundreds of fields.
+  
+  Someone needs to figure out what value to enter in all of those fields.
+  
+  Right now, that person would most likely be a developer, translating Photoshop files into LESS to be compiled into CSS.
+  
+
+{ LANDING PAGE - INDEX }
+
+  What I have built is the Minimum Viable Product (or MVP) that demonstrates a tool that designers can use to create the library of styles that makes up a Bootstrap theme.
+  
+  
+    < click on "New User" >
+  
+  
+{ NEW USER }
+
+  Since this is a full stack application, new users can register and create their accounts.
+  
+  Or, if they already have an account...
+  
+  
+    < click on "Sign In" >
+  
+  
+{ SIGN IN }
+  
+  The user can sign in directly.
+  
+  
+    < sign in with "pjliddy@gmail.com" and "pass" >
+  
+  
+{ USER HOME }
+  
+  When the user signs in, they can access the library of themes already saved in their account.
+  
+    < roll the mouse over the "Load" button link for "Extra Theme">
+  
+  They can load...
+  
+    < roll the mouse over the "Delete" link for "Extra Theme" >
+  
+  Or delete any of their saved themes.
+  
+    < click on "Delete" >
+
+  As you can see, the application asks the user to confirm any permanently destructive actions.
+  
+    < click on "Yes" >
+  
+  
+  Now that we've gotten all the admin features out of the way, let's see what the application actually does.
+  
+  To demonstrate, I'm going to start a new theme.
+  
+    < click on "Start a Theme" >
+    
+  And name it...
+    
+    < enter "Best Theme Ever" >
+    
+  If user doesn't already have a theme with that name, the application will create a copy of the default Bootstrap theme and save it under the new name.
+  
+    < click "Save" >
+    
+  
+{ CORE LAYOUT }
+  
+  Now that the theme is loaded, you can see samples of what all the various Bootstrap elements look like, based on their default values...
+
+  The application has three key elements:
+
+  First, the main navigation lets the user see their theme library, save or export the current theme, or manage their account. 
+  
+  Next, the main layout area shows a variety of HTML elements as they're styled by the user's Bootstrap theme.
+  
+  An finally, the column on the right gives the user access to the hundreds of LESS variables used by Bootstrap.
+      
+  The variables are organized in collapsible hierarchical panels
+  
+  The user can change any of the variables by typing in a new value.
+  
+  In this case, we'll change the primary brand color from blue to orange
+  
+    < change @brand-primary to #f47600 >
+  
+  Since this looks a little too close to the brand warning color, let's change that to a better yellow
+    
+    < change @brand-warning to #f7ca00 >
+  
+  While we're at it, let's also make our brand danger color a little darker to match.
+  
+    < change @brand-danger to darken(#d9534f, 10%)>
+  
+
+  In addition to color, we can modify out default typography.
+  
+    < scroll down to Typography layout >
+  
+    < close "Colors" outer panel; open "Typography" outer panel and "Font-Family" inner panel>
+    
+  
+  You can change the default font families; in this case, let's remove "Helvetica Neue" and use Helvetica as our base font
+  
+  Let's increase our default font size to 15 pixels
+  
+    < close font-family; open font-size; set font size 15px >
+    
+  The headings are looking a little weak; 
+  
+    < close font-size; open "Headings" inner panel >
+    
+  Let's also increase their weight
+  
+    < change @headings-font-weight to 600 >
+    
+  And spread out our default line height
+  
+    < close "Headings" inner panel; open "Line-Heights" inner panel >
+    < change @line-height-base to 1.7
+  
+  
+  One last thing in our core settings...
+  
+    <scroll down to "Components and Font Sizes">
+    
+  I want to get rid of these rounded corners
+    
+    < open "Components" outer panel; open "Border Radius" inner panel >
+    
+  Let's set our base border radius to 1px...
+  
+    < change @border-radius-base to 1px >
+  
+  our large border radius to 2px...
+  
+    < change @border-radius-large to 2px >
+  
+  and our small border radius to 0
+    
+    < change @border-radius-samll to 0 >
+    
+    
+    
+    
+  Now, if we got look at one of the other categories, in this case, "Elements"...
+  
+    < click elements >   
+      
+
+{ ELEMENTS LAYOUT }
+
+  We can see that all the changes that were made to the Core category, such as our font, color, or border radius are reflected across all the Bootsrap components, regardless of category.
+  
+  On this screen, the user can update element-specific attributes. 
+  
+  In this case, let's change the text on our warning button by copying the border color
+  
+    < copy @btn-warning-border to @btn-warning-color >
+  
+  And making it a bit darker
+
+    < change percentage of @btn-warning-color to 25% > 
+    
+  
+  Now, these have been just a few of the values that can be configured when creating a Bootstrap theme.
+  
+  Once the user has gone through and configured all of their options, they can save their theme settings to the database, or ...
+  
+    < click export >
+    
+  
+{ EXPORT SCREEN }
+  
+  They can export the theme to a LESS variables file.
+  
+  This variables file is used by LESS to compile your custom Bootstrap theme.
+
+
+  So, there you have it, my Bootstrap Theme Builder. 
+
+    < click on "About" >
+  
+ { ABOUT SCREEN }
+ 
+    It was built with what I learned in CS50X, some things I knew before, and a lot I learned while putting the project together over the last couple of weeks.
+    
+    There's lots of areas for improvement after more user testing, but overall, I think this project is a good first step in helping designers create their own Bootstrap themes.
+
+
+
+
+
+  PREP:
+    Turn off extensions
+    Create 3 Themes: Primary Theme, Alternate Theme, Extra Theme
+    Clear look ahead in forms on Chrome
+    
